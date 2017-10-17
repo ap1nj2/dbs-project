@@ -1,0 +1,168 @@
+<!--
+  For more information on how to configure your ASP.NET application, please visit
+  http://go.microsoft.com/fwlink/?LinkId=169433
+  -->
+<configuration>
+  <configSections>
+    <!-- For more information on Entity Framework configuration, visit http://go.microsoft.com/fwlink/?LinkID=237468 -->
+    <section name="entityFramework" type="System.Data.Entity.Internal.ConfigFile.EntityFrameworkSection, EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
+    <sectionGroup name="devExpress">
+      <section name="themes" type="DevExpress.Web.ThemesConfigurationSection, DevExpress.Web.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" requirePermission="false" />
+      <section name="compression" type="DevExpress.Web.CompressionConfigurationSection, DevExpress.Web.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" requirePermission="false" />
+      <section name="settings" type="DevExpress.Web.SettingsConfigurationSection, DevExpress.Web.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" requirePermission="false" />
+      <section name="errors" type="DevExpress.Web.ErrorsConfigurationSection, DevExpress.Web.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" requirePermission="false" />
+      <section name="resources" type="DevExpress.Web.ResourcesConfigurationSection, DevExpress.Web.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" requirePermission="false" />
+    </sectionGroup>
+  </configSections>
+  <appSettings>
+    <add key="webpages:Version" value="3.0.0.0" />
+    <add key="webpages:Enabled" value="false" />
+    <add key="PreserveLoginUrl" value="true" />
+    <add key="ClientValidationEnabled" value="true" />
+    <add key="UnobtrusiveJavaScriptEnabled" value="true" />
+    <add key="AuthConnStringLocal" value="data Source=.;Initial Catalog=DBSCBS;uid=sa;pwd=Rq+UIsz7uhUoTg9wHA27DA==;Pooling=false" />
+    <add key="BureauConnStringLocal" value="data Source=.;Initial Catalog=DBSBR;uid=sa;pwd=Rq+UIsz7uhUoTg9wHA27DA==;Pooling=false" />
+    <add key="AuthConnString" value="data Source=103.14.20.19\rentas;Initial Catalog=DBSCBS;uid=DBSCBSUSER;pwd=GGmU4XmtP1SGdjPlx9Rhhg==;Pooling=false" />
+    <add key="BureauConnString" value="data Source=103.14.20.19\rentas;Initial Catalog=DBSCBS;uid=DBSCBSUSER;pwd=GGmU4XmtP1SGdjPlx9Rhhg==;Pooling=false" />
+    <add key="dbTimeOut" value="600" />
+    <add key="TraceLevel" value="100" />
+    <add key="DecSplitQuery" value="True" />
+    <add key="MaxFileSize" value="2048000" />
+  </appSettings>
+  <connectionStrings />
+  <system.web>
+    <authentication mode="None" />
+    <compilation debug="true" targetFramework="4.5">
+      <assemblies>
+        <add assembly="DevExpress.Web.ASPxThemes.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+      </assemblies>
+    </compilation>
+    <httpRuntime targetFramework="4.5" />
+    <pages>
+      <namespaces>
+        <add namespace="System.Web.Helpers" />
+        <add namespace="System.Web.Mvc" />
+        <add namespace="System.Web.Mvc.Ajax" />
+        <add namespace="System.Web.Mvc.Html" />
+        <add namespace="System.Web.Optimization" />
+        <add namespace="System.Web.Routing" />
+        <add namespace="System.Web.WebPages" />
+        <add namespace="Microsoft.AspNet.Identity" />
+      </namespaces>
+      <controls>
+        <add assembly="Microsoft.AspNet.Web.Optimization.WebForms" namespace="Microsoft.AspNet.Web.Optimization.WebForms" tagPrefix="webopt" />
+      </controls>
+    </pages>
+    <membership>
+      <providers>
+        <!--
+	      ASP.NET Membership is disabled in this template. Please visit the following link http://go.microsoft.com/fwlink/?LinkId=301889 to learn about the ASP.NET Membership support in this template
+        -->
+        <clear />
+      </providers>
+    </membership>
+    <profile>
+      <providers>
+        <!--
+	      ASP.NET Membership Profile is disabled in this template. Please visit the following link http://go.microsoft.com/fwlink/?LinkId=301889 to learn about the ASP.NET Membership support in this template
+        -->
+        <clear />
+      </providers>
+    </profile>
+    <roleManager>
+      <!--
+	        ASP.NET Membership Role is disabled in this template. Please visit the following link http://go.microsoft.com/fwlink/?LinkId=301889 to learn about the ASP.NET Membership support in this template
+        -->
+      <providers>
+        <clear />
+      </providers>
+    </roleManager>
+    <!--
+            If you are deploying to a cloud environment that has multiple web server instances,
+            you should change session state mode from "InProc" to "Custom". In addition,
+            change the connection string named "DefaultConnection" to connect to an instance
+            of SQL Server (including SQL Azure and SQL  Compact) instead of to SQL Server Express.
+      -->
+    <sessionState mode="InProc" customProvider="DefaultSessionProvider">
+      <providers>
+        <add name="DefaultSessionProvider" type="System.Web.Providers.DefaultSessionStateProvider, System.Web.Providers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" connectionStringName="DefaultConnection" />
+      </providers>
+    </sessionState>
+    <httpModules>
+      <add type="DevExpress.Web.ASPxHttpHandlerModule, DevExpress.Web.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" name="ASPxHttpHandlerModule" />
+    </httpModules>
+    <httpHandlers>
+      <add type="DevExpress.Web.ASPxHttpHandlerModule, DevExpress.Web.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" verb="GET" path="DX.ashx" validate="false" />
+      <add type="DevExpress.Web.ASPxUploadProgressHttpHandler, DevExpress.Web.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" verb="GET,POST" path="ASPxUploadProgressHandlerPage.ashx" validate="false" />
+    </httpHandlers>
+  </system.web>
+  <system.webServer>
+    <validation validateIntegratedModeConfiguration="false" />
+    <modules>
+      <remove name="FormsAuthentication" />
+      <add type="DevExpress.Web.ASPxHttpHandlerModule, DevExpress.Web.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" name="ASPxHttpHandlerModule" />
+    </modules>
+    <handlers>
+      <remove name="ExtensionlessUrlHandler-Integrated-4.0" />
+      <remove name="OPTIONSVerbHandler" />
+      <remove name="TRACEVerbHandler" />
+      <add name="ExtensionlessUrlHandler-Integrated-4.0" path="*." verb="*" type="System.Web.Handlers.TransferRequestHandler" preCondition="integratedMode,runtimeVersionv4.0" />
+      <add type="DevExpress.Web.ASPxHttpHandlerModule, DevExpress.Web.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" verb="GET" path="DX.ashx" name="ASPxHttpHandlerModule" preCondition="integratedMode" />
+      <add type="DevExpress.Web.ASPxUploadProgressHttpHandler, DevExpress.Web.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" verb="GET,POST" path="ASPxUploadProgressHandlerPage.ashx" name="ASPxUploadProgressHandler" preCondition="integratedMode" />
+    </handlers>
+  </system.webServer>
+  <runtime>
+    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+      <dependentAssembly>
+        <assemblyIdentity name="Newtonsoft.Json" culture="neutral" publicKeyToken="30ad4fe6b2a6aeed" />
+        <bindingRedirect oldVersion="0.0.0.0-6.0.0.0" newVersion="6.0.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="WebGrease" culture="neutral" publicKeyToken="31bf3856ad364e35" />
+        <bindingRedirect oldVersion="0.0.0.0-1.5.2.14234" newVersion="1.5.2.14234" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="EntityFramework" publicKeyToken="b77a5c561934e089" />
+        <bindingRedirect oldVersion="0.0.0.0-6.0.0.0" newVersion="6.0.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.Owin" culture="neutral" publicKeyToken="31bf3856ad364e35" />
+        <bindingRedirect oldVersion="0.0.0.0-3.0.1.0" newVersion="3.0.1.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.Owin.Security.OAuth" culture="neutral" publicKeyToken="31bf3856ad364e35" />
+        <bindingRedirect oldVersion="0.0.0.0-3.0.1.0" newVersion="3.0.1.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.Owin.Security.Cookies" culture="neutral" publicKeyToken="31bf3856ad364e35" />
+        <bindingRedirect oldVersion="0.0.0.0-3.0.1.0" newVersion="3.0.1.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.Owin.Security" culture="neutral" publicKeyToken="31bf3856ad364e35" />
+        <bindingRedirect oldVersion="0.0.0.0-3.0.1.0" newVersion="3.0.1.0" />
+      </dependentAssembly>
+    </assemblyBinding>
+  </runtime>
+  <entityFramework>
+    <defaultConnectionFactory type="System.Data.Entity.Infrastructure.LocalDbConnectionFactory, EntityFramework">
+      <parameters>
+        <parameter value="mssqllocaldb" />
+      </parameters>
+    </defaultConnectionFactory>
+    <providers>
+      <provider invariantName="System.Data.SqlClient" type="System.Data.Entity.SqlServer.SqlProviderServices, EntityFramework.SqlServer" />
+    </providers>
+  </entityFramework>
+  <system.codedom>
+    <compilers>
+      <compiler language="c#;cs;csharp" extension=".cs" type="Microsoft.CodeDom.Providers.DotNetCompilerPlatform.CSharpCodeProvider, Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" warningLevel="4" compilerOptions="/langversion:6 /nowarn:1659;1699;1701" />
+      <compiler language="vb;vbs;visualbasic;vbscript" extension=".vb" type="Microsoft.CodeDom.Providers.DotNetCompilerPlatform.VBCodeProvider, Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" warningLevel="4" compilerOptions="/langversion:14 /nowarn:41008 /define:_MYTYPE=\&quot;Web\&quot; /optionInfer+" />
+    </compilers>
+  </system.codedom>
+  <devExpress>
+    <themes enableThemesAssembly="true" styleSheetTheme="" theme="" customThemeAssemblies="" baseColor="" font="" />
+    <compression enableHtmlCompression="false" enableCallbackCompression="true" enableResourceCompression="true" enableResourceMerging="true" />
+    <settings accessibilityCompliant="false" bootstrapMode="Bootstrap3" doctypeMode="Html5" rightToLeft="false" checkReferencesToExternalScripts="true" protectControlState="true" ieCompatibilityVersion="edge" />
+    <errors callbackErrorRedirectUrl="" />
+  </devExpress>
+</configuration>

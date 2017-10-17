@@ -1,0 +1,6 @@
+E:\Project\DBS DMS\source code\CBS.ImporterSvc\bin\Debug\DMS.CBS.ImporterSvc.exe.config
+E:\Project\DBS DMS\source code\CBS.ImporterSvc\bin\Debug\DMS.CBS.ImporterSvc.exe
+E:\Project\DBS DMS\source code\CBS.ImporterSvc\bin\Debug\DMS.CBS.ImporterSvc.pdb
+E:\Project\DBS DMS\source code\CBS.ImporterSvc\obj\Debug\CBS.ImporterSvc.csprojResolveAssemblyReference.cache
+E:\Project\DBS DMS\source code\CBS.ImporterSvc\obj\Debug\DMS.CBS.ImporterSvc.exe
+E:\Project\DBS DMS\source code\CBS.ImporterSvc\obj\Debug\DMS.CBS.ImporterSvc.pdb

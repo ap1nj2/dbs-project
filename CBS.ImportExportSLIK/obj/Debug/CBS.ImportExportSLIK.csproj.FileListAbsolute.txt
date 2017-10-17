@@ -1,0 +1,11 @@
+E:\Project\DBS DMS\source code\CBS.ImportExportSLIK\bin\Debug\CBS.ImportExportSLIK.dll
+E:\Project\DBS DMS\source code\CBS.ImportExportSLIK\bin\Debug\CBS.ImportExportSLIK.pdb
+E:\Project\DBS DMS\source code\CBS.ImportExportSLIK\bin\Debug\CBS.Common.dll
+E:\Project\DBS DMS\source code\CBS.ImportExportSLIK\bin\Debug\Newtonsoft.Json.dll
+E:\Project\DBS DMS\source code\CBS.ImportExportSLIK\bin\Debug\SLIK.Model.dll
+E:\Project\DBS DMS\source code\CBS.ImportExportSLIK\bin\Debug\CBS.Common.pdb
+E:\Project\DBS DMS\source code\CBS.ImportExportSLIK\bin\Debug\SLIK.Model.pdb
+E:\Project\DBS DMS\source code\CBS.ImportExportSLIK\bin\Debug\Newtonsoft.Json.xml
+E:\Project\DBS DMS\source code\CBS.ImportExportSLIK\obj\Debug\CBS.ImportExportSLIK.csprojResolveAssemblyReference.cache
+E:\Project\DBS DMS\source code\CBS.ImportExportSLIK\obj\Debug\CBS.ImportExportSLIK.dll
+E:\Project\DBS DMS\source code\CBS.ImportExportSLIK\obj\Debug\CBS.ImportExportSLIK.pdb

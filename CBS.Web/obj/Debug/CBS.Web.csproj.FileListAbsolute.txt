@@ -1,0 +1,2 @@
+E:\Project\DBS DMS\source code\CBS.Web\obj\Debug\CBS.Web.csprojResolveAssemblyReference.cache
+E:\Project\DBS DMS\source code\CBS.Web\obj\Debug\CBS.Web.dll.licenses

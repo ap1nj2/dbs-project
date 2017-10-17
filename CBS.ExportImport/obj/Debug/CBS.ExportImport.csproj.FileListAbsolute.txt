@@ -1,0 +1,17 @@
+E:\Project\DBS DMS\source code\CBS.ExportImport\obj\Debug\CBS.ExportImport.csprojResolveAssemblyReference.cache
+E:\Project\DBS DMS\source code\CBS.ExportImport\bin\Debug\DMS.CBS.ExportImport.dll
+E:\Project\DBS DMS\source code\CBS.ExportImport\bin\Debug\DMS.CBS.ExportImport.pdb
+E:\Project\DBS DMS\source code\CBS.ExportImport\bin\Debug\CBS.Common.dll
+E:\Project\DBS DMS\source code\CBS.ExportImport\bin\Debug\DMS.Framework.dll
+E:\Project\DBS DMS\source code\CBS.ExportImport\bin\Debug\DMS.Tools.dll
+E:\Project\DBS DMS\source code\CBS.ExportImport\bin\Debug\DMSControls.dll
+E:\Project\DBS DMS\source code\CBS.ExportImport\bin\Debug\Microsoft.SqlServer.Dts.Design.dll
+E:\Project\DBS DMS\source code\CBS.ExportImport\bin\Debug\Microsoft.SqlServer.ManagedDTS.dll
+E:\Project\DBS DMS\source code\CBS.ExportImport\bin\Debug\Newtonsoft.Json.dll
+E:\Project\DBS DMS\source code\CBS.ExportImport\bin\Debug\SLIK.Model.dll
+E:\Project\DBS DMS\source code\CBS.ExportImport\bin\Debug\CBS.Common.pdb
+E:\Project\DBS DMS\source code\CBS.ExportImport\bin\Debug\SLIK.Model.pdb
+E:\Project\DBS DMS\source code\CBS.ExportImport\bin\Debug\Newtonsoft.Json.pdb
+E:\Project\DBS DMS\source code\CBS.ExportImport\bin\Debug\Newtonsoft.Json.xml
+E:\Project\DBS DMS\source code\CBS.ExportImport\obj\Debug\DMS.CBS.ExportImport.dll
+E:\Project\DBS DMS\source code\CBS.ExportImport\obj\Debug\DMS.CBS.ExportImport.pdb

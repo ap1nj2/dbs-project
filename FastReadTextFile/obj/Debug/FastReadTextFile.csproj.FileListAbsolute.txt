@@ -1,0 +1,5 @@
+E:\Project\DBS DMS\source code\FastReadTextFile\bin\Debug\FastReadTextFile.exe.config
+E:\Project\DBS DMS\source code\FastReadTextFile\bin\Debug\FastReadTextFile.exe
+E:\Project\DBS DMS\source code\FastReadTextFile\bin\Debug\FastReadTextFile.pdb
+E:\Project\DBS DMS\source code\FastReadTextFile\obj\Debug\FastReadTextFile.exe
+E:\Project\DBS DMS\source code\FastReadTextFile\obj\Debug\FastReadTextFile.pdb

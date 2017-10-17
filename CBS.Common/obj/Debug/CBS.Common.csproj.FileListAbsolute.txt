@@ -1,0 +1,5 @@
+E:\Project\DBS DMS\source code\CBS.Common\bin\Debug\CBS.Common.dll
+E:\Project\DBS DMS\source code\CBS.Common\bin\Debug\CBS.Common.pdb
+E:\Project\DBS DMS\source code\CBS.Common\obj\Debug\CBS.Common.csprojResolveAssemblyReference.cache
+E:\Project\DBS DMS\source code\CBS.Common\obj\Debug\CBS.Common.dll
+E:\Project\DBS DMS\source code\CBS.Common\obj\Debug\CBS.Common.pdb
