@@ -3,3 +3,9 @@ E:\Project\DBS DMS\source code\FastReadTextFile\bin\Debug\FastReadTextFile.exe
 E:\Project\DBS DMS\source code\FastReadTextFile\bin\Debug\FastReadTextFile.pdb
 E:\Project\DBS DMS\source code\FastReadTextFile\obj\Debug\FastReadTextFile.exe
 E:\Project\DBS DMS\source code\FastReadTextFile\obj\Debug\FastReadTextFile.pdb
+D:\Data Chandra\coba\SC\dbs-project\FastReadTextFile\bin\Debug\FastReadTextFile.exe.config
+D:\Data Chandra\coba\SC\dbs-project\FastReadTextFile\bin\Debug\FastReadTextFile.exe
+D:\Data Chandra\coba\SC\dbs-project\FastReadTextFile\bin\Debug\FastReadTextFile.pdb
+D:\Data Chandra\coba\SC\dbs-project\FastReadTextFile\obj\Debug\FastReadTextFile.csprojResolveAssemblyReference.cache
+D:\Data Chandra\coba\SC\dbs-project\FastReadTextFile\obj\Debug\FastReadTextFile.exe
+D:\Data Chandra\coba\SC\dbs-project\FastReadTextFile\obj\Debug\FastReadTextFile.pdb

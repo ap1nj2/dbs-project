@@ -20,3 +20,25 @@ E:\Project\DBS DMS\source code\Tofa.Test\bin\Debug\Newtonsoft.Json.pdb
 E:\Project\DBS DMS\source code\Tofa.Test\bin\Debug\Newtonsoft.Json.xml
 E:\Project\DBS DMS\source code\Tofa.Test\obj\Debug\Tofa.Test.exe
 E:\Project\DBS DMS\source code\Tofa.Test\obj\Debug\Tofa.Test.pdb
+D:\Data Chandra\coba\SC\dbs-project\Tofa.Test\bin\Debug\Tofa.Test.exe.config
+D:\Data Chandra\coba\SC\dbs-project\Tofa.Test\bin\Debug\Tofa.Test.exe
+D:\Data Chandra\coba\SC\dbs-project\Tofa.Test\bin\Debug\Tofa.Test.pdb
+D:\Data Chandra\coba\SC\dbs-project\Tofa.Test\bin\Debug\CBS.Common.dll
+D:\Data Chandra\coba\SC\dbs-project\Tofa.Test\bin\Debug\DMS.CBS.ExportImport.dll
+D:\Data Chandra\coba\SC\dbs-project\Tofa.Test\bin\Debug\SLIK.Model.dll
+D:\Data Chandra\coba\SC\dbs-project\Tofa.Test\bin\Debug\DMS.Tools.dll
+D:\Data Chandra\coba\SC\dbs-project\Tofa.Test\bin\Debug\Newtonsoft.Json.dll
+D:\Data Chandra\coba\SC\dbs-project\Tofa.Test\bin\Debug\DMS.Framework.dll
+D:\Data Chandra\coba\SC\dbs-project\Tofa.Test\bin\Debug\DMSControls.dll
+D:\Data Chandra\coba\SC\dbs-project\Tofa.Test\bin\Debug\CBS.Common.pdb
+D:\Data Chandra\coba\SC\dbs-project\Tofa.Test\bin\Debug\DMS.CBS.ExportImport.pdb
+D:\Data Chandra\coba\SC\dbs-project\Tofa.Test\bin\Debug\SLIK.Model.pdb
+D:\Data Chandra\coba\SC\dbs-project\Tofa.Test\bin\Debug\Newtonsoft.Json.pdb
+D:\Data Chandra\coba\SC\dbs-project\Tofa.Test\bin\Debug\Newtonsoft.Json.xml
+D:\Data Chandra\coba\SC\dbs-project\Tofa.Test\obj\Debug\Tofa.Test.csprojResolveAssemblyReference.cache
+D:\Data Chandra\coba\SC\dbs-project\Tofa.Test\obj\Debug\Tofa.Test.Form1.resources
+D:\Data Chandra\coba\SC\dbs-project\Tofa.Test\obj\Debug\Tofa.Test.FrmEncrypt.resources
+D:\Data Chandra\coba\SC\dbs-project\Tofa.Test\obj\Debug\Tofa.Test.Properties.Resources.resources
+D:\Data Chandra\coba\SC\dbs-project\Tofa.Test\obj\Debug\Tofa.Test.csproj.GenerateResource.Cache
+D:\Data Chandra\coba\SC\dbs-project\Tofa.Test\obj\Debug\Tofa.Test.exe
+D:\Data Chandra\coba\SC\dbs-project\Tofa.Test\obj\Debug\Tofa.Test.pdb

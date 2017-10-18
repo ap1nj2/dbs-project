@@ -17,7 +17,7 @@ namespace CBS.ImportExportSLIK
         public class Person
         {
             public string Name { get; set; }
-            public string  Address { get; set; }
+            public string Address { get; set; }
         }
 
         private void SaveSLIKDoc(string appId, string docCode, DbConnection conn)
@@ -51,16 +51,13 @@ namespace CBS.ImportExportSLIK
                 //TODO: validate format file
 
                 string json = File.ReadAllText(slikFilePath);
-                List<Person> list = null;
+                List<SLIKViewModel> list = null;
                 //JavaScriptSerializer js = new JavaScriptSerializer();
 
                 if(!string.IsNullOrEmpty(json))
-                    list = JsonConvert.DeserializeObject<List<Person>>(json);
+                    list = JsonConvert.DeserializeObject<List<SLIKViewModel>>(json);
+                
 
-                foreach(var _obj in list)
-                {
-
-                }
 
             } //harus dihapus klo using db balik
             #region using db

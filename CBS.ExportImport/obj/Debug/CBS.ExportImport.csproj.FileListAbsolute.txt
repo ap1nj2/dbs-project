@@ -15,3 +15,22 @@ E:\Project\DBS DMS\source code\CBS.ExportImport\bin\Debug\Newtonsoft.Json.pdb
 E:\Project\DBS DMS\source code\CBS.ExportImport\bin\Debug\Newtonsoft.Json.xml
 E:\Project\DBS DMS\source code\CBS.ExportImport\obj\Debug\DMS.CBS.ExportImport.dll
 E:\Project\DBS DMS\source code\CBS.ExportImport\obj\Debug\DMS.CBS.ExportImport.pdb
+D:\Data Chandra\coba\SC\dbs-project\CBS.ExportImport\bin\Debug\DMS.CBS.ExportImport.dll
+D:\Data Chandra\coba\SC\dbs-project\CBS.ExportImport\bin\Debug\DMS.CBS.ExportImport.pdb
+D:\Data Chandra\coba\SC\dbs-project\CBS.ExportImport\bin\Debug\CBS.Common.dll
+D:\Data Chandra\coba\SC\dbs-project\CBS.ExportImport\bin\Debug\DMS.Framework.dll
+D:\Data Chandra\coba\SC\dbs-project\CBS.ExportImport\bin\Debug\DMS.Tools.dll
+D:\Data Chandra\coba\SC\dbs-project\CBS.ExportImport\bin\Debug\DMSControls.dll
+D:\Data Chandra\coba\SC\dbs-project\CBS.ExportImport\bin\Debug\Microsoft.SqlServer.Dts.Design.dll
+D:\Data Chandra\coba\SC\dbs-project\CBS.ExportImport\bin\Debug\Microsoft.SqlServer.ManagedDTS.dll
+D:\Data Chandra\coba\SC\dbs-project\CBS.ExportImport\bin\Debug\Newtonsoft.Json.dll
+D:\Data Chandra\coba\SC\dbs-project\CBS.ExportImport\bin\Debug\SLIK.Model.dll
+D:\Data Chandra\coba\SC\dbs-project\CBS.ExportImport\bin\Debug\Microsoft.SqlServer.DTSRuntimeWrap.dll
+D:\Data Chandra\coba\SC\dbs-project\CBS.ExportImport\bin\Debug\Microsoft.SqlServer.PipelineHost.dll
+D:\Data Chandra\coba\SC\dbs-project\CBS.ExportImport\bin\Debug\CBS.Common.pdb
+D:\Data Chandra\coba\SC\dbs-project\CBS.ExportImport\bin\Debug\SLIK.Model.pdb
+D:\Data Chandra\coba\SC\dbs-project\CBS.ExportImport\bin\Debug\Newtonsoft.Json.pdb
+D:\Data Chandra\coba\SC\dbs-project\CBS.ExportImport\bin\Debug\Newtonsoft.Json.xml
+D:\Data Chandra\coba\SC\dbs-project\CBS.ExportImport\obj\Debug\CBS.ExportImport.csprojResolveAssemblyReference.cache
+D:\Data Chandra\coba\SC\dbs-project\CBS.ExportImport\obj\Debug\DMS.CBS.ExportImport.dll
+D:\Data Chandra\coba\SC\dbs-project\CBS.ExportImport\obj\Debug\DMS.CBS.ExportImport.pdb

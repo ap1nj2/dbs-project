@@ -57,6 +57,7 @@
   <ItemGroup>
     <Compile Include="ImportSLIK.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SLIKViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CBS.Common\CBS.Common.csproj">

@@ -9,3 +9,14 @@ E:\Project\DBS DMS\source code\CBS.ImportExportSLIK\bin\Debug\Newtonsoft.Json.xm
 E:\Project\DBS DMS\source code\CBS.ImportExportSLIK\obj\Debug\CBS.ImportExportSLIK.csprojResolveAssemblyReference.cache
 E:\Project\DBS DMS\source code\CBS.ImportExportSLIK\obj\Debug\CBS.ImportExportSLIK.dll
 E:\Project\DBS DMS\source code\CBS.ImportExportSLIK\obj\Debug\CBS.ImportExportSLIK.pdb
+D:\Data Chandra\coba\SC\dbs-project\CBS.ImportExportSLIK\bin\Debug\CBS.ImportExportSLIK.dll
+D:\Data Chandra\coba\SC\dbs-project\CBS.ImportExportSLIK\bin\Debug\CBS.ImportExportSLIK.pdb
+D:\Data Chandra\coba\SC\dbs-project\CBS.ImportExportSLIK\bin\Debug\CBS.Common.dll
+D:\Data Chandra\coba\SC\dbs-project\CBS.ImportExportSLIK\bin\Debug\Newtonsoft.Json.dll
+D:\Data Chandra\coba\SC\dbs-project\CBS.ImportExportSLIK\bin\Debug\SLIK.Model.dll
+D:\Data Chandra\coba\SC\dbs-project\CBS.ImportExportSLIK\bin\Debug\CBS.Common.pdb
+D:\Data Chandra\coba\SC\dbs-project\CBS.ImportExportSLIK\bin\Debug\SLIK.Model.pdb
+D:\Data Chandra\coba\SC\dbs-project\CBS.ImportExportSLIK\bin\Debug\Newtonsoft.Json.xml
+D:\Data Chandra\coba\SC\dbs-project\CBS.ImportExportSLIK\obj\Debug\CBS.ImportExportSLIK.csprojResolveAssemblyReference.cache
+D:\Data Chandra\coba\SC\dbs-project\CBS.ImportExportSLIK\obj\Debug\CBS.ImportExportSLIK.dll
+D:\Data Chandra\coba\SC\dbs-project\CBS.ImportExportSLIK\obj\Debug\CBS.ImportExportSLIK.pdb

@@ -4,3 +4,9 @@ E:\Project\DBS DMS\source code\CBS.ImporterSvc\bin\Debug\DMS.CBS.ImporterSvc.pdb
 E:\Project\DBS DMS\source code\CBS.ImporterSvc\obj\Debug\CBS.ImporterSvc.csprojResolveAssemblyReference.cache
 E:\Project\DBS DMS\source code\CBS.ImporterSvc\obj\Debug\DMS.CBS.ImporterSvc.exe
 E:\Project\DBS DMS\source code\CBS.ImporterSvc\obj\Debug\DMS.CBS.ImporterSvc.pdb
+D:\Data Chandra\coba\SC\dbs-project\CBS.ImporterSvc\bin\Debug\DMS.CBS.ImporterSvc.exe.config
+D:\Data Chandra\coba\SC\dbs-project\CBS.ImporterSvc\bin\Debug\DMS.CBS.ImporterSvc.exe
+D:\Data Chandra\coba\SC\dbs-project\CBS.ImporterSvc\bin\Debug\DMS.CBS.ImporterSvc.pdb
+D:\Data Chandra\coba\SC\dbs-project\CBS.ImporterSvc\obj\Debug\CBS.ImporterSvc.csprojResolveAssemblyReference.cache
+D:\Data Chandra\coba\SC\dbs-project\CBS.ImporterSvc\obj\Debug\DMS.CBS.ImporterSvc.exe
+D:\Data Chandra\coba\SC\dbs-project\CBS.ImporterSvc\obj\Debug\DMS.CBS.ImporterSvc.pdb
