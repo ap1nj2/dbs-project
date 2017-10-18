@@ -32,3 +32,5 @@ D:\Data Chandra\coba\SC\dbs-project\Chandra.Coba\obj\Debug\Chandra.Coba.Properti
 D:\Data Chandra\coba\SC\dbs-project\Chandra.Coba\obj\Debug\Chandra.Coba.csproj.GenerateResource.Cache
 D:\Data Chandra\coba\SC\dbs-project\Chandra.Coba\bin\Debug\SLIK.Model.dll
 D:\Data Chandra\coba\SC\dbs-project\Chandra.Coba\bin\Debug\SLIK.Model.pdb
+E:\Project\DBS DMS\source code\Chandra.Coba\bin\Debug\SLIK.Model.dll
+E:\Project\DBS DMS\source code\Chandra.Coba\bin\Debug\SLIK.Model.pdb

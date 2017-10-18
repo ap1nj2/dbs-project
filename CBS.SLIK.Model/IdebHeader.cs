@@ -40,7 +40,7 @@ namespace SLIK.Model
 
         [JsonProperty(PropertyName = "tanggalPermintaan")]
         public string TanggalPermintaanString { get; set; }
-
+        
         public DateTime TanggalPermintaan
         {
             get { return DateTime.ParseExact(TanggalPermintaanString, "yyyyMMddHHmmss", null); }

@@ -3,7 +3,6 @@ E:\Project\DBS DMS\source code\CBS.SLIK.Model\bin\Debug\SLIK.Model.pdb
 E:\Project\DBS DMS\source code\CBS.SLIK.Model\bin\Debug\Newtonsoft.Json.dll
 E:\Project\DBS DMS\source code\CBS.SLIK.Model\bin\Debug\Newtonsoft.Json.pdb
 E:\Project\DBS DMS\source code\CBS.SLIK.Model\bin\Debug\Newtonsoft.Json.xml
-E:\Project\DBS DMS\source code\CBS.SLIK.Model\obj\Debug\SLIK.Model.csprojResolveAssemblyReference.cache
 E:\Project\DBS DMS\source code\CBS.SLIK.Model\obj\Debug\SLIK.Model.dll
 E:\Project\DBS DMS\source code\CBS.SLIK.Model\obj\Debug\SLIK.Model.pdb
 D:\Data Chandra\coba\SC\dbs-project\CBS.SLIK.Model\bin\Debug\SLIK.Model.dll
@@ -14,3 +13,4 @@ D:\Data Chandra\coba\SC\dbs-project\CBS.SLIK.Model\bin\Debug\Newtonsoft.Json.xml
 D:\Data Chandra\coba\SC\dbs-project\CBS.SLIK.Model\obj\Debug\SLIK.Model.csprojResolveAssemblyReference.cache
 D:\Data Chandra\coba\SC\dbs-project\CBS.SLIK.Model\obj\Debug\SLIK.Model.dll
 D:\Data Chandra\coba\SC\dbs-project\CBS.SLIK.Model\obj\Debug\SLIK.Model.pdb
+E:\Project\DBS DMS\source code\CBS.SLIK.Model\obj\Debug\SLIK.Model.csprojResolveAssemblyReference.cache

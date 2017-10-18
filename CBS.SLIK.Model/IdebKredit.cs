@@ -69,7 +69,12 @@ namespace SLIK.Model
         public string NoRekening { get; set; }
 
         [JsonProperty(PropertyName = "baruPerpanjangan")]
-        public bool BaruPerpanjangan { get; set; }
+        private string BaruPerpanjanganHasil { get; set; }
+
+        public bool BaruPerpanjangan {
+            get { return (BaruPerpanjanganHasil == "1") ? true : false; }
+            set { }
+        }
 
         [JsonProperty(PropertyName = "noAkadAwal")]
         public string NoAkadAwal { get; set; }

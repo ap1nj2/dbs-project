@@ -52,11 +52,28 @@ namespace CBS.ImportExportSLIK
 
                 string json = File.ReadAllText(slikFilePath);
                 List<SLIKViewModel> list = null;
-                //JavaScriptSerializer js = new JavaScriptSerializer();
 
-                if(!string.IsNullOrEmpty(json))
-                    list = JsonConvert.DeserializeObject<List<SLIKViewModel>>(json);
+                //try
+                //{
+                //    JObject.Parse(json.Trim());
+                //}
+                //catch (JsonReaderException jex)
+                //{
+                //    Console.Write(jex.Message);
+                //}
                 
+                var setting = new JsonSerializerSettings
+                {
+                    NullValueHandling = NullValueHandling.Ignore
+                };
+
+                if (!string.IsNullOrEmpty(json))
+                    list = JsonConvert.DeserializeObject<List<SLIKViewModel>>(json, setting);
+
+                foreach(var item in list)
+                {
+                    //insert into header
+                }
 
 
             } //harus dihapus klo using db balik
