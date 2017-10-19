@@ -1,10 +1,10 @@
-E:\Project\DBS DMS\source code\CBS.Common\bin\Debug\CBS.Common.dll
-E:\Project\DBS DMS\source code\CBS.Common\bin\Debug\CBS.Common.pdb
-E:\Project\DBS DMS\source code\CBS.Common\obj\Debug\CBS.Common.csprojResolveAssemblyReference.cache
-E:\Project\DBS DMS\source code\CBS.Common\obj\Debug\CBS.Common.dll
-E:\Project\DBS DMS\source code\CBS.Common\obj\Debug\CBS.Common.pdb
 D:\Data Chandra\coba\SC\dbs-project\CBS.Common\bin\Debug\CBS.Common.dll
 D:\Data Chandra\coba\SC\dbs-project\CBS.Common\bin\Debug\CBS.Common.pdb
 D:\Data Chandra\coba\SC\dbs-project\CBS.Common\obj\Debug\CBS.Common.csprojResolveAssemblyReference.cache
 D:\Data Chandra\coba\SC\dbs-project\CBS.Common\obj\Debug\CBS.Common.dll
 D:\Data Chandra\coba\SC\dbs-project\CBS.Common\obj\Debug\CBS.Common.pdb
+E:\Project\DBS DMS\source code\CBS.Common\bin\Debug\CBS.Common.dll
+E:\Project\DBS DMS\source code\CBS.Common\bin\Debug\CBS.Common.pdb
+E:\Project\DBS DMS\source code\CBS.Common\obj\Debug\CBS.Common.csprojResolveAssemblyReference.cache
+E:\Project\DBS DMS\source code\CBS.Common\obj\Debug\CBS.Common.dll
+E:\Project\DBS DMS\source code\CBS.Common\obj\Debug\CBS.Common.pdb

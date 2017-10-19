@@ -1,19 +1,3 @@
-E:\Project\DBS DMS\source code\Chandra.Coba\bin\Debug\Chandra.Coba.exe.config
-E:\Project\DBS DMS\source code\Chandra.Coba\bin\Debug\Chandra.Coba.exe
-E:\Project\DBS DMS\source code\Chandra.Coba\bin\Debug\Chandra.Coba.pdb
-E:\Project\DBS DMS\source code\Chandra.Coba\bin\Debug\CBS.ImportExportSLIK.dll
-E:\Project\DBS DMS\source code\Chandra.Coba\bin\Debug\DMS.Tools.dll
-E:\Project\DBS DMS\source code\Chandra.Coba\bin\Debug\DMS.Framework.dll
-E:\Project\DBS DMS\source code\Chandra.Coba\bin\Debug\DMSControls.dll
-E:\Project\DBS DMS\source code\Chandra.Coba\bin\Debug\CBS.ImportExportSLIK.pdb
-E:\Project\DBS DMS\source code\Chandra.Coba\obj\Debug\Chandra.Coba.csprojResolveAssemblyReference.cache
-E:\Project\DBS DMS\source code\Chandra.Coba\obj\Debug\Chandra.Coba.Form1.resources
-E:\Project\DBS DMS\source code\Chandra.Coba\obj\Debug\Chandra.Coba.Properties.Resources.resources
-E:\Project\DBS DMS\source code\Chandra.Coba\obj\Debug\Chandra.Coba.csproj.GenerateResource.Cache
-E:\Project\DBS DMS\source code\Chandra.Coba\obj\Debug\Chandra.Coba.exe
-E:\Project\DBS DMS\source code\Chandra.Coba\obj\Debug\Chandra.Coba.pdb
-E:\Project\DBS DMS\source code\Chandra.Coba\bin\Debug\Newtonsoft.Json.dll
-E:\Project\DBS DMS\source code\Chandra.Coba\bin\Debug\Newtonsoft.Json.xml
 D:\Data Chandra\coba\SC\dbs-project\Chandra.Coba\bin\Debug\Chandra.Coba.exe.config
 D:\Data Chandra\coba\SC\dbs-project\Chandra.Coba\obj\Debug\Chandra.Coba.exe
 D:\Data Chandra\coba\SC\dbs-project\Chandra.Coba\obj\Debug\Chandra.Coba.pdb
@@ -32,5 +16,23 @@ D:\Data Chandra\coba\SC\dbs-project\Chandra.Coba\obj\Debug\Chandra.Coba.Properti
 D:\Data Chandra\coba\SC\dbs-project\Chandra.Coba\obj\Debug\Chandra.Coba.csproj.GenerateResource.Cache
 D:\Data Chandra\coba\SC\dbs-project\Chandra.Coba\bin\Debug\SLIK.Model.dll
 D:\Data Chandra\coba\SC\dbs-project\Chandra.Coba\bin\Debug\SLIK.Model.pdb
+E:\Project\DBS DMS\source code\Chandra.Coba\bin\Debug\Chandra.Coba.exe.config
+E:\Project\DBS DMS\source code\Chandra.Coba\bin\Debug\Chandra.Coba.exe
+E:\Project\DBS DMS\source code\Chandra.Coba\bin\Debug\Chandra.Coba.pdb
+E:\Project\DBS DMS\source code\Chandra.Coba\bin\Debug\CBS.ImportExportSLIK.dll
+E:\Project\DBS DMS\source code\Chandra.Coba\bin\Debug\DMS.Tools.dll
+E:\Project\DBS DMS\source code\Chandra.Coba\bin\Debug\Newtonsoft.Json.dll
 E:\Project\DBS DMS\source code\Chandra.Coba\bin\Debug\SLIK.Model.dll
+E:\Project\DBS DMS\source code\Chandra.Coba\bin\Debug\DMS.Framework.dll
+E:\Project\DBS DMS\source code\Chandra.Coba\bin\Debug\DMSControls.dll
+E:\Project\DBS DMS\source code\Chandra.Coba\bin\Debug\CBS.ImportExportSLIK.pdb
+E:\Project\DBS DMS\source code\Chandra.Coba\bin\Debug\Newtonsoft.Json.xml
 E:\Project\DBS DMS\source code\Chandra.Coba\bin\Debug\SLIK.Model.pdb
+E:\Project\DBS DMS\source code\Chandra.Coba\obj\Debug\Chandra.Coba.csprojResolveAssemblyReference.cache
+E:\Project\DBS DMS\source code\Chandra.Coba\obj\Debug\Chandra.Coba.Form1.resources
+E:\Project\DBS DMS\source code\Chandra.Coba\obj\Debug\Chandra.Coba.Properties.Resources.resources
+E:\Project\DBS DMS\source code\Chandra.Coba\obj\Debug\Chandra.Coba.csproj.GenerateResource.Cache
+E:\Project\DBS DMS\source code\Chandra.Coba\obj\Debug\Chandra.Coba.exe
+E:\Project\DBS DMS\source code\Chandra.Coba\obj\Debug\Chandra.Coba.pdb
+E:\Project\DBS DMS\source code\Chandra.Coba\bin\Debug\AutoMapper.dll
+E:\Project\DBS DMS\source code\Chandra.Coba\bin\Debug\AutoMapper.xml

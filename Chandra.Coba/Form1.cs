@@ -39,7 +39,7 @@ namespace Chandra.Coba
         private void button2_Click(object sender, EventArgs e)
         {
             ImportSLIK importer = new ImportSLIK();
-            importer.ImportSLIKinputFile(txtSLIKFilePath.Text, string.Empty, 600);
+            importer.ImportIdebText(txtSLIKFilePath.Text);
         }
     }
 }
