@@ -36,3 +36,5 @@ E:\Project\DBS DMS\source code\Chandra.Coba\obj\Debug\Chandra.Coba.exe
 E:\Project\DBS DMS\source code\Chandra.Coba\obj\Debug\Chandra.Coba.pdb
 E:\Project\DBS DMS\source code\Chandra.Coba\bin\Debug\AutoMapper.dll
 E:\Project\DBS DMS\source code\Chandra.Coba\bin\Debug\AutoMapper.xml
+D:\Data Chandra\coba\SC\dbs-project\Chandra.Coba\bin\Debug\AutoMapper.dll
+D:\Data Chandra\coba\SC\dbs-project\Chandra.Coba\bin\Debug\AutoMapper.xml

@@ -178,7 +178,8 @@ namespace CBS.ImportExportSLIK
 
                     using (DbConnection db = new DbConnection(conn))
                     {
-                        //insert to header
+
+                        #region insert to header
                         NameValueCollection keysHeader = new NameValueCollection();
                         NameValueCollection fieldHeader = new NameValueCollection();
                         Random rnd = new Random();
@@ -198,8 +199,40 @@ namespace CBS.ImportExportSLIK
                         staticFramework.saveNVC(fieldHeader, "TotalBagian", iHeader.TotalBagian);
                         staticFramework.saveNVC(fieldHeader, "NomorBagian", iHeader.NomorBagian);
                         staticFramework.save(fieldHeader, keysHeader,"Ideb",db);
+                        #endregion
+                        
+                        #region insert to saveSearchParamate
+                        keysHeader = new NameValueCollection();
+                        fieldHeader = new NameValueCollection();
 
-                        //insert perusahaaan
+                        staticFramework.saveNVC(keysHeader, "Idebid", no.ToString());
+                        staticFramework.saveNVC(fieldHeader, "ReqId", "123");
+                        staticFramework.saveNVC(fieldHeader, "Seq", "1234");
+                        staticFramework.saveNVC(fieldHeader, "KodeReferensiPengguna", icorpSearch.NamaBadanUsaha);
+                        staticFramework.saveNVC(fieldHeader, "TanggalHasil", icorpSearch.Npwp);
+                        staticFramework.saveNVC(fieldHeader, "IdPenggunaPermintaan", icorpSearch.TempatPendirian);
+                        staticFramework.saveNVC(fieldHeader, "IdPenggunaPermintaan", icorpSearch.TanggalAktaPendirian.ToString());
+                        staticFramework.saveNVC(fieldHeader, "DibuatOleh", icorpSearch.NomorAktaPendirian);
+                        staticFramework.save(fieldHeader, keysHeader, "Ideb", db);
+                        #endregion
+
+                        #region insert into Idecorpdata
+                        keysHeader = new NameValueCollection();
+                        fieldHeader = new NameValueCollection();
+                        foreach (var item in icorpDt)
+                        {
+                            staticFramework.saveNVC(keysHeader, "Idebid", no.ToString());
+                            staticFramework.saveNVC(fieldHeader, "ReqId", "123");
+                            staticFramework.saveNVC(fieldHeader, "Seq", "1234");
+                            staticFramework.saveNVC(fieldHeader, "KodeReferensiPengguna", item.DebtectorId);
+                            staticFramework.saveNVC(fieldHeader, "TanggalHasil", item.DebtectorIdebId);
+                            staticFramework.saveNVC(fieldHeader, "IdPenggunaPermintaan", item.NamaDebitur);
+                            staticFramework.saveNVC(fieldHeader, "IdPenggunaPermintaan", item.NamaLengkap);
+                            staticFramework.saveNVC(fieldHeader, "DibuatOleh", item.Npwp);
+                            staticFramework.save(fieldHeader, keysHeader, "Ideb", db);
+                        }
+                        #endregion
+
 
                     }
                 }
