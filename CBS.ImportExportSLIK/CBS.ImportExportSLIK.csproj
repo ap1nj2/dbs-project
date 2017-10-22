@@ -31,13 +31,16 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DMS.Framework">
-      <HintPath>..\..\..\DBS\Lib\DMS.Framework.dll</HintPath>
+      <HintPath>..\Lib\DMS.Framework.dll</HintPath>
     </Reference>
     <Reference Include="DMS.Tools">
-      <HintPath>..\..\..\DBS\Lib\DMS.Tools.dll</HintPath>
+      <HintPath>..\Lib\DMS.Tools.dll</HintPath>
     </Reference>
     <Reference Include="DMSControls">
-      <HintPath>..\..\..\DBS\Lib\DMSControls.dll</HintPath>
+      <HintPath>..\Lib\DMSControls.dll</HintPath>
+    </Reference>
+    <Reference Include="IMKAHFA">
+      <HintPath>..\Lib\IMKAHFA.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>

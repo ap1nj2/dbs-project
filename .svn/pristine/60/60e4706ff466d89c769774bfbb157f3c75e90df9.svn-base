@@ -1,0 +1,11 @@
+﻿.content {
+    max-width: 500px;
+    margin: auto;    
+    padding: 10px;
+}
+
+.border {
+    border-radius: 25px;
+    border: 2px solid blue;
+    padding: 10px;     
+}

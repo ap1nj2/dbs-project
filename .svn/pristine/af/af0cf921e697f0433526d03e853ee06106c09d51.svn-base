@@ -1,0 +1,1510 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DBSCBSModelStoreContainer" CdmEntityContainer="DBSCBSEntities">
+    <EntitySetMapping Name="Apps">
+      <EntityTypeMapping TypeName="DBSCBSModel.App">
+        <MappingFragment StoreEntitySet="App">
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="DataSource" ColumnName="DataSource" />
+          <ScalarProperty Name="BranchId" ColumnName="BranchId" />
+          <ScalarProperty Name="SourceCd" ColumnName="SourceCd" />
+          <ScalarProperty Name="CampaignCd" ColumnName="CampaignCd" />
+          <ScalarProperty Name="LoanCentreCd" ColumnName="LoanCentreCd" />
+          <ScalarProperty Name="AgentCd" ColumnName="AgentCd" />
+          <ScalarProperty Name="SalesCd" ColumnName="SalesCd" />
+          <ScalarProperty Name="MgmCd" ColumnName="MgmCd" />
+          <ScalarProperty Name="Org" ColumnName="Org" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="OriginAppId" ColumnName="OriginAppId" />
+          <ScalarProperty Name="AppRefNo" ColumnName="AppRefNo" />
+          <ScalarProperty Name="ReceiptDate" ColumnName="ReceiptDate" />
+          <ScalarProperty Name="SolicitationId" ColumnName="SolicitationId" />
+          <ScalarProperty Name="VIPIndicator" ColumnName="VIPIndicator" />
+          <ScalarProperty Name="UseCreditDesired" ColumnName="UseCreditDesired" />
+          <ScalarProperty Name="ProcCradleToGrave" ColumnName="ProcCradleToGrave" />
+          <ScalarProperty Name="CreateCustRecord" ColumnName="CreateCustRecord" />
+          <ScalarProperty Name="CreateRelRecord" ColumnName="CreateRelRecord" />
+          <ScalarProperty Name="RelCd" ColumnName="RelCd" />
+          <ScalarProperty Name="CreateBaseSegRecord" ColumnName="CreateBaseSegRecord" />
+          <ScalarProperty Name="SameCust" ColumnName="SameCust" />
+          <ScalarProperty Name="EmbMethodCd" ColumnName="EmbMethodCd" />
+          <ScalarProperty Name="BaseSegCd" ColumnName="BaseSegCd" />
+          <ScalarProperty Name="CardSchemeCd" ColumnName="CardSchemeCd" />
+          <ScalarProperty Name="LoanPlanNo" ColumnName="LoanPlanNo" />
+          <ScalarProperty Name="PrimaryAcc" ColumnName="PrimaryAcc" />
+          <ScalarProperty Name="LoanRefNo" ColumnName="LoanRefNo" />
+          <ScalarProperty Name="RelTypeIndCd" ColumnName="RelTypeIndCd" />
+          <ScalarProperty Name="ProcessTypeCd" ColumnName="ProcessTypeCd" />
+          <ScalarProperty Name="AlgoProxyIncTest" ColumnName="AlgoProxyIncTest" />
+          <ScalarProperty Name="AlgoSegTest" ColumnName="AlgoSegTest" />
+          <ScalarProperty Name="AlgoScoreTest" ColumnName="AlgoScoreTest" />
+          <ScalarProperty Name="AlgoTestTrack" ColumnName="AlgoTestTrack" />
+          <ScalarProperty Name="PLNameOfBank" ColumnName="PLNameOfBank" />
+          <ScalarProperty Name="CustConsent" ColumnName="CustConsent" />
+          <ScalarProperty Name="MarcomConsent" ColumnName="MarcomConsent" />
+          <ScalarProperty Name="UpfrontReject" ColumnName="UpfrontReject" />
+          <ScalarProperty Name="ExcludeIndustry" ColumnName="ExcludeIndustry" />
+          <ScalarProperty Name="PLOptDBSMUE" ColumnName="PLOptDBSMUE" />
+          <ScalarProperty Name="CCOptDBSMUE" ColumnName="CCOptDBSMUE" />
+          <ScalarProperty Name="MLOptDBSMUE" ColumnName="MLOptDBSMUE" />
+          <ScalarProperty Name="SignatureDate" ColumnName="SignatureDate" />
+          <ScalarProperty Name="AreaScore" ColumnName="AreaScore" />
+          <ScalarProperty Name="PSCd" ColumnName="PSCd" />
+          <ScalarProperty Name="CustType" ColumnName="CustType" />
+          <ScalarProperty Name="TopupType" ColumnName="TopupType" />
+          <ScalarProperty Name="OldestMOB" ColumnName="OldestMOB" />
+          <ScalarProperty Name="OriginAccNo" ColumnName="OriginAccNo" />
+          <ScalarProperty Name="DiscFlag" ColumnName="DiscFlag" />
+          <ScalarProperty Name="PINPIDPI2Flag" ColumnName="PINPIDPI2Flag" />
+          <ScalarProperty Name="RelWithBanks" ColumnName="RelWithBanks" />
+          <ScalarProperty Name="NeedProbing" ColumnName="NeedProbing" />
+          <ScalarProperty Name="ProbingDetail" ColumnName="ProbingDetail" />
+          <ScalarProperty Name="ProbingDetail2" ColumnName="ProbingDetail2" />
+          <ScalarProperty Name="TotalCardIssuers" ColumnName="TotalCardIssuers" />
+          <ScalarProperty Name="BillPmtReg" ColumnName="BillPmtReg" />
+          <ScalarProperty Name="SavingAccNo" ColumnName="SavingAccNo" />
+          <ScalarProperty Name="ReqPrintBilling" ColumnName="ReqPrintBilling" />
+          <ScalarProperty Name="DocType" ColumnName="DocType" />
+          <ScalarProperty Name="Oth1" ColumnName="Oth1" />
+          <ScalarProperty Name="Oth2" ColumnName="Oth2" />
+          <ScalarProperty Name="Oth3" ColumnName="Oth3" />
+          <ScalarProperty Name="Oth4" ColumnName="Oth4" />
+          <ScalarProperty Name="Oth5" ColumnName="Oth5" />
+          <ScalarProperty Name="BatchFileName" ColumnName="BatchFileName" />
+          <ScalarProperty Name="InsertTime" ColumnName="InsertTime" />
+          <ScalarProperty Name="InsertBy" ColumnName="InsertBy" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AppBillPmts">
+      <EntityTypeMapping TypeName="DBSCBSModel.AppBillPmt">
+        <MappingFragment StoreEntitySet="AppBillPmt">
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="Seq" ColumnName="Seq" />
+          <ScalarProperty Name="BillerName" ColumnName="BillerName" />
+          <ScalarProperty Name="BillAccNo" ColumnName="BillAccNo" />
+          <ScalarProperty Name="NameOnBill" ColumnName="NameOnBill" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AppBureauReqs">
+      <EntityTypeMapping TypeName="DBSCBSModel.AppBureauReq">
+        <MappingFragment StoreEntitySet="AppBureauReq">
+          <ScalarProperty Name="ReqId" ColumnName="ReqId" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="Seq" ColumnName="Seq" />
+          <ScalarProperty Name="DatTypeCd" ColumnName="DatTypeCd" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="PlaceOfBirth" ColumnName="PlaceOfBirth" />
+          <ScalarProperty Name="IDType" ColumnName="IDType" />
+          <ScalarProperty Name="IDNumber" ColumnName="IDNumber" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Npwp" ColumnName="Npwp" />
+          <ScalarProperty Name="Addr1" ColumnName="Addr1" />
+          <ScalarProperty Name="Addr2" ColumnName="Addr2" />
+          <ScalarProperty Name="Addr3" ColumnName="Addr3" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+          <ScalarProperty Name="ReqBy" ColumnName="ReqBy" />
+          <ScalarProperty Name="ReqTime" ColumnName="ReqTime" />
+          <ScalarProperty Name="ReqType" ColumnName="ReqType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AppDecResps">
+      <EntityTypeMapping TypeName="DBSCBSModel.AppDecResp">
+        <MappingFragment StoreEntitySet="AppDecResp">
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="GenTime" ColumnName="GenTime" />
+          <ScalarProperty Name="Org" ColumnName="Org" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Sage" ColumnName="Sage" />
+          <ScalarProperty Name="OriginAppId" ColumnName="OriginAppId" />
+          <ScalarProperty Name="EwssResult" ColumnName="EwssResult" />
+          <ScalarProperty Name="LoanCode" ColumnName="LoanCode" />
+          <ScalarProperty Name="SLIKResultCheck" ColumnName="SLIKResultCheck" />
+          <ScalarProperty Name="SLIKID" ColumnName="SLIKID" />
+          <ScalarProperty Name="IncomeVer" ColumnName="IncomeVer" />
+          <ScalarProperty Name="IncomeFinal" ColumnName="IncomeFinal" />
+          <ScalarProperty Name="ProxyIncMOB" ColumnName="ProxyIncMOB" />
+          <ScalarProperty Name="ProxyIncIssuer" ColumnName="ProxyIncIssuer" />
+          <ScalarProperty Name="ProxyIncLimit" ColumnName="ProxyIncLimit" />
+          <ScalarProperty Name="OutsideMUE" ColumnName="OutsideMUE" />
+          <ScalarProperty Name="MultiCusLevelMUE" ColumnName="MultiCusLevelMUE" />
+          <ScalarProperty Name="TotalCCLimitOthBank" ColumnName="TotalCCLimitOthBank" />
+          <ScalarProperty Name="SLIKResult" ColumnName="SLIKResult" />
+          <ScalarProperty Name="SubDecCd" ColumnName="SubDecCd" />
+          <ScalarProperty Name="NoOfNewULL12M" ColumnName="NoOfNewULL12M" />
+          <ScalarProperty Name="TotActiveCCOS" ColumnName="TotActiveCCOS" />
+          <ScalarProperty Name="TotActiveCCLimit" ColumnName="TotActiveCCLimit" />
+          <ScalarProperty Name="GrossOSOrLimit" ColumnName="GrossOSOrLimit" />
+          <ScalarProperty Name="NoOfActiveCC" ColumnName="NoOfActiveCC" />
+          <ScalarProperty Name="WorstDPDl12M" ColumnName="WorstDPDl12M" />
+          <ScalarProperty Name="NoOfActiveHL" ColumnName="NoOfActiveHL" />
+          <ScalarProperty Name="NoOfActiveRev" ColumnName="NoOfActiveRev" />
+          <ScalarProperty Name="RatioOfRevOver90Pct" ColumnName="RatioOfRevOver90Pct" />
+          <ScalarProperty Name="NoOfUL" ColumnName="NoOfUL" />
+          <ScalarProperty Name="NoOfSL" ColumnName="NoOfSL" />
+          <ScalarProperty Name="OldestMOBAllFac" ColumnName="OldestMOBAllFac" />
+          <ScalarProperty Name="LatestDeqMonth" ColumnName="LatestDeqMonth" />
+          <ScalarProperty Name="OldestMOBULCC" ColumnName="OldestMOBULCC" />
+          <ScalarProperty Name="PINPIDPI2Flag" ColumnName="PINPIDPI2Flag" />
+          <ScalarProperty Name="AKKIResult" ColumnName="AKKIResult" />
+          <ScalarProperty Name="RatingResult" ColumnName="RatingResult" />
+          <ScalarProperty Name="BureauResult" ColumnName="BureauResult" />
+          <ScalarProperty Name="RatingOpenDate" ColumnName="RatingOpenDate" />
+          <ScalarProperty Name="RatingLimit" ColumnName="RatingLimit" />
+          <ScalarProperty Name="RatingOSBal" ColumnName="RatingOSBal" />
+          <ScalarProperty Name="RatingPmtType" ColumnName="RatingPmtType" />
+          <ScalarProperty Name="RatingHistL12M" ColumnName="RatingHistL12M" />
+          <ScalarProperty Name="RatingCardType" ColumnName="RatingCardType" />
+          <ScalarProperty Name="RatingLatesSta" ColumnName="RatingLatesSta" />
+          <ScalarProperty Name="BureauRatioCCODWithHL90Util" ColumnName="BureauRatioCCODWithHL90Util" />
+          <ScalarProperty Name="BureauLatesMDelqGT0" ColumnName="BureauLatesMDelqGT0" />
+          <ScalarProperty Name="BureauTotMOBCC" ColumnName="BureauTotMOBCC" />
+          <ScalarProperty Name="BureauURActiveCCOSLimit" ColumnName="BureauURActiveCCOSLimit" />
+          <ScalarProperty Name="BureauNoOfLoanOpenL18M" ColumnName="BureauNoOfLoanOpenL18M" />
+          <ScalarProperty Name="BureauDateLastCCTaken" ColumnName="BureauDateLastCCTaken" />
+          <ScalarProperty Name="BureauMOBLastCCTaken" ColumnName="BureauMOBLastCCTaken" />
+          <ScalarProperty Name="BureauWorstDPDL6M" ColumnName="BureauWorstDPDL6M" />
+          <ScalarProperty Name="BureauProfiling" ColumnName="BureauProfiling" />
+          <ScalarProperty Name="NeedProbing" ColumnName="NeedProbing" />
+          <ScalarProperty Name="ProbingDetail" ColumnName="ProbingDetail" />
+          <ScalarProperty Name="ProbingDetail2" ColumnName="ProbingDetail2" />
+          <ScalarProperty Name="FieldHRArea" ColumnName="FieldHRArea" />
+          <ScalarProperty Name="TotalCCIssuers" ColumnName="TotalCCIssuers" />
+          <ScalarProperty Name="GrossAmtAggrCard" ColumnName="GrossAmtAggrCard" />
+          <ScalarProperty Name="ApproveDeclineCode" ColumnName="ApproveDeclineCode" />
+          <ScalarProperty Name="Oth2" ColumnName="Oth2" />
+          <ScalarProperty Name="Dbr" ColumnName="Dbr" />
+          <ScalarProperty Name="Dsr" ColumnName="Dsr" />
+          <ScalarProperty Name="UtilizationRate" ColumnName="UtilizationRate" />
+          <ScalarProperty Name="PhoneSeg" ColumnName="PhoneSeg" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AppDocs">
+      <EntityTypeMapping TypeName="DBSCBSModel.AppDoc">
+        <MappingFragment StoreEntitySet="AppDoc">
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="Seq" ColumnName="Seq" />
+          <ScalarProperty Name="DocCd" ColumnName="DocCd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AppExCCs">
+      <EntityTypeMapping TypeName="DBSCBSModel.AppExCC">
+        <MappingFragment StoreEntitySet="AppExCC">
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="Seq" ColumnName="Seq" />
+          <ScalarProperty Name="DataTypeCd" ColumnName="DataTypeCd" />
+          <ScalarProperty Name="RelId" ColumnName="RelId" />
+          <ScalarProperty Name="CardNo" ColumnName="CardNo" />
+          <ScalarProperty Name="IssuerId" ColumnName="IssuerId" />
+          <ScalarProperty Name="IssuerName" ColumnName="IssuerName" />
+          <ScalarProperty Name="MemberSince" ColumnName="MemberSince" />
+          <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+          <ScalarProperty Name="Limit" ColumnName="Limit" />
+          <ScalarProperty Name="Outstanding" ColumnName="Outstanding" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AppExFacs">
+      <EntityTypeMapping TypeName="DBSCBSModel.AppExFac">
+        <MappingFragment StoreEntitySet="AppExFac">
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="Seq" ColumnName="Seq" />
+          <ScalarProperty Name="DataTypeCd" ColumnName="DataTypeCd" />
+          <ScalarProperty Name="RelId" ColumnName="RelId" />
+          <ScalarProperty Name="FacType" ColumnName="FacType" />
+          <ScalarProperty Name="IssuerId" ColumnName="IssuerId" />
+          <ScalarProperty Name="IssuerName" ColumnName="IssuerName" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="Tenure" ColumnName="Tenure" />
+          <ScalarProperty Name="Limit" ColumnName="Limit" />
+          <ScalarProperty Name="Interest" ColumnName="Interest" />
+          <ScalarProperty Name="Instalment" ColumnName="Instalment" />
+          <ScalarProperty Name="Outstanding" ColumnName="Outstanding" />
+          <ScalarProperty Name="OpenDate" ColumnName="OpenDate" />
+          <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+          <ScalarProperty Name="LnAccNo" ColumnName="LnAccNo" />
+          <ScalarProperty Name="CardNo" ColumnName="CardNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AppExLoans">
+      <EntityTypeMapping TypeName="DBSCBSModel.AppExLoan">
+        <MappingFragment StoreEntitySet="AppExLoan">
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="Seq" ColumnName="Seq" />
+          <ScalarProperty Name="DataTypeCd" ColumnName="DataTypeCd" />
+          <ScalarProperty Name="RelId" ColumnName="RelId" />
+          <ScalarProperty Name="LnTypeCd" ColumnName="LnTypeCd" />
+          <ScalarProperty Name="BankId" ColumnName="BankId" />
+          <ScalarProperty Name="Limit" ColumnName="Limit" />
+          <ScalarProperty Name="Outstanding" ColumnName="Outstanding" />
+          <ScalarProperty Name="LnAccNo" ColumnName="LnAccNo" />
+          <ScalarProperty Name="Instalment" ColumnName="Instalment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AppFacs">
+      <EntityTypeMapping TypeName="DBSCBSModel.AppFac">
+        <MappingFragment StoreEntitySet="AppFac">
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="Seq" ColumnName="Seq" />
+          <ScalarProperty Name="ProjectCd" ColumnName="ProjectCd" />
+          <ScalarProperty Name="ProdTypeCd" ColumnName="ProdTypeCd" />
+          <ScalarProperty Name="ProgTypeCd" ColumnName="ProgTypeCd" />
+          <ScalarProperty Name="ProgramCd" ColumnName="ProgramCd" />
+          <ScalarProperty Name="LimitReqAmt" ColumnName="LimitReqAmt" />
+          <ScalarProperty Name="LoanCode" ColumnName="LoanCode" />
+          <ScalarProperty Name="Tenure" ColumnName="Tenure" />
+          <ScalarProperty Name="LoanPurpCd" ColumnName="LoanPurpCd" />
+          <ScalarProperty Name="LoanPurpOth" ColumnName="LoanPurpOth" />
+          <ScalarProperty Name="AccBeneficiaryName" ColumnName="AccBeneficiaryName" />
+          <ScalarProperty Name="AccBankName" ColumnName="AccBankName" />
+          <ScalarProperty Name="AccBankId" ColumnName="AccBankId" />
+          <ScalarProperty Name="AccBranchId" ColumnName="AccBranchId" />
+          <ScalarProperty Name="AccNo" ColumnName="AccNo" />
+          <ScalarProperty Name="BranchAreaExp1" ColumnName="BranchAreaExp1" />
+          <ScalarProperty Name="PayeeName2" ColumnName="PayeeName2" />
+          <ScalarProperty Name="PayeeAccNo2" ColumnName="PayeeAccNo2" />
+          <ScalarProperty Name="BranchAreaExp2" ColumnName="BranchAreaExp2" />
+          <ScalarProperty Name="PayeeName3" ColumnName="PayeeName3" />
+          <ScalarProperty Name="PayeeAccNo3" ColumnName="PayeeAccNo3" />
+          <ScalarProperty Name="BranchAreaExp3" ColumnName="BranchAreaExp3" />
+          <ScalarProperty Name="DisbFeeFlag" ColumnName="DisbFeeFlag" />
+          <ScalarProperty Name="DisbPercentage1" ColumnName="DisbPercentage1" />
+          <ScalarProperty Name="DisbPercentage2" ColumnName="DisbPercentage2" />
+          <ScalarProperty Name="DisbPercentage3" ColumnName="DisbPercentage3" />
+          <ScalarProperty Name="DisbFixAmt1" ColumnName="DisbFixAmt1" />
+          <ScalarProperty Name="DisbFixAmt2" ColumnName="DisbFixAmt2" />
+          <ScalarProperty Name="DisbFixAmt3" ColumnName="DisbFixAmt3" />
+          <ScalarProperty Name="PrevTopupLimit" ColumnName="PrevTopupLimit" />
+          <ScalarProperty Name="CardType" ColumnName="CardType" />
+          <ScalarProperty Name="PCTID" ColumnName="PCTID" />
+          <ScalarProperty Name="FundTrans" ColumnName="FundTrans" />
+          <ScalarProperty Name="FundTransLnAmtReq" ColumnName="FundTransLnAmtReq" />
+          <ScalarProperty Name="FundTransLnTenureReq" ColumnName="FundTransLnTenureReq" />
+          <ScalarProperty Name="FundTransLnPmtType" ColumnName="FundTransLnPmtType" />
+          <ScalarProperty Name="DDNomType" ColumnName="DDNomType" />
+          <ScalarProperty Name="DDPmtType" ColumnName="DDPmtType" />
+          <ScalarProperty Name="DDReqDays" ColumnName="DDReqDays" />
+          <ScalarProperty Name="PrevLnSegBaseCd" ColumnName="PrevLnSegBaseCd" />
+          <ScalarProperty Name="TopUpSegCd" ColumnName="TopUpSegCd" />
+          <ScalarProperty Name="InsProdCd" ColumnName="InsProdCd" />
+          <ScalarProperty Name="ApprvDecCd" ColumnName="ApprvDecCd" />
+          <ScalarProperty Name="SubDecCd" ColumnName="SubDecCd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AppFlags">
+      <EntityTypeMapping TypeName="DBSCBSModel.AppFlag">
+        <MappingFragment StoreEntitySet="AppFlag">
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="BankCd" ColumnName="BankCd" />
+          <ScalarProperty Name="DBSLnLimit_OS" ColumnName="DBSLnLimit_OS" />
+          <ScalarProperty Name="VerBillAddrMatch" ColumnName="VerBillAddrMatch" />
+          <ScalarProperty Name="VerMobilePhnMatch" ColumnName="VerMobilePhnMatch" />
+          <ScalarProperty Name="NpwpDocFlag" ColumnName="NpwpDocFlag" />
+          <ScalarProperty Name="AMLRiskRating" ColumnName="AMLRiskRating" />
+          <ScalarProperty Name="BureauType" ColumnName="BureauType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AppMemoes">
+      <EntityTypeMapping TypeName="DBSCBSModel.AppMemo">
+        <MappingFragment StoreEntitySet="AppMemo">
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="Seq" ColumnName="Seq" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="InputDate" ColumnName="InputDate" />
+          <ScalarProperty Name="InputBy" ColumnName="InputBy" />
+          <ScalarProperty Name="Locked" ColumnName="Locked" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AppSupps">
+      <EntityTypeMapping TypeName="DBSCBSModel.AppSupp">
+        <MappingFragment StoreEntitySet="AppSupp">
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="Seq" ColumnName="Seq" />
+          <ScalarProperty Name="NameAsIDCard" ColumnName="NameAsIDCard" />
+          <ScalarProperty Name="IDNumber" ColumnName="IDNumber" />
+          <ScalarProperty Name="NameOnCard" ColumnName="NameOnCard" />
+          <ScalarProperty Name="Relationship" ColumnName="Relationship" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="PlaceOfBirth" ColumnName="PlaceOfBirth" />
+          <ScalarProperty Name="MothersMaidenName" ColumnName="MothersMaidenName" />
+          <ScalarProperty Name="MobilePhoneNo" ColumnName="MobilePhoneNo" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="NationalityCd" ColumnName="NationalityCd" />
+          <ScalarProperty Name="CountryCd" ColumnName="CountryCd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AuthGroupMenus">
+      <EntityTypeMapping TypeName="DBSCBSModel.AuthGroupMenu">
+        <MappingFragment StoreEntitySet="AuthGroupMenu">
+          <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+          <ScalarProperty Name="MenuId" ColumnName="MenuId" />
+          <ScalarProperty Name="IsRead" ColumnName="IsRead" />
+          <ScalarProperty Name="IsWrite" ColumnName="IsWrite" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AuthGroups">
+      <EntityTypeMapping TypeName="DBSCBSModel.AuthGroup">
+        <MappingFragment StoreEntitySet="AuthGroups">
+          <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+          <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="RegDate" ColumnName="RegDate" />
+          <ScalarProperty Name="RegBy" ColumnName="RegBy" />
+          <ScalarProperty Name="ApprvDate" ColumnName="ApprvDate" />
+          <ScalarProperty Name="ApprvBy" ColumnName="ApprvBy" />
+          <ScalarProperty Name="IsDormant" ColumnName="IsDormant" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AuthMenus">
+      <EntityTypeMapping TypeName="DBSCBSModel.AuthMenu">
+        <MappingFragment StoreEntitySet="AuthMenus">
+          <ScalarProperty Name="MenuId" ColumnName="MenuId" />
+          <ScalarProperty Name="MenuName" ColumnName="MenuName" />
+          <ScalarProperty Name="MenuUrl" ColumnName="MenuUrl" />
+          <ScalarProperty Name="MenuIcon" ColumnName="MenuIcon" />
+          <ScalarProperty Name="MenuParent" ColumnName="MenuParent" />
+          <ScalarProperty Name="MenuOrder" ColumnName="MenuOrder" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AuthParams">
+      <EntityTypeMapping TypeName="DBSCBSModel.AuthParam">
+        <MappingFragment StoreEntitySet="AuthParam">
+          <ScalarProperty Name="ParamId" ColumnName="ParamId" />
+          <ScalarProperty Name="ParamName" ColumnName="ParamName" />
+          <ScalarProperty Name="DataType" ColumnName="DataType" />
+          <ScalarProperty Name="ParamValue" ColumnName="ParamValue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AuthPwdHists">
+      <EntityTypeMapping TypeName="DBSCBSModel.AuthPwdHist">
+        <MappingFragment StoreEntitySet="AuthPwdHist">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Seq" ColumnName="Seq" />
+          <ScalarProperty Name="ChangeDate" ColumnName="ChangeDate" />
+          <ScalarProperty Name="OldPwd" ColumnName="OldPwd" />
+          <ScalarProperty Name="NewPwd" ColumnName="NewPwd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AuthUserActivities">
+      <EntityTypeMapping TypeName="DBSCBSModel.AuthUserActivity">
+        <MappingFragment StoreEntitySet="AuthUserActivity">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Seq" ColumnName="Seq" />
+          <ScalarProperty Name="TokenId" ColumnName="TokenId" />
+          <ScalarProperty Name="ActTime" ColumnName="ActTime" />
+          <ScalarProperty Name="ActDesc" ColumnName="ActDesc" />
+          <ScalarProperty Name="ActLevel" ColumnName="ActLevel" />
+          <ScalarProperty Name="Host" ColumnName="Host" />
+          <ScalarProperty Name="PageUrl" ColumnName="PageUrl" />
+          <ScalarProperty Name="PageName" ColumnName="PageName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AuthUserFlags">
+      <EntityTypeMapping TypeName="DBSCBSModel.AuthUserFlag">
+        <MappingFragment StoreEntitySet="AuthUserFlag">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="IsLogon" ColumnName="IsLogon" />
+          <ScalarProperty Name="IsRevoke" ColumnName="IsRevoke" />
+          <ScalarProperty Name="FalsePwd" ColumnName="FalsePwd" />
+          <ScalarProperty Name="LastLogon" ColumnName="LastLogon" />
+          <ScalarProperty Name="LastHost" ColumnName="LastHost" />
+          <ScalarProperty Name="LastActivity" ColumnName="LastActivity" />
+          <ScalarProperty Name="TokenId" ColumnName="TokenId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AuthUserGroups">
+      <EntityTypeMapping TypeName="DBSCBSModel.AuthUserGroup">
+        <MappingFragment StoreEntitySet="AuthUserGroup">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AuthUserHists">
+      <EntityTypeMapping TypeName="DBSCBSModel.AuthUserHist">
+        <MappingFragment StoreEntitySet="AuthUserHist">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Seq" ColumnName="Seq" />
+          <ScalarProperty Name="TokenId" ColumnName="TokenId" />
+          <ScalarProperty Name="LogonTime" ColumnName="LogonTime" />
+          <ScalarProperty Name="LogonHost" ColumnName="LogonHost" />
+          <ScalarProperty Name="LogoutTime" ColumnName="LogoutTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AuthUsers">
+      <EntityTypeMapping TypeName="DBSCBSModel.AuthUser">
+        <MappingFragment StoreEntitySet="AuthUsers">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="NIP" ColumnName="NIP" />
+          <ScalarProperty Name="ExtensionNo" ColumnName="ExtensionNo" />
+          <ScalarProperty Name="HomePhoneNo" ColumnName="HomePhoneNo" />
+          <ScalarProperty Name="MobilePhoneNo" ColumnName="MobilePhoneNo" />
+          <ScalarProperty Name="UplinerId" ColumnName="UplinerId" />
+          <ScalarProperty Name="PwdExpDate" ColumnName="PwdExpDate" />
+          <ScalarProperty Name="BranchId" ColumnName="BranchId" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="Departement" ColumnName="Departement" />
+          <ScalarProperty Name="RegDate" ColumnName="RegDate" />
+          <ScalarProperty Name="RegBy" ColumnName="RegBy" />
+          <ScalarProperty Name="ApprvDate" ColumnName="ApprvDate" />
+          <ScalarProperty Name="ApprvBy" ColumnName="ApprvBy" />
+          <ScalarProperty Name="LevelId" ColumnName="LevelId" />
+          <ScalarProperty Name="IsDormant" ColumnName="IsDormant" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CustFins">
+      <EntityTypeMapping TypeName="DBSCBSModel.CustFin">
+        <MappingFragment StoreEntitySet="CustFin">
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="IncDocType" ColumnName="IncDocType" />
+          <ScalarProperty Name="IncDeclare12M" ColumnName="IncDeclare12M" />
+          <ScalarProperty Name="IncDeclareExtraYearly" ColumnName="IncDeclareExtraYearly" />
+          <ScalarProperty Name="IncMonthlyBasedOnDoc" ColumnName="IncMonthlyBasedOnDoc" />
+          <ScalarProperty Name="IncMultiplier" ColumnName="IncMultiplier" />
+          <ScalarProperty Name="IncTotalBasedOnDoc" ColumnName="IncTotalBasedOnDoc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CustJobs">
+      <EntityTypeMapping TypeName="DBSCBSModel.CustJob">
+        <MappingFragment StoreEntitySet="CustJob">
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="Seq" ColumnName="Seq" />
+          <ScalarProperty Name="CompName" ColumnName="CompName" />
+          <ScalarProperty Name="Addr1" ColumnName="Addr1" />
+          <ScalarProperty Name="Addr2" ColumnName="Addr2" />
+          <ScalarProperty Name="Addr3" ColumnName="Addr3" />
+          <ScalarProperty Name="DistrictCd" ColumnName="DistrictCd" />
+          <ScalarProperty Name="DistrictName" ColumnName="DistrictName" />
+          <ScalarProperty Name="SubDistrictCd" ColumnName="SubDistrictCd" />
+          <ScalarProperty Name="SubDistrictName" ColumnName="SubDistrictName" />
+          <ScalarProperty Name="CityCd" ColumnName="CityCd" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+          <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+          <ScalarProperty Name="PhoneExt" ColumnName="PhoneExt" />
+          <ScalarProperty Name="PhoneStaCd" ColumnName="PhoneStaCd" />
+          <ScalarProperty Name="Phone2No" ColumnName="Phone2No" />
+          <ScalarProperty Name="Phone2Ext" ColumnName="Phone2Ext" />
+          <ScalarProperty Name="Phone2StaCd" ColumnName="Phone2StaCd" />
+          <ScalarProperty Name="HomeAddrEqOffAddr" ColumnName="HomeAddrEqOffAddr" />
+          <ScalarProperty Name="PositionCd" ColumnName="PositionCd" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="NOB" ColumnName="NOB" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="EmployeeIDNo" ColumnName="EmployeeIDNo" />
+          <ScalarProperty Name="JobStatus" ColumnName="JobStatus" />
+          <ScalarProperty Name="CurrLojYY" ColumnName="CurrLojYY" />
+          <ScalarProperty Name="CurrLojMM" ColumnName="CurrLojMM" />
+          <ScalarProperty Name="TotalLojYY" ColumnName="TotalLojYY" />
+          <ScalarProperty Name="TotalLojMM" ColumnName="TotalLojMM" />
+          <ScalarProperty Name="PrevLojYY" ColumnName="PrevLojYY" />
+          <ScalarProperty Name="PrevLojMM" ColumnName="PrevLojMM" />
+          <ScalarProperty Name="PervCompName" ColumnName="PervCompName" />
+          <ScalarProperty Name="PrevPhoneNo" ColumnName="PrevPhoneNo" />
+          <ScalarProperty Name="PrevPhoneExt" ColumnName="PrevPhoneExt" />
+          <ScalarProperty Name="NoOfEmployee" ColumnName="NoOfEmployee" />
+          <ScalarProperty Name="EwssResult" ColumnName="EwssResult" />
+          <ScalarProperty Name="RelPartyResult" ColumnName="RelPartyResult" />
+          <ScalarProperty Name="WellEstablishCompType" ColumnName="WellEstablishCompType" />
+          <ScalarProperty Name="ChangeToNewOffAddr" ColumnName="ChangeToNewOffAddr" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CustPersonals">
+      <EntityTypeMapping TypeName="DBSCBSModel.CustPersonal">
+        <MappingFragment StoreEntitySet="CustPersonal">
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="CustNo" ColumnName="CustNo" />
+          <ScalarProperty Name="CustName" ColumnName="CustName" />
+          <ScalarProperty Name="CustNameOnID" ColumnName="CustNameOnID" />
+          <ScalarProperty Name="CustNickName" ColumnName="CustNickName" />
+          <ScalarProperty Name="CustNameInCard" ColumnName="CustNameInCard" />
+          <ScalarProperty Name="NationalityCd" ColumnName="NationalityCd" />
+          <ScalarProperty Name="MothersMaidenName" ColumnName="MothersMaidenName" />
+          <ScalarProperty Name="GenderCd" ColumnName="GenderCd" />
+          <ScalarProperty Name="PlaceOfBirth" ColumnName="PlaceOfBirth" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="IDTypeCd" ColumnName="IDTypeCd" />
+          <ScalarProperty Name="IdCardTrackCd" ColumnName="IdCardTrackCd" />
+          <ScalarProperty Name="IDNumber" ColumnName="IDNumber" />
+          <ScalarProperty Name="EduCd" ColumnName="EduCd" />
+          <ScalarProperty Name="MaritalCd" ColumnName="MaritalCd" />
+          <ScalarProperty Name="NoOfDependents" ColumnName="NoOfDependents" />
+          <ScalarProperty Name="HomeAddr1" ColumnName="HomeAddr1" />
+          <ScalarProperty Name="HomeAddr2" ColumnName="HomeAddr2" />
+          <ScalarProperty Name="HomeAddr3" ColumnName="HomeAddr3" />
+          <ScalarProperty Name="HomeDistrictCd" ColumnName="HomeDistrictCd" />
+          <ScalarProperty Name="HomeDistrictName" ColumnName="HomeDistrictName" />
+          <ScalarProperty Name="HomeSubDistrictCd" ColumnName="HomeSubDistrictCd" />
+          <ScalarProperty Name="HomeSubDistrictName" ColumnName="HomeSubDistrictName" />
+          <ScalarProperty Name="HomeCityName" ColumnName="HomeCityName" />
+          <ScalarProperty Name="HomePostalCode" ColumnName="HomePostalCode" />
+          <ScalarProperty Name="HomePhoneNo" ColumnName="HomePhoneNo" />
+          <ScalarProperty Name="HomePhoneStaCd" ColumnName="HomePhoneStaCd" />
+          <ScalarProperty Name="HomeAddrEqIDAddr" ColumnName="HomeAddrEqIDAddr" />
+          <ScalarProperty Name="IDAddr1" ColumnName="IDAddr1" />
+          <ScalarProperty Name="IDAddr2" ColumnName="IDAddr2" />
+          <ScalarProperty Name="IDAddr3" ColumnName="IDAddr3" />
+          <ScalarProperty Name="IDDistrictCd" ColumnName="IDDistrictCd" />
+          <ScalarProperty Name="IDDistrictName" ColumnName="IDDistrictName" />
+          <ScalarProperty Name="IDSubDistrictCd" ColumnName="IDSubDistrictCd" />
+          <ScalarProperty Name="IDSubDistrictName" ColumnName="IDSubDistrictName" />
+          <ScalarProperty Name="IDCityName" ColumnName="IDCityName" />
+          <ScalarProperty Name="IDPostalCode" ColumnName="IDPostalCode" />
+          <ScalarProperty Name="PixelCode" ColumnName="PixelCode" />
+          <ScalarProperty Name="PixelAddr" ColumnName="PixelAddr" />
+          <ScalarProperty Name="PixelWKCCode" ColumnName="PixelWKCCode" />
+          <ScalarProperty Name="MobilePhoneNo" ColumnName="MobilePhoneNo" />
+          <ScalarProperty Name="MobilePhoneNo2" ColumnName="MobilePhoneNo2" />
+          <ScalarProperty Name="ExMobilePhone" ColumnName="ExMobilePhone" />
+          <ScalarProperty Name="ResStaCd" ColumnName="ResStaCd" />
+          <ScalarProperty Name="ResLOSYY" ColumnName="ResLOSYY" />
+          <ScalarProperty Name="ResLOSMM" ColumnName="ResLOSMM" />
+          <ScalarProperty Name="Npwp" ColumnName="Npwp" />
+          <ScalarProperty Name="MailingAddrCd" ColumnName="MailingAddrCd" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="ChangeToNewHomeAddr" ColumnName="ChangeToNewHomeAddr" />
+          <ScalarProperty Name="CountryCd" ColumnName="CountryCd" />
+          <ScalarProperty Name="InsertTime" ColumnName="InsertTime" />
+          <ScalarProperty Name="InsertBy" ColumnName="InsertBy" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CustRels">
+      <EntityTypeMapping TypeName="DBSCBSModel.CustRel">
+        <MappingFragment StoreEntitySet="CustRel">
+          <ScalarProperty Name="RelId" ColumnName="RelId" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="Seq" ColumnName="Seq" />
+          <ScalarProperty Name="DataTypeCd" ColumnName="DataTypeCd" />
+          <ScalarProperty Name="RelTypeCd" ColumnName="RelTypeCd" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Addr1" ColumnName="Addr1" />
+          <ScalarProperty Name="Addr2" ColumnName="Addr2" />
+          <ScalarProperty Name="Addr3" ColumnName="Addr3" />
+          <ScalarProperty Name="DistrictCd" ColumnName="DistrictCd" />
+          <ScalarProperty Name="DistrictName" ColumnName="DistrictName" />
+          <ScalarProperty Name="SubDistrictCd" ColumnName="SubDistrictCd" />
+          <ScalarProperty Name="SubDistrictName" ColumnName="SubDistrictName" />
+          <ScalarProperty Name="CityCd" ColumnName="CityCd" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+          <ScalarProperty Name="HomePhoneNo" ColumnName="HomePhoneNo" />
+          <ScalarProperty Name="HomePhoneStaCd" ColumnName="HomePhoneStaCd" />
+          <ScalarProperty Name="MobilePhoneNo" ColumnName="MobilePhoneNo" />
+          <ScalarProperty Name="OtherPhoneNo" ColumnName="OtherPhoneNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DataImports">
+      <EntityTypeMapping TypeName="DBSCBSModel.DataImport">
+        <MappingFragment StoreEntitySet="DataImport">
+          <ScalarProperty Name="ImportId" ColumnName="ImportId" />
+          <ScalarProperty Name="ImportName" ColumnName="ImportName" />
+          <ScalarProperty Name="OrderSeq" ColumnName="OrderSeq" />
+          <ScalarProperty Name="SourceType" ColumnName="SourceType" />
+          <ScalarProperty Name="DestTable" ColumnName="DestTable" />
+          <ScalarProperty Name="Method" ColumnName="Method" />
+          <ScalarProperty Name="RowOverwrite" ColumnName="RowOverwrite" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DataImportDestColumns">
+      <EntityTypeMapping TypeName="DBSCBSModel.DataImportDestColumn">
+        <MappingFragment StoreEntitySet="DataImportDestColumn">
+          <ScalarProperty Name="ImportId" ColumnName="ImportId" />
+          <ScalarProperty Name="TableName" ColumnName="TableName" />
+          <ScalarProperty Name="ColumnName" ColumnName="ColumnName" />
+          <ScalarProperty Name="SourceColumnName" ColumnName="SourceColumnName" />
+          <ScalarProperty Name="IsKey" ColumnName="IsKey" />
+          <ScalarProperty Name="AutoFormula" ColumnName="AutoFormula" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DataImportDestTables">
+      <EntityTypeMapping TypeName="DBSCBSModel.DataImportDestTable">
+        <MappingFragment StoreEntitySet="DataImportDestTable">
+          <ScalarProperty Name="ImportId" ColumnName="ImportId" />
+          <ScalarProperty Name="TableName" ColumnName="TableName" />
+          <ScalarProperty Name="OrderSeq" ColumnName="OrderSeq" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DataImportFlatFiles">
+      <EntityTypeMapping TypeName="DBSCBSModel.DataImportFlatFile">
+        <MappingFragment StoreEntitySet="DataImportFlatFile">
+          <ScalarProperty Name="ImportId" ColumnName="ImportId" />
+          <ScalarProperty Name="SourceFileName" ColumnName="SourceFileName" />
+          <ScalarProperty Name="SourceFilePath" ColumnName="SourceFilePath" />
+          <ScalarProperty Name="Format" ColumnName="Format" />
+          <ScalarProperty Name="TextQualifier" ColumnName="TextQualifier" />
+          <ScalarProperty Name="HeaderRowDelimiter" ColumnName="HeaderRowDelimiter" />
+          <ScalarProperty Name="HeaderRowsToSkip" ColumnName="HeaderRowsToSkip" />
+          <ScalarProperty Name="ColumnNameIn1st" ColumnName="ColumnNameIn1st" />
+          <ScalarProperty Name="DataRowsToSkip" ColumnName="DataRowsToSkip" />
+          <ScalarProperty Name="RowDelimiter" ColumnName="RowDelimiter" />
+          <ScalarProperty Name="ColumnDelimiter" ColumnName="ColumnDelimiter" />
+          <ScalarProperty Name="FtpId" ColumnName="FtpId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DataImportFlatFileColumns">
+      <EntityTypeMapping TypeName="DBSCBSModel.DataImportFlatFileColumn">
+        <MappingFragment StoreEntitySet="DataImportFlatFileColumn">
+          <ScalarProperty Name="ImportId" ColumnName="ImportId" />
+          <ScalarProperty Name="Seq" ColumnName="Seq" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="InputColumnWidth" ColumnName="InputColumnWidth" />
+          <ScalarProperty Name="DataPrecision" ColumnName="DataPrecision" />
+          <ScalarProperty Name="DataScale" ColumnName="DataScale" />
+          <ScalarProperty Name="DataType" ColumnName="DataType" />
+          <ScalarProperty Name="OutputColumnWidth" ColumnName="OutputColumnWidth" />
+          <ScalarProperty Name="TextQualified" ColumnName="TextQualified" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DataImportLogs">
+      <EntityTypeMapping TypeName="DBSCBSModel.DataImportLog">
+        <MappingFragment StoreEntitySet="DataImportLog">
+          <ScalarProperty Name="BatchFileName" ColumnName="BatchFileName" />
+          <ScalarProperty Name="TotalRow" ColumnName="TotalRow" />
+          <ScalarProperty Name="NoOfSuccess" ColumnName="NoOfSuccess" />
+          <ScalarProperty Name="NoOfFailed" ColumnName="NoOfFailed" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="FinishTime" ColumnName="FinishTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DataImportLogDetails">
+      <EntityTypeMapping TypeName="DBSCBSModel.DataImportLogDetail">
+        <MappingFragment StoreEntitySet="DataImportLogDetail">
+          <ScalarProperty Name="BatchFileName" ColumnName="BatchFileName" />
+          <ScalarProperty Name="RowNumber" ColumnName="RowNumber" />
+          <ScalarProperty Name="LineNumber" ColumnName="LineNumber" />
+          <ScalarProperty Name="KeyValue" ColumnName="KeyValue" />
+          <ScalarProperty Name="LogType" ColumnName="LogType" />
+          <ScalarProperty Name="LogMessage" ColumnName="LogMessage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EnumBureauTypes">
+      <EntityTypeMapping TypeName="DBSCBSModel.EnumBureauType">
+        <MappingFragment StoreEntitySet="EnumBureauType">
+          <ScalarProperty Name="BurTypeCd" ColumnName="BurTypeCd" />
+          <ScalarProperty Name="BurTypeDesc" ColumnName="BurTypeDesc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EnumIdebFacCats">
+      <EntityTypeMapping TypeName="DBSCBSModel.EnumIdebFacCat">
+        <MappingFragment StoreEntitySet="EnumIdebFacCat">
+          <ScalarProperty Name="CatCd" ColumnName="CatCd" />
+          <ScalarProperty Name="CatDesc" ColumnName="CatDesc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FRAMEWORK_FOREIGNKEY">
+      <EntityTypeMapping TypeName="DBSCBSModel.FRAMEWORK_FOREIGNKEY">
+        <MappingFragment StoreEntitySet="FRAMEWORK_FOREIGNKEY">
+          <ScalarProperty Name="TableName" ColumnName="TableName" />
+          <ScalarProperty Name="TableName_As" ColumnName="TableName_As" />
+          <ScalarProperty Name="TableName_FK" ColumnName="TableName_FK" />
+          <ScalarProperty Name="Constraint_SQL" ColumnName="Constraint_SQL" />
+          <ScalarProperty Name="TableName_Join" ColumnName="TableName_Join" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FRAMEWORK_FORMULAFIELD">
+      <EntityTypeMapping TypeName="DBSCBSModel.FRAMEWORK_FORMULAFIELD">
+        <MappingFragment StoreEntitySet="FRAMEWORK_FORMULAFIELD">
+          <ScalarProperty Name="FieldId" ColumnName="FieldId" />
+          <ScalarProperty Name="FieldCaption" ColumnName="FieldCaption" />
+          <ScalarProperty Name="FieldDesc" ColumnName="FieldDesc" />
+          <ScalarProperty Name="FieldFW" ColumnName="FieldFW" />
+          <ScalarProperty Name="FieldReff" ColumnName="FieldReff" />
+          <ScalarProperty Name="FormatString" ColumnName="FormatString" />
+          <ScalarProperty Name="FilterType" ColumnName="FilterType" />
+          <ScalarProperty Name="SETID" ColumnName="SETID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FRAMEWORK_LINDEDSERVER">
+      <EntityTypeMapping TypeName="DBSCBSModel.FRAMEWORK_LINDEDSERVER">
+        <MappingFragment StoreEntitySet="FRAMEWORK_LINDEDSERVER">
+          <ScalarProperty Name="LinkedServID" ColumnName="LinkedServID" />
+          <ScalarProperty Name="LinkedServName" ColumnName="LinkedServName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Idebs">
+      <EntityTypeMapping TypeName="DBSCBSModel.Ideb">
+        <MappingFragment StoreEntitySet="Ideb">
+          <ScalarProperty Name="IdebId" ColumnName="IdebId" />
+          <ScalarProperty Name="ReqId" ColumnName="ReqId" />
+          <ScalarProperty Name="Seq" ColumnName="Seq" />
+          <ScalarProperty Name="DebtectorId" ColumnName="DebtectorId" />
+          <ScalarProperty Name="KodeReferensiPengguna" ColumnName="KodeReferensiPengguna" />
+          <ScalarProperty Name="TanggalHasil" ColumnName="TanggalHasil" />
+          <ScalarProperty Name="IdPermintaan" ColumnName="IdPermintaan" />
+          <ScalarProperty Name="IdPenggunaPermintaan" ColumnName="IdPenggunaPermintaan" />
+          <ScalarProperty Name="DibuatOleh" ColumnName="DibuatOleh" />
+          <ScalarProperty Name="KodeLJKPermintaan" ColumnName="KodeLJKPermintaan" />
+          <ScalarProperty Name="KodeCabangPermintaan" ColumnName="KodeCabangPermintaan" />
+          <ScalarProperty Name="KodeTujuanPermintaan" ColumnName="KodeTujuanPermintaan" />
+          <ScalarProperty Name="TanggalPermintaan" ColumnName="TanggalPermintaan" />
+          <ScalarProperty Name="TotalBagian" ColumnName="TotalBagian" />
+          <ScalarProperty Name="NomorBagian" ColumnName="NomorBagian" />
+          <ScalarProperty Name="DebType" ColumnName="DebType" />
+          <ScalarProperty Name="NomorLaporan" ColumnName="NomorLaporan" />
+          <ScalarProperty Name="PosisiDataTerakhir" ColumnName="PosisiDataTerakhir" />
+          <ScalarProperty Name="PosisiDataTerakhirDate" ColumnName="PosisiDataTerakhirDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IdebCorpDatas">
+      <EntityTypeMapping TypeName="DBSCBSModel.IdebCorpData">
+        <MappingFragment StoreEntitySet="IdebCorpData">
+          <ScalarProperty Name="IdebId" ColumnName="IdebId" />
+          <ScalarProperty Name="Seq" ColumnName="Seq" />
+          <ScalarProperty Name="DebtectorId" ColumnName="DebtectorId" />
+          <ScalarProperty Name="NamaDebitur" ColumnName="NamaDebitur" />
+          <ScalarProperty Name="NamaLengkap" ColumnName="NamaLengkap" />
+          <ScalarProperty Name="Npwp" ColumnName="Npwp" />
+          <ScalarProperty Name="BentukBu" ColumnName="BentukBu" />
+          <ScalarProperty Name="BentukBuKet" ColumnName="BentukBuKet" />
+          <ScalarProperty Name="GoPublic" ColumnName="GoPublic" />
+          <ScalarProperty Name="TempatPendirian" ColumnName="TempatPendirian" />
+          <ScalarProperty Name="NoAktaPendirian" ColumnName="NoAktaPendirian" />
+          <ScalarProperty Name="TglAktaPendirian" ColumnName="TglAktaPendirian" />
+          <ScalarProperty Name="Pelapor" ColumnName="Pelapor" />
+          <ScalarProperty Name="PelaporKet" ColumnName="PelaporKet" />
+          <ScalarProperty Name="TanggalDibentuk" ColumnName="TanggalDibentuk" />
+          <ScalarProperty Name="TanggalUpdate" ColumnName="TanggalUpdate" />
+          <ScalarProperty Name="Alamat" ColumnName="Alamat" />
+          <ScalarProperty Name="Kelurahan" ColumnName="Kelurahan" />
+          <ScalarProperty Name="Kecamatan" ColumnName="Kecamatan" />
+          <ScalarProperty Name="KabKota" ColumnName="KabKota" />
+          <ScalarProperty Name="KabKotaKet" ColumnName="KabKotaKet" />
+          <ScalarProperty Name="KodePos" ColumnName="KodePos" />
+          <ScalarProperty Name="Negara" ColumnName="Negara" />
+          <ScalarProperty Name="NegaraKet" ColumnName="NegaraKet" />
+          <ScalarProperty Name="NoAktaTerakhir" ColumnName="NoAktaTerakhir" />
+          <ScalarProperty Name="TglAktaTerakhir" ColumnName="TglAktaTerakhir" />
+          <ScalarProperty Name="SektorEkonomi" ColumnName="SektorEkonomi" />
+          <ScalarProperty Name="SektorEkonomiKet" ColumnName="SektorEkonomiKet" />
+          <ScalarProperty Name="Pemeringkat" ColumnName="Pemeringkat" />
+          <ScalarProperty Name="PemeringkatKet" ColumnName="PemeringkatKet" />
+          <ScalarProperty Name="Peringkat" ColumnName="Peringkat" />
+          <ScalarProperty Name="TanggalPemeringkatan" ColumnName="TanggalPemeringkatan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IdebCorpGroups">
+      <EntityTypeMapping TypeName="DBSCBSModel.IdebCorpGroup">
+        <MappingFragment StoreEntitySet="IdebCorpGroup">
+          <ScalarProperty Name="IdebId" ColumnName="IdebId" />
+          <ScalarProperty Name="Seq" ColumnName="Seq" />
+          <ScalarProperty Name="KodeLJK" ColumnName="KodeLJK" />
+          <ScalarProperty Name="NamaLJK" ColumnName="NamaLJK" />
+          <ScalarProperty Name="NamaSesuaiIdentitas" ColumnName="NamaSesuaiIdentitas" />
+          <ScalarProperty Name="NomorIdentitas" ColumnName="NomorIdentitas" />
+          <ScalarProperty Name="JenisKelamin" ColumnName="JenisKelamin" />
+          <ScalarProperty Name="JenisKelaminKet" ColumnName="JenisKelaminKet" />
+          <ScalarProperty Name="PosisiPekerjaan" ColumnName="PosisiPekerjaan" />
+          <ScalarProperty Name="PosisiPekerjaanKet" ColumnName="PosisiPekerjaanKet" />
+          <ScalarProperty Name="ProsentaseKepemilikan" ColumnName="ProsentaseKepemilikan" />
+          <ScalarProperty Name="StatusPengurusPemilik" ColumnName="StatusPengurusPemilik" />
+          <ScalarProperty Name="StatusPengurusPemilikKet" ColumnName="StatusPengurusPemilikKet" />
+          <ScalarProperty Name="Alamat" ColumnName="Alamat" />
+          <ScalarProperty Name="Kelurahan" ColumnName="Kelurahan" />
+          <ScalarProperty Name="Kecamatan" ColumnName="Kecamatan" />
+          <ScalarProperty Name="Kota" ColumnName="Kota" />
+          <ScalarProperty Name="KotaKet" ColumnName="KotaKet" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IdebCorpSearchVars">
+      <EntityTypeMapping TypeName="DBSCBSModel.IdebCorpSearchVar">
+        <MappingFragment StoreEntitySet="IdebCorpSearchVar">
+          <ScalarProperty Name="IdebId" ColumnName="IdebId" />
+          <ScalarProperty Name="NamaBadanUsaha" ColumnName="NamaBadanUsaha" />
+          <ScalarProperty Name="Npwp" ColumnName="Npwp" />
+          <ScalarProperty Name="TempatPendirian" ColumnName="TempatPendirian" />
+          <ScalarProperty Name="TanggalAktaPendirian" ColumnName="TanggalAktaPendirian" />
+          <ScalarProperty Name="NomorAktaPendirian" ColumnName="NomorAktaPendirian" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IdebFacs">
+      <EntityTypeMapping TypeName="DBSCBSModel.IdebFac">
+        <MappingFragment StoreEntitySet="IdebFac">
+          <ScalarProperty Name="FacId" ColumnName="FacId" />
+          <ScalarProperty Name="IdebId" ColumnName="IdebId" />
+          <ScalarProperty Name="Seq" ColumnName="Seq" />
+          <ScalarProperty Name="DebtectorId" ColumnName="DebtectorId" />
+          <ScalarProperty Name="FacCat" ColumnName="FacCat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IdebFacBgs">
+      <EntityTypeMapping TypeName="DBSCBSModel.IdebFacBg">
+        <MappingFragment StoreEntitySet="IdebFacBg">
+          <ScalarProperty Name="FacId" ColumnName="FacId" />
+          <ScalarProperty Name="Ljk" ColumnName="Ljk" />
+          <ScalarProperty Name="LjkKet" ColumnName="LjkKet" />
+          <ScalarProperty Name="Cabang" ColumnName="Cabang" />
+          <ScalarProperty Name="CabangKet" ColumnName="CabangKet" />
+          <ScalarProperty Name="NominalBg" ColumnName="NominalBg" />
+          <ScalarProperty Name="TanggalDibentuk" ColumnName="TanggalDibentuk" />
+          <ScalarProperty Name="TanggalUpdate" ColumnName="TanggalUpdate" />
+          <ScalarProperty Name="Bulan" ColumnName="Bulan" />
+          <ScalarProperty Name="Tahun" ColumnName="Tahun" />
+          <ScalarProperty Name="NoRekening" ColumnName="NoRekening" />
+          <ScalarProperty Name="JenisGaransi" ColumnName="JenisGaransi" />
+          <ScalarProperty Name="JenisGaransiKet" ColumnName="JenisGaransiKet" />
+          <ScalarProperty Name="TanggalDiterbitkan" ColumnName="TanggalDiterbitkan" />
+          <ScalarProperty Name="TanggalJatuhTempo" ColumnName="TanggalJatuhTempo" />
+          <ScalarProperty Name="NoAkadAwal" ColumnName="NoAkadAwal" />
+          <ScalarProperty Name="TanggalAkadAwal" ColumnName="TanggalAkadAwal" />
+          <ScalarProperty Name="NoAkadAkhir" ColumnName="NoAkadAkhir" />
+          <ScalarProperty Name="TanggalAkadAkhir" ColumnName="TanggalAkadAkhir" />
+          <ScalarProperty Name="NamaYangDijamin" ColumnName="NamaYangDijamin" />
+          <ScalarProperty Name="Kolektibilitas" ColumnName="Kolektibilitas" />
+          <ScalarProperty Name="Valuta" ColumnName="Valuta" />
+          <ScalarProperty Name="Plafon" ColumnName="Plafon" />
+          <ScalarProperty Name="TujuanGaransi" ColumnName="TujuanGaransi" />
+          <ScalarProperty Name="TujuanGaransiKet" ColumnName="TujuanGaransiKet" />
+          <ScalarProperty Name="SetoranJaminan" ColumnName="SetoranJaminan" />
+          <ScalarProperty Name="TanggalWanPrestasi" ColumnName="TanggalWanPrestasi" />
+          <ScalarProperty Name="Kondisi" ColumnName="Kondisi" />
+          <ScalarProperty Name="KondisiKet" ColumnName="KondisiKet" />
+          <ScalarProperty Name="TanggalKondisi" ColumnName="TanggalKondisi" />
+          <ScalarProperty Name="Keterangan" ColumnName="Keterangan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IdebFacCollaterals">
+      <EntityTypeMapping TypeName="DBSCBSModel.IdebFacCollateral">
+        <MappingFragment StoreEntitySet="IdebFacCollateral">
+          <ScalarProperty Name="FacId" ColumnName="FacId" />
+          <ScalarProperty Name="Seq" ColumnName="Seq" />
+          <ScalarProperty Name="DebtectorId" ColumnName="DebtectorId" />
+          <ScalarProperty Name="DebtectorFacId" ColumnName="DebtectorFacId" />
+          <ScalarProperty Name="JenisAgunanKet" ColumnName="JenisAgunanKet" />
+          <ScalarProperty Name="NilaiAgunanMenurutLJK" ColumnName="NilaiAgunanMenurutLJK" />
+          <ScalarProperty Name="ProsentaseParipasu" ColumnName="ProsentaseParipasu" />
+          <ScalarProperty Name="TanggalUpdate" ColumnName="TanggalUpdate" />
+          <ScalarProperty Name="NomorAgunan" ColumnName="NomorAgunan" />
+          <ScalarProperty Name="JenisPengikatan" ColumnName="JenisPengikatan" />
+          <ScalarProperty Name="JenisPengikatanKet" ColumnName="JenisPengikatanKet" />
+          <ScalarProperty Name="TanggalPengikatan" ColumnName="TanggalPengikatan" />
+          <ScalarProperty Name="NamaPemilikAgunan" ColumnName="NamaPemilikAgunan" />
+          <ScalarProperty Name="AlamatAgunan" ColumnName="AlamatAgunan" />
+          <ScalarProperty Name="LokasiAgunan" ColumnName="LokasiAgunan" />
+          <ScalarProperty Name="LokasiAgunanKet" ColumnName="LokasiAgunanKet" />
+          <ScalarProperty Name="TglPenilaianLjk" ColumnName="TglPenilaianLjk" />
+          <ScalarProperty Name="PeringkatAgunan" ColumnName="PeringkatAgunan" />
+          <ScalarProperty Name="LembagaPemeringkat" ColumnName="LembagaPemeringkat" />
+          <ScalarProperty Name="LembagaPemeringkatKet" ColumnName="LembagaPemeringkatKet" />
+          <ScalarProperty Name="BuktiKepemilikan" ColumnName="BuktiKepemilikan" />
+          <ScalarProperty Name="NilaiAgunanNjop" ColumnName="NilaiAgunanNjop" />
+          <ScalarProperty Name="NilaiAgunanIndep" ColumnName="NilaiAgunanIndep" />
+          <ScalarProperty Name="NamaPenilaiIndep" ColumnName="NamaPenilaiIndep" />
+          <ScalarProperty Name="Asuransi" ColumnName="Asuransi" />
+          <ScalarProperty Name="TanggalPenilaianPenilaiIndependen" ColumnName="TanggalPenilaianPenilaiIndependen" />
+          <ScalarProperty Name="Keterangan" ColumnName="Keterangan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IdebFacCollects">
+      <EntityTypeMapping TypeName="DBSCBSModel.IdebFacCollect">
+        <MappingFragment StoreEntitySet="IdebFacCollect">
+          <ScalarProperty Name="FacId" ColumnName="FacId" />
+          <ScalarProperty Name="Seq" ColumnName="Seq" />
+          <ScalarProperty Name="Tahun" ColumnName="Tahun" />
+          <ScalarProperty Name="Bulan" ColumnName="Bulan" />
+          <ScalarProperty Name="Dpd" ColumnName="Dpd" />
+          <ScalarProperty Name="Collect" ColumnName="Collect" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IdebFacCredits">
+      <EntityTypeMapping TypeName="DBSCBSModel.IdebFacCredit">
+        <MappingFragment StoreEntitySet="IdebFacCredit">
+          <ScalarProperty Name="FacId" ColumnName="FacId" />
+          <ScalarProperty Name="Ljk" ColumnName="Ljk" />
+          <ScalarProperty Name="LjkKet" ColumnName="LjkKet" />
+          <ScalarProperty Name="Cabang" ColumnName="Cabang" />
+          <ScalarProperty Name="CabangKet" ColumnName="CabangKet" />
+          <ScalarProperty Name="BakiDebet" ColumnName="BakiDebet" />
+          <ScalarProperty Name="TanggalDibentuk" ColumnName="TanggalDibentuk" />
+          <ScalarProperty Name="TanggalUpdate" ColumnName="TanggalUpdate" />
+          <ScalarProperty Name="Bulan" ColumnName="Bulan" />
+          <ScalarProperty Name="Tahun" ColumnName="Tahun" />
+          <ScalarProperty Name="SifatKredit" ColumnName="SifatKredit" />
+          <ScalarProperty Name="SifatKreditKet" ColumnName="SifatKreditKet" />
+          <ScalarProperty Name="JenisKredit" ColumnName="JenisKredit" />
+          <ScalarProperty Name="JenisKreditKet" ColumnName="JenisKreditKet" />
+          <ScalarProperty Name="AkadPembiayaan" ColumnName="AkadPembiayaan" />
+          <ScalarProperty Name="AkadPembiayaanKet" ColumnName="AkadPembiayaanKet" />
+          <ScalarProperty Name="NoRekening" ColumnName="NoRekening" />
+          <ScalarProperty Name="BaruPerpanjangan" ColumnName="BaruPerpanjangan" />
+          <ScalarProperty Name="NoAkadAwal" ColumnName="NoAkadAwal" />
+          <ScalarProperty Name="TanggalAkadAwal" ColumnName="TanggalAkadAwal" />
+          <ScalarProperty Name="NoAkadAkhir" ColumnName="NoAkadAkhir" />
+          <ScalarProperty Name="TanggalAkadAkhir" ColumnName="TanggalAkadAkhir" />
+          <ScalarProperty Name="TanggalAwalKredit" ColumnName="TanggalAwalKredit" />
+          <ScalarProperty Name="TanggalMulai" ColumnName="TanggalMulai" />
+          <ScalarProperty Name="TanggalJatuhTempo" ColumnName="TanggalJatuhTempo" />
+          <ScalarProperty Name="KategoriDebiturKode" ColumnName="KategoriDebiturKode" />
+          <ScalarProperty Name="KategoriDebiturKet" ColumnName="KategoriDebiturKet" />
+          <ScalarProperty Name="JenisPenggunaan" ColumnName="JenisPenggunaan" />
+          <ScalarProperty Name="JenisPenggunaanKet" ColumnName="JenisPenggunaanKet" />
+          <ScalarProperty Name="SektorEkonomi" ColumnName="SektorEkonomi" />
+          <ScalarProperty Name="SektorEkonomiKet" ColumnName="SektorEkonomiKet" />
+          <ScalarProperty Name="KreditProgramPemerintah" ColumnName="KreditProgramPemerintah" />
+          <ScalarProperty Name="KreditProgramPemerintahKet" ColumnName="KreditProgramPemerintahKet" />
+          <ScalarProperty Name="LokasiProyek" ColumnName="LokasiProyek" />
+          <ScalarProperty Name="LokasiProyekKet" ColumnName="LokasiProyekKet" />
+          <ScalarProperty Name="Valuta" ColumnName="Valuta" />
+          <ScalarProperty Name="SukuBunga" ColumnName="SukuBunga" />
+          <ScalarProperty Name="JenisSukuBunga" ColumnName="JenisSukuBunga" />
+          <ScalarProperty Name="JenisSukuBungaKet" ColumnName="JenisSukuBungaKet" />
+          <ScalarProperty Name="Kolektibilitas" ColumnName="Kolektibilitas" />
+          <ScalarProperty Name="JumlahHariTunggakan" ColumnName="JumlahHariTunggakan" />
+          <ScalarProperty Name="NilaiProyek" ColumnName="NilaiProyek" />
+          <ScalarProperty Name="PlafonAwal" ColumnName="PlafonAwal" />
+          <ScalarProperty Name="Plafon" ColumnName="Plafon" />
+          <ScalarProperty Name="RealisasiBulanBerjalan" ColumnName="RealisasiBulanBerjalan" />
+          <ScalarProperty Name="NilaiDalamMataUangAsal" ColumnName="NilaiDalamMataUangAsal" />
+          <ScalarProperty Name="SebabMacet" ColumnName="SebabMacet" />
+          <ScalarProperty Name="SebabMacetKet" ColumnName="SebabMacetKet" />
+          <ScalarProperty Name="TanggalMacet" ColumnName="TanggalMacet" />
+          <ScalarProperty Name="TunggakanPokok" ColumnName="TunggakanPokok" />
+          <ScalarProperty Name="TunggakanBunga" ColumnName="TunggakanBunga" />
+          <ScalarProperty Name="FrekuensiTunggakan" ColumnName="FrekuensiTunggakan" />
+          <ScalarProperty Name="Denda" ColumnName="Denda" />
+          <ScalarProperty Name="FrekuensiRestrukturisasi" ColumnName="FrekuensiRestrukturisasi" />
+          <ScalarProperty Name="TanggalRestrukturisasiAkhir" ColumnName="TanggalRestrukturisasiAkhir" />
+          <ScalarProperty Name="KodeCaraRestrukturisasi" ColumnName="KodeCaraRestrukturisasi" />
+          <ScalarProperty Name="RestrukturisasiKet" ColumnName="RestrukturisasiKet" />
+          <ScalarProperty Name="Kondisi" ColumnName="Kondisi" />
+          <ScalarProperty Name="KondisiKet" ColumnName="KondisiKet" />
+          <ScalarProperty Name="TanggalKondisi" ColumnName="TanggalKondisi" />
+          <ScalarProperty Name="Keterangan" ColumnName="Keterangan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IdebFacLcs">
+      <EntityTypeMapping TypeName="DBSCBSModel.IdebFacLc">
+        <MappingFragment StoreEntitySet="IdebFacLc">
+          <ScalarProperty Name="FacId" ColumnName="FacId" />
+          <ScalarProperty Name="Ljk" ColumnName="Ljk" />
+          <ScalarProperty Name="LjkKet" ColumnName="LjkKet" />
+          <ScalarProperty Name="Cabang" ColumnName="Cabang" />
+          <ScalarProperty Name="CabangKet" ColumnName="CabangKet" />
+          <ScalarProperty Name="NominalLc" ColumnName="NominalLc" />
+          <ScalarProperty Name="TanggalDibentuk" ColumnName="TanggalDibentuk" />
+          <ScalarProperty Name="TanggalUpdate" ColumnName="TanggalUpdate" />
+          <ScalarProperty Name="Bulan" ColumnName="Bulan" />
+          <ScalarProperty Name="Tahun" ColumnName="Tahun" />
+          <ScalarProperty Name="NoLc" ColumnName="NoLc" />
+          <ScalarProperty Name="JenisLc" ColumnName="JenisLc" />
+          <ScalarProperty Name="JenisLcKet" ColumnName="JenisLcKet" />
+          <ScalarProperty Name="TanggalDiterbitkan" ColumnName="TanggalDiterbitkan" />
+          <ScalarProperty Name="TanggalJatuhTempo" ColumnName="TanggalJatuhTempo" />
+          <ScalarProperty Name="NoAkadAwal" ColumnName="NoAkadAwal" />
+          <ScalarProperty Name="TanggalAkadAwal" ColumnName="TanggalAkadAwal" />
+          <ScalarProperty Name="NoAkadAkhir" ColumnName="NoAkadAkhir" />
+          <ScalarProperty Name="TanggalAkadAkhir" ColumnName="TanggalAkadAkhir" />
+          <ScalarProperty Name="BankCounterparty" ColumnName="BankCounterparty" />
+          <ScalarProperty Name="Kolektibilitas" ColumnName="Kolektibilitas" />
+          <ScalarProperty Name="Valuta" ColumnName="Valuta" />
+          <ScalarProperty Name="Plafon" ColumnName="Plafon" />
+          <ScalarProperty Name="TujuanLc" ColumnName="TujuanLc" />
+          <ScalarProperty Name="TujuanLcKet" ColumnName="TujuanLcKet" />
+          <ScalarProperty Name="SetoraJaminan" ColumnName="SetoraJaminan" />
+          <ScalarProperty Name="TanggalWanPrestasi" ColumnName="TanggalWanPrestasi" />
+          <ScalarProperty Name="Kondisi" ColumnName="Kondisi" />
+          <ScalarProperty Name="KondisiKet" ColumnName="KondisiKet" />
+          <ScalarProperty Name="TanggalKondisi" ColumnName="TanggalKondisi" />
+          <ScalarProperty Name="Keterangan" ColumnName="Keterangan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IdebFacOthers">
+      <EntityTypeMapping TypeName="DBSCBSModel.IdebFacOther">
+        <MappingFragment StoreEntitySet="IdebFacOther">
+          <ScalarProperty Name="FacId" ColumnName="FacId" />
+          <ScalarProperty Name="Ljk" ColumnName="Ljk" />
+          <ScalarProperty Name="LjkKet" ColumnName="LjkKet" />
+          <ScalarProperty Name="Cabang" ColumnName="Cabang" />
+          <ScalarProperty Name="CabangKet" ColumnName="CabangKet" />
+          <ScalarProperty Name="NominalJumlahKwajibanIDR" ColumnName="NominalJumlahKwajibanIDR" />
+          <ScalarProperty Name="TanggalDibentuk" ColumnName="TanggalDibentuk" />
+          <ScalarProperty Name="TanggalUpdate" ColumnName="TanggalUpdate" />
+          <ScalarProperty Name="Bulan" ColumnName="Bulan" />
+          <ScalarProperty Name="Tahun" ColumnName="Tahun" />
+          <ScalarProperty Name="NoRekening" ColumnName="NoRekening" />
+          <ScalarProperty Name="JenisFasilitas" ColumnName="JenisFasilitas" />
+          <ScalarProperty Name="JenisFasilitasKet" ColumnName="JenisFasilitasKet" />
+          <ScalarProperty Name="TanggalMulai" ColumnName="TanggalMulai" />
+          <ScalarProperty Name="TanggalJatuhTempo" ColumnName="TanggalJatuhTempo" />
+          <ScalarProperty Name="Valuta" ColumnName="Valuta" />
+          <ScalarProperty Name="NilaiDalamMataUangAsal" ColumnName="NilaiDalamMataUangAsal" />
+          <ScalarProperty Name="SukuBunga" ColumnName="SukuBunga" />
+          <ScalarProperty Name="Kolektibilitas" ColumnName="Kolektibilitas" />
+          <ScalarProperty Name="JumlahHariTunggakan" ColumnName="JumlahHariTunggakan" />
+          <ScalarProperty Name="TanggalMacet" ColumnName="TanggalMacet" />
+          <ScalarProperty Name="SebabMacet" ColumnName="SebabMacet" />
+          <ScalarProperty Name="SebabMacetKet" ColumnName="SebabMacetKet" />
+          <ScalarProperty Name="Tunggakan" ColumnName="Tunggakan" />
+          <ScalarProperty Name="Kondisi" ColumnName="Kondisi" />
+          <ScalarProperty Name="KondisiKet" ColumnName="KondisiKet" />
+          <ScalarProperty Name="TanggalKondisi" ColumnName="TanggalKondisi" />
+          <ScalarProperty Name="Keterangan" ColumnName="Keterangan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IdebFacPenjamins">
+      <EntityTypeMapping TypeName="DBSCBSModel.IdebFacPenjamin">
+        <MappingFragment StoreEntitySet="IdebFacPenjamin">
+          <ScalarProperty Name="FacId" ColumnName="FacId" />
+          <ScalarProperty Name="Seq" ColumnName="Seq" />
+          <ScalarProperty Name="NamaPenjamin" ColumnName="NamaPenjamin" />
+          <ScalarProperty Name="NomorIdentitas" ColumnName="NomorIdentitas" />
+          <ScalarProperty Name="TanggalUpdate" ColumnName="TanggalUpdate" />
+          <ScalarProperty Name="TanggalBuat" ColumnName="TanggalBuat" />
+          <ScalarProperty Name="JenisPenjamin" ColumnName="JenisPenjamin" />
+          <ScalarProperty Name="JenisPenjaminKet" ColumnName="JenisPenjaminKet" />
+          <ScalarProperty Name="AlamatPenjamin" ColumnName="AlamatPenjamin" />
+          <ScalarProperty Name="Keterangan" ColumnName="Keterangan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IdebFacSbs">
+      <EntityTypeMapping TypeName="DBSCBSModel.IdebFacSb">
+        <MappingFragment StoreEntitySet="IdebFacSb">
+          <ScalarProperty Name="FacId" ColumnName="FacId" />
+          <ScalarProperty Name="Ljk" ColumnName="Ljk" />
+          <ScalarProperty Name="LjkKet" ColumnName="LjkKet" />
+          <ScalarProperty Name="Cabang" ColumnName="Cabang" />
+          <ScalarProperty Name="CabangKet" ColumnName="CabangKet" />
+          <ScalarProperty Name="NominalSb" ColumnName="NominalSb" />
+          <ScalarProperty Name="TanggalDibentuk" ColumnName="TanggalDibentuk" />
+          <ScalarProperty Name="TanggalUpdate" ColumnName="TanggalUpdate" />
+          <ScalarProperty Name="Bulan" ColumnName="Bulan" />
+          <ScalarProperty Name="Tahun" ColumnName="Tahun" />
+          <ScalarProperty Name="NoSuratBeharga" ColumnName="NoSuratBeharga" />
+          <ScalarProperty Name="JenisSuratBeharga" ColumnName="JenisSuratBeharga" />
+          <ScalarProperty Name="JenisSuratBehargaKet" ColumnName="JenisSuratBehargaKet" />
+          <ScalarProperty Name="SovereignRate" ColumnName="SovereignRate" />
+          <ScalarProperty Name="Listing" ColumnName="Listing" />
+          <ScalarProperty Name="PeringkatSuratBeharga" ColumnName="PeringkatSuratBeharga" />
+          <ScalarProperty Name="TujuanKepemilikan" ColumnName="TujuanKepemilikan" />
+          <ScalarProperty Name="TujuanKepemilikanKet" ColumnName="TujuanKepemilikanKet" />
+          <ScalarProperty Name="TanggalDiterbitkan" ColumnName="TanggalDiterbitkan" />
+          <ScalarProperty Name="TanggalJatuhTempo" ColumnName="TanggalJatuhTempo" />
+          <ScalarProperty Name="SukuBunga" ColumnName="SukuBunga" />
+          <ScalarProperty Name="Valuta" ColumnName="Valuta" />
+          <ScalarProperty Name="Kolektibilitas" ColumnName="Kolektibilitas" />
+          <ScalarProperty Name="JumlahHariTunggakan" ColumnName="JumlahHariTunggakan" />
+          <ScalarProperty Name="NilaiDalamMataUangAsal" ColumnName="NilaiDalamMataUangAsal" />
+          <ScalarProperty Name="NilaiPasar" ColumnName="NilaiPasar" />
+          <ScalarProperty Name="NilaiPerolehan" ColumnName="NilaiPerolehan" />
+          <ScalarProperty Name="Tunggakan" ColumnName="Tunggakan" />
+          <ScalarProperty Name="SebabMacet" ColumnName="SebabMacet" />
+          <ScalarProperty Name="SebabMacetKet" ColumnName="SebabMacetKet" />
+          <ScalarProperty Name="TanggalMacet" ColumnName="TanggalMacet" />
+          <ScalarProperty Name="Kondisi" ColumnName="Kondisi" />
+          <ScalarProperty Name="KondisiKet" ColumnName="KondisiKet" />
+          <ScalarProperty Name="TanggalKondisi" ColumnName="TanggalKondisi" />
+          <ScalarProperty Name="Keterangan" ColumnName="Keterangan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IdebFacSummaries">
+      <EntityTypeMapping TypeName="DBSCBSModel.IdebFacSummary">
+        <MappingFragment StoreEntitySet="IdebFacSummary">
+          <ScalarProperty Name="IdebId" ColumnName="IdebId" />
+          <ScalarProperty Name="PlafonEfektifKredit" ColumnName="PlafonEfektifKredit" />
+          <ScalarProperty Name="PlafonEfektifLc" ColumnName="PlafonEfektifLc" />
+          <ScalarProperty Name="PlafonEfektifBg" ColumnName="PlafonEfektifBg" />
+          <ScalarProperty Name="plafonEfektifSec" ColumnName="plafonEfektifSec" />
+          <ScalarProperty Name="PlafonEfektifLainnya" ColumnName="PlafonEfektifLainnya" />
+          <ScalarProperty Name="PlafonEfektifTotal" ColumnName="PlafonEfektifTotal" />
+          <ScalarProperty Name="BakiDebetKredit" ColumnName="BakiDebetKredit" />
+          <ScalarProperty Name="BakiDebetLc" ColumnName="BakiDebetLc" />
+          <ScalarProperty Name="BakiDebetBg" ColumnName="BakiDebetBg" />
+          <ScalarProperty Name="BakiDebetSec" ColumnName="BakiDebetSec" />
+          <ScalarProperty Name="BakiDebetLainnya" ColumnName="BakiDebetLainnya" />
+          <ScalarProperty Name="BakiDebetTotal" ColumnName="BakiDebetTotal" />
+          <ScalarProperty Name="KrediturBankUmum" ColumnName="KrediturBankUmum" />
+          <ScalarProperty Name="KrediturBPR_S" ColumnName="KrediturBPR_S" />
+          <ScalarProperty Name="KrediturLp" ColumnName="KrediturLp" />
+          <ScalarProperty Name="KrediturLainnya" ColumnName="KrediturLainnya" />
+          <ScalarProperty Name="KolekTerburuk" ColumnName="KolekTerburuk" />
+          <ScalarProperty Name="KolekDataTerburuk" ColumnName="KolekDataTerburuk" />
+          <ScalarProperty Name="KolekBulanDataTerburuk" ColumnName="KolekBulanDataTerburuk" />
+          <ScalarProperty Name="KolekDataTerburukDate" ColumnName="KolekDataTerburukDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IdebIndivDatas">
+      <EntityTypeMapping TypeName="DBSCBSModel.IdebIndivData">
+        <MappingFragment StoreEntitySet="IdebIndivData">
+          <ScalarProperty Name="IdebId" ColumnName="IdebId" />
+          <ScalarProperty Name="Seq" ColumnName="Seq" />
+          <ScalarProperty Name="DebtectorId" ColumnName="DebtectorId" />
+          <ScalarProperty Name="NamaDebitur" ColumnName="NamaDebitur" />
+          <ScalarProperty Name="Identitas" ColumnName="Identitas" />
+          <ScalarProperty Name="NoIdentitas" ColumnName="NoIdentitas" />
+          <ScalarProperty Name="JenisKelamin" ColumnName="JenisKelamin" />
+          <ScalarProperty Name="JenisKelaminKet" ColumnName="JenisKelaminKet" />
+          <ScalarProperty Name="Npwp" ColumnName="Npwp" />
+          <ScalarProperty Name="TempatLahir" ColumnName="TempatLahir" />
+          <ScalarProperty Name="TanggalLahir" ColumnName="TanggalLahir" />
+          <ScalarProperty Name="Pelapor" ColumnName="Pelapor" />
+          <ScalarProperty Name="PelaporKet" ColumnName="PelaporKet" />
+          <ScalarProperty Name="TanggalDibentuk" ColumnName="TanggalDibentuk" />
+          <ScalarProperty Name="TanggalUpdate" ColumnName="TanggalUpdate" />
+          <ScalarProperty Name="Alamat" ColumnName="Alamat" />
+          <ScalarProperty Name="Kelurahan" ColumnName="Kelurahan" />
+          <ScalarProperty Name="Kecamatan" ColumnName="Kecamatan" />
+          <ScalarProperty Name="KabKota" ColumnName="KabKota" />
+          <ScalarProperty Name="KabKotaKet" ColumnName="KabKotaKet" />
+          <ScalarProperty Name="KodePos" ColumnName="KodePos" />
+          <ScalarProperty Name="Negara" ColumnName="Negara" />
+          <ScalarProperty Name="NegaraKet" ColumnName="NegaraKet" />
+          <ScalarProperty Name="Pekerjaan" ColumnName="Pekerjaan" />
+          <ScalarProperty Name="PekerjaanKet" ColumnName="PekerjaanKet" />
+          <ScalarProperty Name="TempatBekerja" ColumnName="TempatBekerja" />
+          <ScalarProperty Name="BidangUsaha" ColumnName="BidangUsaha" />
+          <ScalarProperty Name="BidangUsahaKet" ColumnName="BidangUsahaKet" />
+          <ScalarProperty Name="KodeGelarDebitur" ColumnName="KodeGelarDebitur" />
+          <ScalarProperty Name="StatusGelarDebitur" ColumnName="StatusGelarDebitur" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IdebIndivSearchVars">
+      <EntityTypeMapping TypeName="DBSCBSModel.IdebIndivSearchVar">
+        <MappingFragment StoreEntitySet="IdebIndivSearchVar">
+          <ScalarProperty Name="IdebId" ColumnName="IdebId" />
+          <ScalarProperty Name="NamaDebitur" ColumnName="NamaDebitur" />
+          <ScalarProperty Name="JenisKelamin" ColumnName="JenisKelamin" />
+          <ScalarProperty Name="JenisKelaminKet" ColumnName="JenisKelaminKet" />
+          <ScalarProperty Name="NoIdentitas" ColumnName="NoIdentitas" />
+          <ScalarProperty Name="Npwp" ColumnName="Npwp" />
+          <ScalarProperty Name="TempatLahir" ColumnName="TempatLahir" />
+          <ScalarProperty Name="TanggalLahir" ColumnName="TanggalLahir" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LISTs">
+      <EntityTypeMapping TypeName="DBSCBSModel.LIST">
+        <MappingFragment StoreEntitySet="LIST">
+          <ScalarProperty Name="LISTID" ColumnName="LISTID" />
+          <ScalarProperty Name="KEYFIELD" ColumnName="KEYFIELD" />
+          <ScalarProperty Name="KEYFIELDDESC" ColumnName="KEYFIELDDESC" />
+          <ScalarProperty Name="LISTDESC" ColumnName="LISTDESC" />
+          <ScalarProperty Name="LISTFIELD" ColumnName="LISTFIELD" />
+          <ScalarProperty Name="LISTFILTER" ColumnName="LISTFILTER" />
+          <ScalarProperty Name="LISTDETAIL" ColumnName="LISTDETAIL" />
+          <ScalarProperty Name="LISTSQLPARAM" ColumnName="LISTSQLPARAM" />
+          <ScalarProperty Name="LISTSQLCOND" ColumnName="LISTSQLCOND" />
+          <ScalarProperty Name="LISTGROUPBY" ColumnName="LISTGROUPBY" />
+          <ScalarProperty Name="ALLOWSELECTION" ColumnName="ALLOWSELECTION" />
+          <ScalarProperty Name="ALLOWFILTER" ColumnName="ALLOWFILTER" />
+          <ScalarProperty Name="ALLOWSORT" ColumnName="ALLOWSORT" />
+          <ScalarProperty Name="ALLOWGROUPBY" ColumnName="ALLOWGROUPBY" />
+          <ScalarProperty Name="ALLOWEXPORT" ColumnName="ALLOWEXPORT" />
+          <ScalarProperty Name="LISTDETAILDESC" ColumnName="LISTDETAILDESC" />
+          <ScalarProperty Name="LISTDETAIL2" ColumnName="LISTDETAIL2" />
+          <ScalarProperty Name="LISTDETAIL2DESC" ColumnName="LISTDETAIL2DESC" />
+          <ScalarProperty Name="LISTCHKBOXCMD" ColumnName="LISTCHKBOXCMD" />
+          <ScalarProperty Name="LISTCHKCMDTEXT" ColumnName="LISTCHKCMDTEXT" />
+          <ScalarProperty Name="LISTREASONQRY" ColumnName="LISTREASONQRY" />
+          <ScalarProperty Name="LISTREASONCAPTION" ColumnName="LISTREASONCAPTION" />
+          <ScalarProperty Name="LISTREASONPOSFRONT" ColumnName="LISTREASONPOSFRONT" />
+          <ScalarProperty Name="LISTORDERBY" ColumnName="LISTORDERBY" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ParameterSystems">
+      <EntityTypeMapping TypeName="DBSCBSModel.ParameterSystem">
+        <MappingFragment StoreEntitySet="ParameterSystem">
+          <ScalarProperty Name="SetId" ColumnName="SetId" />
+          <ScalarProperty Name="TableNM" ColumnName="TableNM" />
+          <ScalarProperty Name="IsMaker" ColumnName="IsMaker" />
+          <ScalarProperty Name="ISApprv" ColumnName="ISApprv" />
+          <ScalarProperty Name="ParamDesc" ColumnName="ParamDesc" />
+          <ScalarProperty Name="ParamLinkMaker" ColumnName="ParamLinkMaker" />
+          <ScalarProperty Name="ParamLinkApprv" ColumnName="ParamLinkApprv" />
+          <ScalarProperty Name="ParamPos" ColumnName="ParamPos" />
+          <ScalarProperty Name="ShowPending" ColumnName="ShowPending" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ParameterSystem_AuditTrail">
+      <EntityTypeMapping TypeName="DBSCBSModel.ParameterSystem_AuditTrail">
+        <MappingFragment StoreEntitySet="ParameterSystem_AuditTrail">
+          <ScalarProperty Name="TemporaryID" ColumnName="TemporaryID" />
+          <ScalarProperty Name="TableName" ColumnName="TableName" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ApproveDate" ColumnName="ApproveDate" />
+          <ScalarProperty Name="ApproveBy" ColumnName="ApproveBy" />
+          <ScalarProperty Name="HostIP" ColumnName="HostIP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ParameterSystem_AuditTrailDetail">
+      <EntityTypeMapping TypeName="DBSCBSModel.ParameterSystem_AuditTrailDetail">
+        <MappingFragment StoreEntitySet="ParameterSystem_AuditTrailDetail">
+          <ScalarProperty Name="TemporaryID" ColumnName="TemporaryID" />
+          <ScalarProperty Name="FieldName" ColumnName="FieldName" />
+          <ScalarProperty Name="FieldValue" ColumnName="FieldValue" />
+          <ScalarProperty Name="FieldValueBefore" ColumnName="FieldValueBefore" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ParameterSystem_Temporary">
+      <EntityTypeMapping TypeName="DBSCBSModel.ParameterSystem_Temporary">
+        <MappingFragment StoreEntitySet="ParameterSystem_Temporary">
+          <ScalarProperty Name="TemporaryID" ColumnName="TemporaryID" />
+          <ScalarProperty Name="TableName" ColumnName="TableName" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ParameterSystem_TemporaryDetail">
+      <EntityTypeMapping TypeName="DBSCBSModel.ParameterSystem_TemporaryDetail">
+        <MappingFragment StoreEntitySet="ParameterSystem_TemporaryDetail">
+          <ScalarProperty Name="TemporaryID" ColumnName="TemporaryID" />
+          <ScalarProperty Name="FieldName" ColumnName="FieldName" />
+          <ScalarProperty Name="FieldValue" ColumnName="FieldValue" />
+          <ScalarProperty Name="FieldValueBefore" ColumnName="FieldValueBefore" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ParameterSystemFields">
+      <EntityTypeMapping TypeName="DBSCBSModel.ParameterSystemField">
+        <MappingFragment StoreEntitySet="ParameterSystemField">
+          <ScalarProperty Name="TableNM" ColumnName="TableNM" />
+          <ScalarProperty Name="FieldPos" ColumnName="FieldPos" />
+          <ScalarProperty Name="FieldNM" ColumnName="FieldNM" />
+          <ScalarProperty Name="FieldTYPE" ColumnName="FieldTYPE" />
+          <ScalarProperty Name="FieldDesc" ColumnName="FieldDesc" />
+          <ScalarProperty Name="FieldReff" ColumnName="FieldReff" />
+          <ScalarProperty Name="FieldAuto" ColumnName="FieldAuto" />
+          <ScalarProperty Name="FieldKey" ColumnName="FieldKey" />
+          <ScalarProperty Name="FieldMan" ColumnName="FieldMan" />
+          <ScalarProperty Name="GroupBy" ColumnName="GroupBy" />
+          <ScalarProperty Name="SortSeq" ColumnName="SortSeq" />
+          <ScalarProperty Name="SortAsc" ColumnName="SortAsc" />
+          <ScalarProperty Name="AutoPrefix" ColumnName="AutoPrefix" />
+          <ScalarProperty Name="AutoSufix" ColumnName="AutoSufix" />
+          <ScalarProperty Name="FormulaType" ColumnName="FormulaType" />
+          <ScalarProperty Name="Locked" ColumnName="Locked" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProcGenAppIds">
+      <EntityTypeMapping TypeName="DBSCBSModel.ProcGenAppId">
+        <MappingFragment StoreEntitySet="ProcGenAppId">
+          <ScalarProperty Name="Org" ColumnName="Org" />
+          <ScalarProperty Name="ProcDate" ColumnName="ProcDate" />
+          <ScalarProperty Name="ProcFlag" ColumnName="ProcFlag" />
+          <ScalarProperty Name="RunNo" ColumnName="RunNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="DBSCBSModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SysModules">
+      <EntityTypeMapping TypeName="DBSCBSModel.SysModule">
+        <MappingFragment StoreEntitySet="SysModule">
+          <ScalarProperty Name="ModuleId" ColumnName="ModuleId" />
+          <ScalarProperty Name="ModuleName" ColumnName="ModuleName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="DBSCBSModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="DBSCBSModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="DBSCBSModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="DBSCBSModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBSCBSModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="DBSCBSModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBSCBSModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="DBSCBSModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="DBSCBSModel.Store.sp_upgraddiagrams" />
+    <FunctionImportMapping FunctionImportName="usp_GenAppId" FunctionName="DBSCBSModel.Store.usp_GenAppId" />
+    <FunctionImportMapping FunctionImportName="usp_GetAppId" FunctionName="DBSCBSModel.Store.usp_GetAppId" />
+    <FunctionImportMapping FunctionImportName="usp_InsUserActivity" FunctionName="DBSCBSModel.Store.usp_InsUserActivity" />
+    <FunctionImportMapping FunctionImportName="usp_ViewImpFFSetting" FunctionName="DBSCBSModel.Store.usp_ViewImpFFSetting">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBSCBSModel.usp_ViewImpFFSetting_Result">
+          <ScalarProperty Name="ImportName" ColumnName="ImportName" />
+          <ScalarProperty Name="SourceType" ColumnName="SourceType" />
+          <ScalarProperty Name="DestTable" ColumnName="DestTable" />
+          <ScalarProperty Name="Method" ColumnName="Method" />
+          <ScalarProperty Name="RowOverwrite" ColumnName="RowOverwrite" />
+          <ScalarProperty Name="ImportId" ColumnName="ImportId" />
+          <ScalarProperty Name="SourceFileName" ColumnName="SourceFileName" />
+          <ScalarProperty Name="SourceFilePath" ColumnName="SourceFilePath" />
+          <ScalarProperty Name="Format" ColumnName="Format" />
+          <ScalarProperty Name="TextQualifier" ColumnName="TextQualifier" />
+          <ScalarProperty Name="HeaderRowDelimiter" ColumnName="HeaderRowDelimiter" />
+          <ScalarProperty Name="HeaderRowsToSkip" ColumnName="HeaderRowsToSkip" />
+          <ScalarProperty Name="ColumnNameIn1st" ColumnName="ColumnNameIn1st" />
+          <ScalarProperty Name="DataRowsToSkip" ColumnName="DataRowsToSkip" />
+          <ScalarProperty Name="RowDelimiter" ColumnName="RowDelimiter" />
+          <ScalarProperty Name="ColumnDelimiter" ColumnName="ColumnDelimiter" />
+          <ScalarProperty Name="FtpId" ColumnName="FtpId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_ViewIWIDReqResp" FunctionName="DBSCBSModel.Store.usp_ViewIWIDReqResp">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBSCBSModel.usp_ViewIWIDReqResp_Result">
+          <ScalarProperty Name="TotalRecord" ColumnName="TotalRecord" />
+          <ScalarProperty Name="NoOfSuccess" ColumnName="NoOfSuccess" />
+          <ScalarProperty Name="NoOfFailed" ColumnName="NoOfFailed" />
+          <ScalarProperty Name="Start" ColumnName="Start" />
+          <ScalarProperty Name="Finish" ColumnName="Finish" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_ViewSPSResponse" FunctionName="DBSCBSModel.Store.usp_ViewSPSResponse">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBSCBSModel.usp_ViewSPSResponse_Result">
+          <ScalarProperty Name="ORG" ColumnName="ORG" />
+          <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+          <ScalarProperty Name="STAGE_FLAG" ColumnName="STAGE_FLAG" />
+          <ScalarProperty Name="APPLICATION_NO" ColumnName="APPLICATION NO" />
+          <ScalarProperty Name="EWSS_RESULT" ColumnName="EWSS RESULT" />
+          <ScalarProperty Name="LOAN_CODE" ColumnName="LOAN CODE" />
+          <ScalarProperty Name="BI_RESULT_CHECK" ColumnName="BI RESULT CHECK" />
+          <ScalarProperty Name="DIN" ColumnName="DIN" />
+          <ScalarProperty Name="VERIFIED_INCOME" ColumnName="VERIFIED INCOME" />
+          <ScalarProperty Name="FINAL_INCOME" ColumnName="FINAL INCOME" />
+          <ScalarProperty Name="PROXY_INC___MOB" ColumnName="PROXY INC - MOB" />
+          <ScalarProperty Name="PROXY_INC___ISSUER" ColumnName="PROXY INC - ISSUER" />
+          <ScalarProperty Name="PROXY_INC___LIMIT" ColumnName="PROXY INC - LIMIT" />
+          <ScalarProperty Name="OUTSIDE_MUE" ColumnName="OUTSIDE MUE" />
+          <ScalarProperty Name="MULTIPLIER_CUS_LEVEL_MUE" ColumnName="MULTIPLIER CUS LEVEL MUE" />
+          <ScalarProperty Name="TOTAL_EXPOSURE_CC_LIMIT_AT_OTHER_BANKS" ColumnName="TOTAL EXPOSURE CC LIMIT AT OTHER BANKS" />
+          <ScalarProperty Name="SID_RESULT" ColumnName="SID RESULT" />
+          <ScalarProperty Name="SUB_DECISION_CODE" ColumnName="SUB DECISION CODE" />
+          <ScalarProperty Name="C__OF_NEW_UL_L12M" ColumnName="# OF NEW UL L12M" />
+          <ScalarProperty Name="TOT_ACTIVE_CC_OS" ColumnName="TOT ACTIVE CC OS" />
+          <ScalarProperty Name="TOT_ACTIVE_CC_LIMIT" ColumnName="TOT ACTIVE CC LIMIT" />
+          <ScalarProperty Name="GROSS_OS_LIMIT" ColumnName="GROSS OS/LIMIT" />
+          <ScalarProperty Name="C__OF_ACTIVE_CC" ColumnName="# OF ACTIVE CC" />
+          <ScalarProperty Name="WORST_DPD_L12M" ColumnName="WORST DPD L12M" />
+          <ScalarProperty Name="C__OF_ACT_MORT_LOAN" ColumnName="# OF ACT MORT LOAN" />
+          <ScalarProperty Name="C__OF_ACTIVE_REV" ColumnName="# OF ACTIVE REV" />
+          <ScalarProperty Name="C__OF_REV_OVER_90_" ColumnName="% OF REV OVER 90%" />
+          <ScalarProperty Name="C__OF_UNC_LOANS" ColumnName="# OF UNC LOANS" />
+          <ScalarProperty Name="C__OF_SECURED_LOANS" ColumnName="# OF SECURED LOANS" />
+          <ScalarProperty Name="OLDEST_MOB_ALL_FAC" ColumnName="OLDEST MOB ALL FAC" />
+          <ScalarProperty Name="LATEST_DEQ_MONTH" ColumnName="LATEST DEQ MONTH" />
+          <ScalarProperty Name="OLDEST_MOB_UL_CC_ACT" ColumnName="OLDEST MOB UL/CC ACT" />
+          <ScalarProperty Name="PIN_PID_PI2_FLAG" ColumnName="PIN/PID/PI2 FLAG" />
+          <ScalarProperty Name="AKKI_RESULT" ColumnName="AKKI RESULT" />
+          <ScalarProperty Name="CARD_RATING" ColumnName="CARD RATING" />
+          <ScalarProperty Name="SID__CREDIT_BUREAU_RESULT" ColumnName="SID/ CREDIT BUREAU RESULT" />
+          <ScalarProperty Name="OPEN_DATE___CARD_RATING_RESULT" ColumnName="OPEN DATE - CARD RATING RESULT" />
+          <ScalarProperty Name="LIMIT___CARD_RATING_RESULT" ColumnName="LIMIT - CARD RATING RESULT" />
+          <ScalarProperty Name="OS_BALANCE___CARD_RATING_RESULT" ColumnName="OS BALANCE - CARD RATING RESULT" />
+          <ScalarProperty Name="PAYMENT_TYPE___CARD_RATING_RESULT" ColumnName="PAYMENT TYPE - CARD RATING RESULT" />
+          <ScalarProperty Name="HISTORY_L12_M___CARD_RATING_RESULT" ColumnName="HISTORY L12 M - CARD RATING RESULT" />
+          <ScalarProperty Name="CARD_TYPE___CARD_RATING_RESULT" ColumnName="CARD TYPE - CARD RATING RESULT" />
+          <ScalarProperty Name="LATEST_STATUS___CARD_RATING_RESULT" ColumnName="LATEST STATUS - CARD RATING RESULT" />
+          <ScalarProperty Name="BUREAU____FACILITIES_CC_OD_WITH_MORT_90__UTILIZATION" ColumnName="BUREAU - %FACILITIES CC/OD WITH MORT 90% UTILIZATION" />
+          <ScalarProperty Name="BUREAU___MONTHS_ON_BUREAU___LATEST_MONTH_WITH_DELQ__0" ColumnName="BUREAU - MONTHS ON BUREAU &amp; LATEST MONTH WITH DELQ &gt;0" />
+          <ScalarProperty Name="NEED_PROBING" ColumnName="NEED PROBING" />
+          <ScalarProperty Name="PROBING_DETAIL" ColumnName="PROBING DETAIL" />
+          <ScalarProperty Name="PROBING_DETAIL_2" ColumnName="PROBING DETAIL 2" />
+          <ScalarProperty Name="BUREAU___TOTAL_MOB_CARDS_FACILITY" ColumnName="BUREAU - TOTAL MOB CARDS FACILITY" />
+          <ScalarProperty Name="BUREAU___UR__OF_ACTIVE_CARDS_OS_LIMIT" ColumnName="BUREAU - UR% OF ACTIVE CARDS OS/LIMIT" />
+          <ScalarProperty Name="BUREAU_____LOAN_OPEN_L18M" ColumnName="BUREAU - # LOAN OPEN L18M" />
+          <ScalarProperty Name="BUREAU___DATE_LAST_CREDIT_CARD_TAKEN" ColumnName="BUREAU - DATE LAST CREDIT CARD TAKEN" />
+          <ScalarProperty Name="BUREAU___MOB_LAST_CREDIT_CARD_TAKEN" ColumnName="BUREAU - MOB LAST CREDIT CARD TAKEN" />
+          <ScalarProperty Name="BUREAU___WORST_DPD_L6M" ColumnName="BUREAU - WORST DPD L6M" />
+          <ScalarProperty Name="SID_PROFILLING" ColumnName="SID PROFILLING" />
+          <ScalarProperty Name="FIELD_HIGH_RISK_AREA" ColumnName="FIELD HIGH RISK AREA" />
+          <ScalarProperty Name="TOTAL_CARD_ISSUERS" ColumnName="TOTAL CARD ISSUERS" />
+          <ScalarProperty Name="GROSS_AMT_AGGR_CARD" ColumnName="GROSS AMT AGGR CARD" />
+          <ScalarProperty Name="APPROVE_DECLINE_CODE" ColumnName="APPROVE DECLINE CODE" />
+          <ScalarProperty Name="OTH2" ColumnName="OTH2" />
+          <ScalarProperty Name="DBR" ColumnName="DBR" />
+          <ScalarProperty Name="DSR" ColumnName="DSR" />
+          <ScalarProperty Name="UTILIZATION_RATE" ColumnName="UTILIZATION RATE" />
+          <ScalarProperty Name="PHONE_SEGMENTATION" ColumnName="PHONE SEGMENTATION" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

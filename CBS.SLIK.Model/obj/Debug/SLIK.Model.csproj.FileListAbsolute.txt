@@ -11,6 +11,6 @@ E:\Project\DBS DMS\source code\CBS.SLIK.Model\bin\Debug\SLIK.Model.pdb
 E:\Project\DBS DMS\source code\CBS.SLIK.Model\bin\Debug\Newtonsoft.Json.dll
 E:\Project\DBS DMS\source code\CBS.SLIK.Model\bin\Debug\Newtonsoft.Json.pdb
 E:\Project\DBS DMS\source code\CBS.SLIK.Model\bin\Debug\Newtonsoft.Json.xml
-E:\Project\DBS DMS\source code\CBS.SLIK.Model\obj\Debug\SLIK.Model.csprojResolveAssemblyReference.cache
 E:\Project\DBS DMS\source code\CBS.SLIK.Model\obj\Debug\SLIK.Model.dll
 E:\Project\DBS DMS\source code\CBS.SLIK.Model\obj\Debug\SLIK.Model.pdb
+E:\Project\DBS DMS\source code\CBS.SLIK.Model\obj\Debug\SLIK.Model.csprojResolveAssemblyReference.cache

@@ -1,7 +1,6 @@
 E:\Project\DBS DMS\source code\CBS.ExporterSvc\bin\Debug\DMS.CBS.ExporterSvc.exe.config
 E:\Project\DBS DMS\source code\CBS.ExporterSvc\bin\Debug\DMS.CBS.ExporterSvc.exe
 E:\Project\DBS DMS\source code\CBS.ExporterSvc\bin\Debug\DMS.CBS.ExporterSvc.pdb
-E:\Project\DBS DMS\source code\CBS.ExporterSvc\obj\Debug\CBS.ExporterSvc.csprojResolveAssemblyReference.cache
 E:\Project\DBS DMS\source code\CBS.ExporterSvc\obj\Debug\DMS.CBS.ExporterSvc.exe
 E:\Project\DBS DMS\source code\CBS.ExporterSvc\obj\Debug\DMS.CBS.ExporterSvc.pdb
 D:\Data Chandra\coba\SC\dbs-project\CBS.ExporterSvc\bin\Debug\DMS.CBS.ExporterSvc.exe.config

@@ -1,0 +1,441 @@
+﻿using DMS.Framework;
+using DMS.Tools;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using SLIK.Model;
+using System;
+using System.Collections.Generic;
+using System.Collections.Specialized;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
+using System.Globalization;
+using System.IO;
+
+namespace CBS.ImportExportSLIK
+{
+    public class ImportSLIK
+    {
+        private void SaveSLIKDoc(string appId, string docCode, DbConnection conn)
+        {
+            NameValueCollection Keys = new NameValueCollection();
+            NameValueCollection Fields = new NameValueCollection();
+            staticFramework.saveNVC(Keys, "AppId", appId);
+            staticFramework.saveNVC(Fields, "DocCd", docCode);
+            staticFramework.save(Fields, Keys, "AppDoc",
+                "DECLARE @Seq INT \n" +
+                "SELECT @Seq=ISNULL(MAX(Seq),0)+1 FROM AppDoc " +
+                "WHERE AppId='" + appId + "' \n"
+                , conn);
+        }
+
+        public Dictionary<string, object> ImportSLIKInputFile(string iwidFilePath, string connString, int dbTimeOut)
+        {
+            Dictionary<string, object> result = new Dictionary<string, object>();
+            result["Message"] = "";
+            result["LogSummary"] = null;
+            result["LogDetail"] = null;
+            try
+            {
+                FileInfo iwidFile = new FileInfo(iwidFilePath);
+                string detailLogFileName = Path.GetFileNameWithoutExtension(iwidFilePath) + "_detail.log";
+                string summLogFileName = Path.GetFileNameWithoutExtension(iwidFilePath) + "_summary.log";
+                result["LogDetail"] = new FileInfo(Path.GetFullPath(iwidFilePath) + detailLogFileName);
+                result["LogSummary"] = new FileInfo(Path.GetFullPath(iwidFilePath) + summLogFileName);
+                string _nFile_ = Path.GetFileNameWithoutExtension(iwidFilePath);
+                //TODO: validate format file
+                int row_total_ = 0;
+                using (DbConnection conn = new DbConnection(connString))
+                {
+                    using (StreamReader reader = new StreamReader(iwidFile.FullName))
+                    {
+                        int row = 0;
+                        int startRow = 1;
+                        string delimeter = "|";
+                        while (reader.Peek() > 0)
+                        {
+                            string strLine = reader.ReadLine();
+                            row++;
+                            if (strLine == null || strLine.Trim() == "")
+                                continue;
+                            if (row < startRow)
+                                continue;
+                            string[] fieldValues = strLine.Split(new string[] { delimeter }, StringSplitOptions.None);
+                            string appId = "";
+                            try
+                            {
+                                DataTable dtAppId = conn.GetDataTable("exec dbo.usp_GetAppId @1,@2",
+                                    new object[] { "SYSTEM", fieldValues[0].ToString() }, dbTimeOut);
+                                if (dtAppId.Rows.Count == 0)
+                                {
+                                    //TODO: insert log ke table log
+
+                                    continue;
+                                }
+                                appId = dtAppId.Rows[0]["AppId"].ToString();
+                                dtAppId.Dispose();
+
+                                //UNDONE:save ke table app
+                                NameValueCollection Keys = new NameValueCollection();
+                                NameValueCollection Fields = new NameValueCollection();
+                                staticFramework.saveNVC(Keys, "AppId", appId);
+                                staticFramework.saveNVC(Fields, "Type", fieldValues[1].ToString());
+                                staticFramework.saveNVC(Fields, "OriginAppId", fieldValues[2].ToString());
+                                staticFramework.save(Fields, Keys, "APP", conn);
+
+
+                                //Save Doc
+                                SaveSLIKDoc(appId, fieldValues[94].ToString(), conn);
+                                SaveSLIKDoc(appId, fieldValues[95].ToString(), conn);
+                                SaveSLIKDoc(appId, fieldValues[96].ToString(), conn);
+                                SaveSLIKDoc(appId, fieldValues[97].ToString(), conn);
+                                SaveSLIKDoc(appId, fieldValues[98].ToString(), conn);
+                                SaveSLIKDoc(appId, fieldValues[99].ToString(), conn);
+                                //End Save Doc
+
+                                //TODO: Insert ke table CustPersonal, etc lihat data dictionary sheet IWID_INPUT_DICTIONARY
+                            }
+                            catch (Exception exp)
+                            {
+                                //TODO: insert log ke table detail log
+                                NameValueCollection Keys = new NameValueCollection();
+                                NameValueCollection Fields = new NameValueCollection();
+                                staticFramework.saveNVC(Keys, "BatchFileName", _nFile_);
+                                staticFramework.saveNVC(Keys, "RowNumber", row);
+                                staticFramework.saveNVC(Fields, "LineNumber", row);
+                                staticFramework.saveNVC(Fields, "KeyValue", fieldValues[2].ToString());
+                                staticFramework.saveNVC(Fields, "LogType", "IWIDTYPE");
+                                staticFramework.saveNVC(Fields, "LogMessage", exp);
+                                staticFramework.save(Fields, Keys, "DataImportLogDetail", conn);
+                            }
+                        }
+                        row_total_ = row;
+                    }
+                    //TODO:create log files
+                    DateTime dt = DateTime.Now;
+                    string _time_ = String.Format("{0:ddMMyyyyHHmm}", dt);
+                    string sPath = "\\App_Data\\IWID_SPSFile_" + _time_ + ".resp";
+                    StreamWriter SaveFile = new StreamWriter(sPath);
+                    //SaveFile.WriteLine(row_total_ + "|" + a_success + "|" + a_failed + "|" + _time_start + "|" + _time_end);
+                    SaveFile.Close();
+                }
+            }
+            catch (Exception exp)
+            {
+                result["Message"] = exp.Message;
+            }
+            return result;
+        }
+
+        public Dictionary<string, object> ImportIdebText(string filePath)
+        {
+            string conn = ConfigurationManager.ConnectionStrings["DBSCBSConnectionString"].ConnectionString;
+            int increment;
+            int incerementOther;
+            Dictionary<string, object> result = new Dictionary<string, object>();
+            result["Message"] = "";
+            result["LogSummary"] = null;
+            result["LogDetail"] = null;
+
+            try
+            {
+                FileInfo SLIKFilePath = new FileInfo(filePath);
+                string detailLogFileName = Path.GetFileNameWithoutExtension(filePath) + "_detail.log";
+                string summLogFileName = Path.GetFileNameWithoutExtension(filePath) + "_summary.log";
+                result["LogDetail"] = new FileInfo(Path.GetFullPath(filePath) + detailLogFileName);
+                result["LogSummary"] = new FileInfo(Path.GetFullPath(filePath) + summLogFileName);
+                string _nFile_ = Path.GetFileNameWithoutExtension(filePath);
+
+                //mapping table
+                JObject jObj = JObject.Parse(File.ReadAllText(filePath));
+                JToken header = jObj["header"];
+                JToken perusahaan = jObj["perusahaan"];
+                JToken individual = jObj["individual"];
+                JToken type = null;
+
+                if (perusahaan != null)
+                {
+                    type = perusahaan;
+                }
+                else if (individual != null)
+                {
+                    type = individual;
+                }
+
+                IdebHeader iHeader = JsonConvert.DeserializeObject<IdebHeader>(jObj["header"].ToString());
+
+                if (type != null)
+                {
+                    IdebCorpSearchVar icorpSearch = JsonConvert.DeserializeObject<IdebCorpSearchVar>(type["parameterPencarian"].ToString());
+                    List<IdebCorpData> icorpDt = JsonConvert.DeserializeObject<List<IdebCorpData>>(type["dataPokokDebitur"].ToString());
+
+                    List<IdebCorpGroup> icorpGrp = JsonConvert.DeserializeObject<List<IdebCorpGroup>>(type["kelompokPengurusPemilik"].ToString());
+                    IdebFacSummary ifacSumm = JsonConvert.DeserializeObject<IdebFacSummary>(type["ringkasanFasilitas"].ToString());
+
+                    JToken fasilitas = type["fasilitas"];
+                    List<IdebSuratBerharga> iSrtBerharga = JsonConvert.DeserializeObject<List<IdebSuratBerharga>>(fasilitas["suratBerharga"].ToString());
+                    List<IdebKredit> iKredit = JsonConvert.DeserializeObject<List<IdebKredit>>(fasilitas["kredit"].ToString());
+                    List<IdebCollateral> ilc = JsonConvert.DeserializeObject<List<IdebCollateral>>(fasilitas["lc"].ToString());
+                    List<IdebBankGaransi> iBankGar = JsonConvert.DeserializeObject<List<IdebBankGaransi>>(fasilitas["bankGaransi"].ToString());
+                    List<IdebFasilitasLainnya> iFasLain = JsonConvert.DeserializeObject<List<IdebFasilitasLainnya>>(fasilitas["fasilitasLainnya"].ToString());
+
+                    using (DbConnection db = new DbConnection(conn))
+                    {
+                        try
+                        {
+
+                            #region insert to header
+                            NameValueCollection Keys = new NameValueCollection();
+                            NameValueCollection Field = new NameValueCollection();
+                            Random rnd = new Random();
+                            int no = rnd.Next(10);
+                            staticFramework.saveNVC(Keys, "Idebid", no.ToString());
+                            staticFramework.saveNVC(Field, "ReqId", "123");
+                            staticFramework.saveNVC(Field, "Seq", no.ToString());
+                            staticFramework.saveNVC(Field, "KodeReferensiPengguna", iHeader.KodeReferensiPengguna);
+                            staticFramework.saveNVC(Field, "TanggalHasil", DatetimeToString(iHeader.TanggalHasil));
+                            staticFramework.saveNVC(Field, "IdPenggunaPermintaan", iHeader.IdPermintaan);
+                            staticFramework.saveNVC(Field, "IdPenggunaPermintaan", iHeader.IdPenggunaPermintaan);
+                            staticFramework.saveNVC(Field, "DibuatOleh", iHeader.DibuatOleh);
+                            staticFramework.saveNVC(Field, "KodeLJKPermintaan", iHeader.KodeLJKPermintaan);
+                            staticFramework.saveNVC(Field, "KodeCabangPermintaan", iHeader.KodeCabangPermintaan);
+                            staticFramework.saveNVC(Field, "KodeTujuanPermintaan", iHeader.KodeTujuanPermintaan);
+                            staticFramework.saveNVC(Field, "TanggalPermintaan", DatetimeToString(iHeader.TanggalPermintaan));
+                            staticFramework.saveNVC(Field, "TotalBagian", iHeader.TotalBagian);
+                            staticFramework.saveNVC(Field, "NomorBagian", iHeader.NomorBagian);
+                            staticFramework.save(Field, Keys, "Ideb", db);
+                            #endregion
+
+                            #region insert to saveSearchParamater
+                            Keys = new NameValueCollection();
+                            Field = new NameValueCollection();
+                            staticFramework.saveNVC(Keys, "Idebid", no.ToString());
+                            staticFramework.saveNVC(Field, "NamaBadanUsaha", icorpSearch.NamaBadanUsaha);
+                            staticFramework.saveNVC(Field, "Npwp", icorpSearch.Npwp);
+                            staticFramework.saveNVC(Field, "TempatPendirian", icorpSearch.TempatPendirian);
+                            staticFramework.saveNVC(Field, "TanggalAktaPendirian", DatetimeToString(icorpSearch.TanggalAktaPendirian));
+                            staticFramework.saveNVC(Field, "NomorAktaPendirian", icorpSearch.NomorAktaPendirian);
+                            staticFramework.save(Field, Keys, "IdebCorpSearchVar", db);
+                            #endregion
+
+                            #region insert into Idecorpdata
+                            increment = 1;
+                            foreach (var item in icorpDt)
+                            {
+                                Keys = new NameValueCollection();
+                                Field = new NameValueCollection();
+                                staticFramework.saveNVC(Keys, "Idebid", no.ToString());
+                                staticFramework.saveNVC(Keys, "Seq", increment.ToString());
+                                staticFramework.saveNVC(Field, "DebtectorId", item.DebtectorId);
+                                staticFramework.saveNVC(Field, "NamaDebitur", item.NamaDebitur);
+                                staticFramework.saveNVC(Field, "NamaLengkap", item.NamaLengkap);
+                                staticFramework.saveNVC(Field, "Npwp", item.Npwp);
+                                staticFramework.saveNVC(Field, "BentukBu", item.BentukBu);
+                                staticFramework.saveNVC(Field, "GoPublic", item.GoPublic);
+                                staticFramework.saveNVC(Field, "TempatPendirian", item.TempatPendirian);
+                                staticFramework.saveNVC(Field, "NoAktaPendirian", item.NoAktaPendirian);
+                                staticFramework.saveNVC(Field, "TglAktaPendirian", DatetimeToString(item.TglAktaPendirian));
+                                staticFramework.saveNVC(Field, "Pelapor", item.Pelapor);
+                                staticFramework.saveNVC(Field, "TanggalDibentuk", DatetimeToString(item.TanggalDibentuk));
+                                staticFramework.saveNVC(Field, "TanggalUpdate", DatetimeToString(item.TanggalUpdate));
+                                staticFramework.saveNVC(Field, "Alamat", item.Alamat);
+                                staticFramework.saveNVC(Field, "Kelurahan", item.Kelurahan);
+                                staticFramework.saveNVC(Field, "Kecamatan", item.Kecamatan);
+                                staticFramework.saveNVC(Field, "KabKota", item.KabKota);
+                                staticFramework.saveNVC(Field, "KodePos", item.KodePos);
+                                staticFramework.saveNVC(Field, "Negara", item.Negara);
+                                staticFramework.saveNVC(Field, "NoAktaTerakhir", item.NoAktaTerakhir);
+                                staticFramework.saveNVC(Field, "TglAktaTerakhir", DatetimeToString(item.TglAktaTerakhir));
+                                staticFramework.saveNVC(Field, "SektorEkonomi", item.SektorEkonomi);
+                                staticFramework.saveNVC(Field, "Pemeringkat", item.Pemeringkat);
+                                staticFramework.saveNVC(Field, "Peringkat", item.Peringkat);
+                                staticFramework.saveNVC(Field, "TanggalPemeringkatan", DatetimeToString(item.TanggalPemeringkatan));
+                                staticFramework.save(Field, Keys, "IdebCorpData", db);
+                                increment++;
+                            }
+                            #endregion
+
+                            #region insert to idepcorgroup
+                            increment = 1;
+                            foreach (var item in icorpGrp)
+                            {
+                                Keys = new NameValueCollection();
+                                Field = new NameValueCollection();
+                                staticFramework.saveNVC(Keys, "Idebid", no.ToString());
+                                staticFramework.saveNVC(Field, "KodeLJK", item.KodeLJK);
+                                staticFramework.saveNVC(Field, "NamaLJK", item.NamaLJK);
+
+                                foreach (var itemPemilik in item.PengurusList)
+                                {
+                                    staticFramework.saveNVC(Keys, "Seq", increment.ToString());
+                                    staticFramework.saveNVC(Field, "NamaSesuaiIdentitas", itemPemilik.NamaSesuaiIdentitas);
+                                    staticFramework.saveNVC(Field, "NomorIdentitas", itemPemilik.NomorIdentitas);
+                                    staticFramework.saveNVC(Field, "JenisKelamin", itemPemilik.KodeJenisKelamin);
+                                    staticFramework.saveNVC(Field, "PosisiPekerjaan", itemPemilik.KodePosisiPekerjaan);
+                                    staticFramework.saveNVC(Field, "ProsentaseKepemilikan", itemPemilik.ProsentaseKepemilikan);
+                                    staticFramework.saveNVC(Field, "StatusPengurusPemilik", itemPemilik.KodeStatusPengurusPemilik);
+                                    staticFramework.saveNVC(Field, "Alamat", itemPemilik.Alamat);
+                                    staticFramework.saveNVC(Field, "Kelurahan", itemPemilik.Kelurahan);
+                                    staticFramework.saveNVC(Field, "Kecamatan", itemPemilik.Kecamatan);
+                                    staticFramework.saveNVC(Field, "Kota", itemPemilik.KodeKota);
+                                    staticFramework.save(Field, Keys, "IdebCorpGroup", db);
+                                    increment++;
+                                }
+
+                            }
+                            #endregion
+
+                            #region insert into ringkasan fasilitas
+                            Keys = new NameValueCollection();
+                            Field = new NameValueCollection();
+                            staticFramework.saveNVC(Keys, "Idebid", no.ToString());
+                            staticFramework.saveNVC(Field, "PlafonEfektifKredit", ifacSumm.PlafonEfektifKredit);
+                            staticFramework.saveNVC(Field, "PlafonEfektifLc", ifacSumm.PlafonEfektifLc);
+                            staticFramework.saveNVC(Field, "PlafonEfektifBg", ifacSumm.PlafonEfektifBg);
+                            staticFramework.saveNVC(Field, "plafonEfektifSec", ifacSumm.plafonEfektifSec);
+                            staticFramework.saveNVC(Field, "PlafonEfektifLainnya", ifacSumm.PlafonEfektifLainnya);
+                            staticFramework.saveNVC(Field, "PlafonEfektifTotal", ifacSumm.PlafonEfektifTotal);
+                            staticFramework.saveNVC(Field, "BakiDebetKredit", ifacSumm.BakiDebetKredit);
+                            staticFramework.saveNVC(Field, "BakiDebetSec", ifacSumm.BakiDebetSec);
+                            staticFramework.saveNVC(Field, "BakiDebetLainnya", ifacSumm.BakiDebetLainnya);
+                            staticFramework.saveNVC(Field, "BakiDebetTotal", ifacSumm.BakiDebetTotal);
+                            staticFramework.saveNVC(Field, "KrediturBankUmum", ifacSumm.KrediturBankUmum);
+                            staticFramework.saveNVC(Field, "KrediturBPR_S", ifacSumm.KrediturBPR_S);
+                            staticFramework.saveNVC(Field, "KrediturLp", ifacSumm.KrediturLp);
+                            staticFramework.saveNVC(Field, "KrediturLainnya", ifacSumm.KrediturLainnya);
+                            staticFramework.saveNVC(Field, "KolekTerburuk", ifacSumm.KolekTerburuk);
+                            staticFramework.saveNVC(Field, "kolekBulanDataTerburuk", ifacSumm.kolekBulanDataTerburuk);
+                            staticFramework.save(Field, Keys, "IdebFacSummary", db);
+                            #endregion
+
+                            #region insert to IdebSuratBerharga
+                            increment = 1;
+                            foreach (var item in iSrtBerharga)
+                            {
+                                //Random rand = new Random(10);
+                                //Keys = new NameValueCollection();
+                                //Field = new NameValueCollection();
+                                //staticFramework.saveNVC(Keys, "FacId", rand.ToString());
+                                //staticFramework.saveNVC(Field, "Ljk", item.Ljk);
+                                //staticFramework.saveNVC(Field, "LjkKet", item.LjkKet);
+                                //staticFramework.saveNVC(Field, "Cabang", item.Cabang);
+                                //staticFramework.saveNVC(Field, "CabangKet", item.CabangKet);
+                                //staticFramework.saveNVC(Field, "NominalSb", item.NominalSb);
+                                //staticFramework.saveNVC(Field, "TanggalDibentuk",DatetimeToString(item.TanggalDibentuk));
+                                //staticFramework.saveNVC(Field, "TanggalUpdate", DatetimeToString(item.TanggalUpdate));
+                                //staticFramework.saveNVC(Field, "Bulan", item.Bulan);
+                                //staticFramework.saveNVC(Field, "Tahun", item.Tahun);
+                                //staticFramework.saveNVC(Field, "NoSuratBeharga", item.NoSuratBeharga);
+                                //staticFramework.saveNVC(Field, "JenisSuratBeharga", item.JenisSuratBeharga);
+                                //staticFramework.saveNVC(Field, "SovereignRate", item.SovereignRate);
+                                //staticFramework.saveNVC(Field, "Listing", item.Listing);
+                                //staticFramework.saveNVC(Field, "PeringkatSuratBeharga", item.PeringkatSuratBeharga);
+                                //staticFramework.saveNVC(Field, "TujuanKepemilikan", item.TujuanKepemilikan);
+                                //staticFramework.saveNVC(Field, "TujuanKepemilikanKet", item.TujuanKepemilikanKet);
+                                //staticFramework.saveNVC(Field, "TanggalDiterbitkan", DateToString(item.TanggalDiterbitkan));
+                                //staticFramework.saveNVC(Field, "TanggalJatuhTempo", DateToString(item.TanggalJatuhTempo));
+                                //staticFramework.saveNVC(Field, "SukuBunga", item.SukuBunga);
+                                //staticFramework.saveNVC(Field, "Valuta", item.KodeValuta);
+                                //staticFramework.saveNVC(Field, "Kolektibilitas", item.Kolektibilitas);
+                                //staticFramework.saveNVC(Field, "JumlahHariTunggakan", item.JumlahHariTunggakan);
+                                //staticFramework.saveNVC(Field, "NilaiDalamMataUangAsal", item.NilaiDalamMataUangAsal);
+                                //staticFramework.saveNVC(Field, "NilaiPasar", item.NilaiPasar);
+                                //staticFramework.saveNVC(Field, "NilaiPerolehan", item.NilaiPerolehan);
+                                //staticFramework.saveNVC(Field, "Tunggakan", item.Tunggakan);
+                                //staticFramework.saveNVC(Field, "SebabMacet", item.SebabMacet);
+                                //staticFramework.saveNVC(Field, "SebabMacetKet", item.SebabMacetKet);
+                                //staticFramework.saveNVC(Field, "TanggalMacet", DateToString(item.TanggalMacet));
+                                //staticFramework.saveNVC(Field, "Kondisi", item.Kondisi);
+                                //staticFramework.saveNVC(Field, "KondisiKet", item.KondisiKet);
+                                //staticFramework.saveNVC(Field, "TanggalKondisi", DateToString(item.TanggalKondisi));
+                                //staticFramework.saveNVC(Field, "Keterangan", item.Keterangan);
+                                //staticFramework.save(Field, Keys, "IdebFacSb", db);
+
+                                //incerementOther = 1;
+                                //foreach (var itemAgunan in item.Agunan)
+                                //{
+                                //    Keys = new NameValueCollection();
+                                //    Field = new NameValueCollection();
+                                //    staticFramework.saveNVC(Keys, "FacId", rand.ToString());
+                                //    staticFramework.saveNVC(Keys, "Seq", incerementOther.ToString());
+                                //    staticFramework.saveNVC(Field, "DebtectorFacId", itemAgunan.DebtectorFacId);
+                                //    staticFramework.saveNVC(Field, "DebtectorId", itemAgunan.DebtectorId);
+                                //    staticFramework.saveNVC(Field, "JenisAgunanKet", itemAgunan.JenisAgunanKet);
+                                //    staticFramework.saveNVC(Field, "NilaiAgunanMenurutLJK", itemAgunan.NilaiAgunanMenurutLJK);
+                                //    staticFramework.saveNVC(Field, "ProsentaseParipasu", itemAgunan.ProsentaseParipasu);
+                                //    staticFramework.saveNVC(Field, "TanggalUpdate", DatetimeToString(itemAgunan.TanggalUpdate));
+                                //    staticFramework.saveNVC(Field, "NomorAgunan", itemAgunan.NomorAgunan);
+                                //    staticFramework.saveNVC(Field, "JenisPengikatan", itemAgunan.JenisPengikatan);
+                                //    staticFramework.saveNVC(Field, "TanggalPengikatan", DateToString(itemAgunan.TanggalPengikatan));
+                                //    staticFramework.saveNVC(Field, "NamaPemilikAgunan", itemAgunan.NamaPemilikAgunan);
+                                //    staticFramework.saveNVC(Field, "AlamatAgunan", itemAgunan.AlamatAgunan);
+                                //    staticFramework.saveNVC(Field, "LokasiAgunan", itemAgunan.LokasiAgunan);
+                                //    staticFramework.saveNVC(Field, "TglPenilaianLjk", DateToString(itemAgunan.TglPenilaianLjk));
+                                //    staticFramework.saveNVC(Field, "PeringkatAgunan", itemAgunan.PeringkatAgunan);
+                                //    staticFramework.saveNVC(Field, "LembagaPemeringkat", itemAgunan.LembagaPemeringkat);
+                                //    staticFramework.saveNVC(Field, "BuktiKepemilikan", itemAgunan.BuktiKepemilikan);
+                                //    staticFramework.saveNVC(Field, "NilaiAgunanNjop", itemAgunan.NilaiAgunanNjop);
+                                //    staticFramework.saveNVC(Field, "NilaiAgunanIndep", itemAgunan.NilaiAgunanIndep);
+                                //    staticFramework.saveNVC(Field, "NamaPenilaiIndep", itemAgunan.NamaPenilaiIndep);
+                                //    staticFramework.saveNVC(Field, "Asuransi", itemAgunan.Asuransi);
+                                //    staticFramework.saveNVC(Field, "TanggalPenilaianPenilaiIndependen", DateToString(itemAgunan.TanggalPenilaianPenilaiIndependen));
+                                //    staticFramework.saveNVC(Field, "Keterangan", itemAgunan.Keterangan);
+                                //    staticFramework.save(Field, Keys, "IdebFacCollateral", db);
+                                //    incerementOther++;
+                                //}
+
+                                //incerementOther = 1;
+                                //foreach (var itemPenjamin in item.Penjamin)
+                                //{
+                                //    Keys = new NameValueCollection();
+                                //    Field = new NameValueCollection();
+                                //    staticFramework.saveNVC(Keys, "FacId", rand.ToString());
+                                //    staticFramework.saveNVC(Keys, "Seq", incerementOther.ToString());
+                                //    staticFramework.saveNVC(Field, "NamaPenjamin", itemPenjamin.NamaPenjamin);
+                                //    staticFramework.saveNVC(Field, "NomorIdentitas", itemPenjamin.NomorIdentitas);
+                                //    staticFramework.saveNVC(Field, "TanggalUpdate", DatetimeToString(itemPenjamin.TanggalUpdate));
+                                //    staticFramework.saveNVC(Field, "TanggalBuat", DatetimeToString( itemPenjamin.TanggalBuat));
+                                //    staticFramework.saveNVC(Field, "JenisPenjamin", itemPenjamin.JenisPenjamin);
+                                //    staticFramework.saveNVC(Field, "AlamatPenjamin", itemPenjamin.AlamatPenjamin);
+                                //    staticFramework.saveNVC(Field, "Keterangan", itemPenjamin.Keterangan);
+                                //    staticFramework.save(Field, Keys, "IdebFacPenjamin", db);
+                                //    incerementOther++;
+                                //}
+
+                                increment++;
+                            }
+                            #endregion
+                        }
+                        catch (Exception ex)
+                        {
+                            db.ExecTran_Rollback();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            return result;
+        }
+
+        private string DatetimeToString(DateTime? date)
+        {
+            if (date == null)
+                return string.Empty;
+            else
+                return string.Format("{0:yyyy-MM-dd HH':'mm':'ss}", date);
+        }
+
+        private string DateToString(DateTime? date)
+        {
+            if (date == null)
+                return string.Empty;
+            else
+                return string.Format("{0:yyyy-MM-dd}", date);
+        }
+
+
+    }
+}

@@ -37,6 +37,16 @@
       <HintPath>..\packages\AutoMapper.6.1.1\lib\net45\AutoMapper.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="DMS.Framework">
+      <HintPath>..\Lib\DMS.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="DMS.Tools">
+      <HintPath>..\Lib\DMS.Tools.dll</HintPath>
+    </Reference>
+    <Reference Include="DMSControls, Version=1.0.4106.30712, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\DMSControls.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />

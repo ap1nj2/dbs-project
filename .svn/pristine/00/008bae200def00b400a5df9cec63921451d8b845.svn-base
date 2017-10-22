@@ -1,0 +1,37 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="CBS.Testing.WebForm1" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div class="content">
+        <form runat="server" align="center" class="border">       
+            <div class="form-group">
+                <div class="alert alert-success" style="width:100%" id="successAlert" runat="server" role="alert">
+                    <asp:Label ID="successLabel" runat="server"></asp:Label>
+                </div>
+                <div class="alert alert-warning" style="width:100%" id="warningAlert" runat="server" role="alert">
+                    <asp:Label ID="warningLabel" runat="server"></asp:Label>
+                </div> 
+            </div>
+
+            <div class="form-group">
+                <asp:Button ID="dlReqProcessIwidExspsLogFile" style="width:100%" OnClick="dlReqProcessIwidExspsLogFile_Click" runat="server" CssClass="btn btn-primary" Text="Download Request Process IWID + ExSPS Log File"/>        
+            </div>    
+
+            <div class="form-group">
+                <asp:Button ID="dlBureauProcessResultLogFile" style="width:100%" OnClick="dlBureauProcessResultLogFile_Click" runat="server" CssClass="btn btn-primary" Text="Download Bureau Process Result Log File"/>        
+            </div>    
+
+            <div class="form-group">
+                <asp:Button ID="genBureauReqFileSlik" style="width:100%" OnClick="genBureauReqFileSlik_Click" runat="server" CssClass="btn btn-primary" Text="Generate SLIK Bureau Request File"/>        
+            </div>    
+
+            <div class="form-group">
+                <asp:Button ID="genBureauReqFilePefindo" style="width:100%" OnClick="genBureauReqFilePefindo_Click" runat="server" CssClass="btn btn-primary" Text="Generate Pefindo Bureau Request File"/>        
+            </div>    
+
+            <div class="form-group">
+                <asp:Button ID="genBureauReqFileKBIJ" style="width:100%" OnClick="genBureauReqFileKBIJ_Click" runat="server" CssClass="btn btn-primary" Text="Generate KBIJ Bureau Request File"/>        
+            </div>    
+        </form>
+    </div>
+</asp:Content>

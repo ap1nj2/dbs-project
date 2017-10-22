@@ -1,0 +1,1884 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBSCBSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="App">
+    <Key>
+      <PropertyRef Name="AppId" />
+    </Key>
+    <Property Name="AppId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DataSource" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="BranchId" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="SourceCd" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CampaignCd" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LoanCentreCd" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="AgentCd" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="SalesCd" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="MgmCd" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Org" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="Type" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="OriginAppId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AppRefNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ReceiptDate" Type="DateTime" Precision="0" />
+    <Property Name="SolicitationId" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="VIPIndicator" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="UseCreditDesired" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="ProcCradleToGrave" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CreateCustRecord" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="CreateRelRecord" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="RelCd" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CreateBaseSegRecord" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SameCust" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="EmbMethodCd" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="BaseSegCd" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CardSchemeCd" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="LoanPlanNo" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="PrimaryAcc" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="LoanRefNo" Type="String" MaxLength="23" FixedLength="false" Unicode="false" />
+    <Property Name="RelTypeIndCd" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="ProcessTypeCd" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AlgoProxyIncTest" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="AlgoSegTest" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="AlgoScoreTest" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="AlgoTestTrack" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="PLNameOfBank" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="CustConsent" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="MarcomConsent" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="UpfrontReject" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="ExcludeIndustry" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="PLOptDBSMUE" Type="Double" />
+    <Property Name="CCOptDBSMUE" Type="Double" />
+    <Property Name="MLOptDBSMUE" Type="Double" />
+    <Property Name="SignatureDate" Type="DateTime" Precision="0" />
+    <Property Name="AreaScore" Type="Int32" />
+    <Property Name="PSCd" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="CustType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TopupType" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="OldestMOB" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="OriginAccNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DiscFlag" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="PINPIDPI2Flag" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="RelWithBanks" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="NeedProbing" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ProbingDetail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ProbingDetail2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TotalCardIssuers" Type="Int32" />
+    <Property Name="BillPmtReg" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="SavingAccNo" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="ReqPrintBilling" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="DocType" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="Oth1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Oth2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Oth3" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Oth4" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Oth5" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="BatchFileName" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="InsertTime" Type="DateTime" Precision="3" />
+    <Property Name="InsertBy" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+    <Property Name="UpdateBy" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="AppBillPmt">
+    <Key>
+      <PropertyRef Name="AppId" />
+      <PropertyRef Name="Seq" />
+    </Key>
+    <Property Name="AppId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Seq" Type="Int32" Nullable="false" />
+    <Property Name="BillerName" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="BillAccNo" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="NameOnBill" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="AppBureauReq">
+    <Key>
+      <PropertyRef Name="ReqId" />
+    </Key>
+    <Property Name="ReqId" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AppId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Seq" Type="Int32" />
+    <Property Name="DatTypeCd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DateOfBirth" Type="DateTime" Precision="0" />
+    <Property Name="PlaceOfBirth" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="IDType" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="IDNumber" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="Gender" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="Npwp" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="Addr1" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="Addr2" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="Addr3" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="CityName" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="PostalCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ReqBy" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ReqTime" Type="DateTime" Precision="3" />
+    <Property Name="ReqType" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="AppDecResp">
+    <Key>
+      <PropertyRef Name="AppId" />
+    </Key>
+    <Property Name="AppId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="GenTime" Type="DateTime" Precision="3" />
+    <Property Name="Org" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="Type" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="Sage" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="OriginAppId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="EwssResult" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="LoanCode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="SLIKResultCheck" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="SLIKID" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="IncomeVer" Type="Double" />
+    <Property Name="IncomeFinal" Type="Double" />
+    <Property Name="ProxyIncMOB" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ProxyIncIssuer" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ProxyIncLimit" Type="Double" />
+    <Property Name="OutsideMUE" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="MultiCusLevelMUE" Type="Double" />
+    <Property Name="TotalCCLimitOthBank" Type="Double" />
+    <Property Name="SLIKResult" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="SubDecCd" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="NoOfNewULL12M" Type="Int32" />
+    <Property Name="TotActiveCCOS" Type="Double" />
+    <Property Name="TotActiveCCLimit" Type="Double" />
+    <Property Name="GrossOSOrLimit" Type="Double" />
+    <Property Name="NoOfActiveCC" Type="Int32" />
+    <Property Name="WorstDPDl12M" Type="Int32" />
+    <Property Name="NoOfActiveHL" Type="Int32" />
+    <Property Name="NoOfActiveRev" Type="Int32" />
+    <Property Name="RatioOfRevOver90Pct" Type="Double" />
+    <Property Name="NoOfUL" Type="Int32" />
+    <Property Name="NoOfSL" Type="Int32" />
+    <Property Name="OldestMOBAllFac" Type="Int32" />
+    <Property Name="LatestDeqMonth" Type="Int32" />
+    <Property Name="OldestMOBULCC" Type="Int32" />
+    <Property Name="PINPIDPI2Flag" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="AKKIResult" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="RatingResult" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="BureauResult" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="RatingOpenDate" Type="DateTime" Precision="0" />
+    <Property Name="RatingLimit" Type="Double" />
+    <Property Name="RatingOSBal" Type="Double" />
+    <Property Name="RatingPmtType" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="RatingHistL12M" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RatingCardType" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="RatingLatesSta" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="BureauRatioCCODWithHL90Util" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="BureauLatesMDelqGT0" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="BureauTotMOBCC" Type="Int32" />
+    <Property Name="BureauURActiveCCOSLimit" Type="Double" />
+    <Property Name="BureauNoOfLoanOpenL18M" Type="Int32" />
+    <Property Name="BureauDateLastCCTaken" Type="DateTime" Precision="0" />
+    <Property Name="BureauMOBLastCCTaken" Type="Int32" />
+    <Property Name="BureauWorstDPDL6M" Type="Int32" />
+    <Property Name="BureauProfiling" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="NeedProbing" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="ProbingDetail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ProbingDetail2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FieldHRArea" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="TotalCCIssuers" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="GrossAmtAggrCard" Type="Double" />
+    <Property Name="ApproveDeclineCode" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="Oth2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Dbr" Type="Double" />
+    <Property Name="Dsr" Type="Double" />
+    <Property Name="UtilizationRate" Type="Double" />
+    <Property Name="PhoneSeg" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="AppDoc">
+    <Key>
+      <PropertyRef Name="AppId" />
+    </Key>
+    <Property Name="AppId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Seq" Type="Int32" />
+    <Property Name="DocCd" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="AppExCC">
+    <Key>
+      <PropertyRef Name="AppId" />
+      <PropertyRef Name="Seq" />
+    </Key>
+    <Property Name="AppId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Seq" Type="Int32" Nullable="false" />
+    <Property Name="DataTypeCd" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="RelId" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="CardNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IssuerId" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="IssuerName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="MemberSince" Type="DateTime" Precision="0" />
+    <Property Name="ExpiryDate" Type="DateTime" Precision="0" />
+    <Property Name="Limit" Type="Double" />
+    <Property Name="Outstanding" Type="Double" />
+  </EntityType>
+  <EntityType Name="AppExFac">
+    <Key>
+      <PropertyRef Name="AppId" />
+      <PropertyRef Name="Seq" />
+    </Key>
+    <Property Name="AppId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Seq" Type="Int32" Nullable="false" />
+    <Property Name="DataTypeCd" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="RelId" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="FacType" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="IssuerId" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="IssuerName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Currency" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Tenure" Type="Int32" />
+    <Property Name="Limit" Type="Double" />
+    <Property Name="Interest" Type="Double" />
+    <Property Name="Instalment" Type="Double" />
+    <Property Name="Outstanding" Type="Double" />
+    <Property Name="OpenDate" Type="DateTime" Precision="0" />
+    <Property Name="ExpiryDate" Type="DateTime" Precision="0" />
+    <Property Name="LnAccNo" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="CardNo" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="AppExLoan">
+    <Key>
+      <PropertyRef Name="AppId" />
+      <PropertyRef Name="Seq" />
+    </Key>
+    <Property Name="AppId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Seq" Type="Int32" Nullable="false" />
+    <Property Name="DataTypeCd" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="RelId" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="LnTypeCd" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="BankId" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Limit" Type="Double" />
+    <Property Name="Outstanding" Type="Double" />
+    <Property Name="LnAccNo" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="Instalment" Type="Double" />
+  </EntityType>
+  <EntityType Name="AppFac">
+    <Key>
+      <PropertyRef Name="AppId" />
+      <PropertyRef Name="Seq" />
+    </Key>
+    <Property Name="AppId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Seq" Type="Int32" Nullable="false" />
+    <Property Name="ProjectCd" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="ProdTypeCd" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="ProgTypeCd" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="ProgramCd" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="LimitReqAmt" Type="Double" />
+    <Property Name="LoanCode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Tenure" Type="Int32" />
+    <Property Name="LoanPurpCd" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LoanPurpOth" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="AccBeneficiaryName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="AccBankName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="AccBankId" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="AccBranchId" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="AccNo" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="BranchAreaExp1" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="PayeeName2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PayeeAccNo2" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="BranchAreaExp2" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="PayeeName3" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PayeeAccNo3" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="BranchAreaExp3" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="DisbFeeFlag" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="DisbPercentage1" Type="Double" />
+    <Property Name="DisbPercentage2" Type="Double" />
+    <Property Name="DisbPercentage3" Type="Double" />
+    <Property Name="DisbFixAmt1" Type="Double" />
+    <Property Name="DisbFixAmt2" Type="Double" />
+    <Property Name="DisbFixAmt3" Type="Double" />
+    <Property Name="PrevTopupLimit" Type="Double" />
+    <Property Name="CardType" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="PCTID" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="FundTrans" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="FundTransLnAmtReq" Type="Double" Nullable="false" />
+    <Property Name="FundTransLnTenureReq" Type="Int32" />
+    <Property Name="FundTransLnPmtType" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="DDNomType" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="DDPmtType" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="DDReqDays" Type="Int32" />
+    <Property Name="PrevLnSegBaseCd" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="TopUpSegCd" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="InsProdCd" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="ApprvDecCd" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="SubDecCd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="AppFlag">
+    <Key>
+      <PropertyRef Name="AppId" />
+    </Key>
+    <Property Name="AppId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BankCd" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="DBSLnLimit_OS" Type="Double" />
+    <Property Name="VerBillAddrMatch" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="VerMobilePhnMatch" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="NpwpDocFlag" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AMLRiskRating" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="BureauType" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="AppMemo">
+    <Key>
+      <PropertyRef Name="AppId" />
+      <PropertyRef Name="Seq" />
+    </Key>
+    <Property Name="AppId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Seq" Type="Int32" Nullable="false" />
+    <Property Name="Memo" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="InputDate" Type="DateTime" Precision="3" />
+    <Property Name="InputBy" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Locked" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="AppSupp">
+    <Key>
+      <PropertyRef Name="AppId" />
+      <PropertyRef Name="Seq" />
+    </Key>
+    <Property Name="AppId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Seq" Type="Int32" Nullable="false" />
+    <Property Name="NameAsIDCard" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="IDNumber" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="NameOnCard" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="Relationship" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Gender" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="DateOfBirth" Type="DateTime" Precision="0" />
+    <Property Name="PlaceOfBirth" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="MothersMaidenName" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="MobilePhoneNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NationalityCd" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="CountryCd" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="AuthGroupMenu">
+    <Key>
+      <PropertyRef Name="GroupId" />
+      <PropertyRef Name="MenuId" />
+    </Key>
+    <Property Name="GroupId" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MenuId" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IsRead" Type="Boolean" />
+    <Property Name="IsWrite" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="AuthGroup">
+    <Key>
+      <PropertyRef Name="GroupId" />
+    </Key>
+    <Property Name="GroupId" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="GroupName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="RegDate" Type="DateTime" Precision="3" />
+    <Property Name="RegBy" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ApprvDate" Type="DateTime" Precision="3" />
+    <Property Name="ApprvBy" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="IsDormant" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="AuthMenu">
+    <Key>
+      <PropertyRef Name="MenuId" />
+    </Key>
+    <Property Name="MenuId" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MenuName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MenuUrl" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="MenuIcon" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="MenuParent" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="MenuOrder" Type="Int32" />
+  </EntityType>
+  <EntityType Name="AuthParam">
+    <Key>
+      <PropertyRef Name="ParamId" />
+    </Key>
+    <Property Name="ParamId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ParamName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DataType" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="ParamValue" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="AuthPwdHist">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="Seq" />
+    </Key>
+    <Property Name="UserId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Seq" Type="Int32" Nullable="false" />
+    <Property Name="ChangeDate" Type="DateTime" Precision="3" />
+    <Property Name="OldPwd" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="NewPwd" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="AuthUserActivity">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="Seq" />
+    </Key>
+    <Property Name="UserId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Seq" Type="Int32" Nullable="false" />
+    <Property Name="TokenId" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="ActTime" Type="DateTime" Precision="3" />
+    <Property Name="ActDesc" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <Property Name="ActLevel" Type="Int32" />
+    <Property Name="Host" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="PageUrl" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="PageName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="AuthUserFlag">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IsLogon" Type="Boolean" />
+    <Property Name="IsRevoke" Type="Boolean" />
+    <Property Name="FalsePwd" Type="Int32" />
+    <Property Name="LastLogon" Type="DateTime" Precision="3" />
+    <Property Name="LastHost" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="LastActivity" Type="DateTime" Precision="3" />
+    <Property Name="TokenId" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="AuthUserGroup">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="GroupId" />
+    </Key>
+    <Property Name="UserId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="GroupId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AuthUserHist">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="Seq" />
+    </Key>
+    <Property Name="UserId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Seq" Type="Int32" Nullable="false" />
+    <Property Name="TokenId" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LogonTime" Type="DateTime" Precision="3" />
+    <Property Name="LogonHost" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="LogoutTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="AuthUser">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NIP" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="ExtensionNo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="HomePhoneNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="MobilePhoneNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="UplinerId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="PwdExpDate" Type="DateTime" Precision="3" />
+    <Property Name="BranchId" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Position" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="Departement" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="RegDate" Type="DateTime" Precision="3" />
+    <Property Name="RegBy" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ApprvDate" Type="DateTime" Precision="3" />
+    <Property Name="ApprvBy" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="LevelId" Type="Int32" />
+    <Property Name="IsDormant" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="CustFin">
+    <Key>
+      <PropertyRef Name="AppId" />
+    </Key>
+    <Property Name="AppId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IncDocType" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="IncDeclare12M" Type="Double" />
+    <Property Name="IncDeclareExtraYearly" Type="Double" />
+    <Property Name="IncMonthlyBasedOnDoc" Type="Double" />
+    <Property Name="IncMultiplier" Type="Double" />
+    <Property Name="IncTotalBasedOnDoc" Type="Double" />
+  </EntityType>
+  <EntityType Name="CustJob">
+    <Key>
+      <PropertyRef Name="AppId" />
+      <PropertyRef Name="Seq" />
+    </Key>
+    <Property Name="AppId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Seq" Type="Int32" Nullable="false" />
+    <Property Name="CompName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Addr1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Addr2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Addr3" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DistrictCd" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="DistrictName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SubDistrictCd" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="SubDistrictName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CityCd" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CityName" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="PostalCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="PhoneNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="PhoneExt" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="PhoneStaCd" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="Phone2No" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Phone2Ext" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Phone2StaCd" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="HomeAddrEqOffAddr" Type="Boolean" />
+    <Property Name="PositionCd" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="Position" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NOB" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="Department" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="EmployeeIDNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="JobStatus" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="CurrLojYY" Type="Int32" />
+    <Property Name="CurrLojMM" Type="Int32" />
+    <Property Name="TotalLojYY" Type="Int32" />
+    <Property Name="TotalLojMM" Type="Int32" />
+    <Property Name="PrevLojYY" Type="Int32" />
+    <Property Name="PrevLojMM" Type="Int32" />
+    <Property Name="PervCompName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PrevPhoneNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="PrevPhoneExt" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="NoOfEmployee" Type="Int32" />
+    <Property Name="EwssResult" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="RelPartyResult" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="WellEstablishCompType" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="ChangeToNewOffAddr" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CustPersonal">
+    <Key>
+      <PropertyRef Name="AppId" />
+    </Key>
+    <Property Name="AppId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CustNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CustName" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="CustNameOnID" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="CustNickName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CustNameInCard" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="NationalityCd" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="MothersMaidenName" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="GenderCd" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="PlaceOfBirth" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DateOfBirth" Type="DateTime" Precision="0" />
+    <Property Name="IDTypeCd" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="IdCardTrackCd" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="IDNumber" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="EduCd" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="MaritalCd" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="NoOfDependents" Type="Int32" />
+    <Property Name="HomeAddr1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="HomeAddr2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="HomeAddr3" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="HomeDistrictCd" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="HomeDistrictName" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="HomeSubDistrictCd" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="HomeSubDistrictName" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="HomeCityName" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="HomePostalCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="HomePhoneNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="HomePhoneStaCd" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="HomeAddrEqIDAddr" Type="Boolean" />
+    <Property Name="IDAddr1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="IDAddr2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="IDAddr3" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="IDDistrictCd" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="IDDistrictName" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="IDSubDistrictCd" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="IDSubDistrictName" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="IDCityName" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="IDPostalCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="PixelCode" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="PixelAddr" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="PixelWKCCode" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="MobilePhoneNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="MobilePhoneNo2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ExMobilePhone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ResStaCd" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="ResLOSYY" Type="Int32" />
+    <Property Name="ResLOSMM" Type="Int32" />
+    <Property Name="Npwp" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="MailingAddrCd" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ChangeToNewHomeAddr" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CountryCd" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="InsertTime" Type="DateTime" Precision="3" />
+    <Property Name="InsertBy" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+    <Property Name="UpdateBy" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CustRel">
+    <Key>
+      <PropertyRef Name="RelId" />
+    </Key>
+    <Property Name="RelId" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AppId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Seq" Type="Int32" Nullable="false" />
+    <Property Name="DataTypeCd" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="RelTypeCd" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="FullName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Addr1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Addr2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Addr3" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DistrictCd" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="DistrictName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SubDistrictCd" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="SubDistrictName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CityCd" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CityName" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="PostalCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="HomePhoneNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="HomePhoneStaCd" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="MobilePhoneNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="OtherPhoneNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="DataImport">
+    <Key>
+      <PropertyRef Name="ImportId" />
+    </Key>
+    <Property Name="ImportId" Type="Int32" Nullable="false" />
+    <Property Name="ImportName" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="OrderSeq" Type="Int32" />
+    <Property Name="SourceType" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Name="DestTable" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="Method" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="RowOverwrite" Type="Boolean" />
+    <Property Name="Active" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="DataImportDestColumn">
+    <Key>
+      <PropertyRef Name="ImportId" />
+      <PropertyRef Name="TableName" />
+      <PropertyRef Name="ColumnName" />
+    </Key>
+    <Property Name="ImportId" Type="Int32" Nullable="false" />
+    <Property Name="TableName" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ColumnName" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SourceColumnName" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="IsKey" Type="Boolean" />
+    <Property Name="AutoFormula" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="DataImportDestTable">
+    <Key>
+      <PropertyRef Name="ImportId" />
+      <PropertyRef Name="TableName" />
+    </Key>
+    <Property Name="ImportId" Type="Int32" Nullable="false" />
+    <Property Name="TableName" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="OrderSeq" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DataImportFlatFile">
+    <Key>
+      <PropertyRef Name="ImportId" />
+    </Key>
+    <Property Name="ImportId" Type="Int32" Nullable="false" />
+    <Property Name="SourceFileName" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="SourceFilePath" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="Format" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Name="TextQualifier" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="HeaderRowDelimiter" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="HeaderRowsToSkip" Type="Int32" />
+    <Property Name="ColumnNameIn1st" Type="Boolean" />
+    <Property Name="DataRowsToSkip" Type="Int32" />
+    <Property Name="RowDelimiter" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ColumnDelimiter" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="FtpId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="DataImportFlatFileColumn">
+    <Key>
+      <PropertyRef Name="ImportId" />
+      <PropertyRef Name="Seq" />
+    </Key>
+    <Property Name="ImportId" Type="Int32" Nullable="false" />
+    <Property Name="Seq" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="InputColumnWidth" Type="Int32" />
+    <Property Name="DataPrecision" Type="Int32" />
+    <Property Name="DataScale" Type="Int32" />
+    <Property Name="DataType" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="OutputColumnWidth" Type="Int32" />
+    <Property Name="TextQualified" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="DataImportLog">
+    <Key>
+      <PropertyRef Name="BatchFileName" />
+    </Key>
+    <Property Name="BatchFileName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TotalRow" Type="Int32" />
+    <Property Name="NoOfSuccess" Type="Int32" />
+    <Property Name="NoOfFailed" Type="Int32" />
+    <Property Name="StartTime" Type="DateTime" Precision="3" />
+    <Property Name="FinishTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="DataImportLogDetail">
+    <Key>
+      <PropertyRef Name="BatchFileName" />
+      <PropertyRef Name="RowNumber" />
+    </Key>
+    <Property Name="BatchFileName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="RowNumber" Type="Int32" Nullable="false" />
+    <Property Name="LineNumber" Type="Int32" />
+    <Property Name="KeyValue" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="LogType" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LogMessage" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="EnumBureauType">
+    <Key>
+      <PropertyRef Name="BurTypeCd" />
+    </Key>
+    <Property Name="BurTypeCd" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BurTypeDesc" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="EnumIdebFacCat">
+    <Key>
+      <PropertyRef Name="CatCd" />
+    </Key>
+    <Property Name="CatCd" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CatDesc" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="FRAMEWORK_FOREIGNKEY">
+    <Key>
+      <PropertyRef Name="TableName" />
+      <PropertyRef Name="TableName_FK" />
+    </Key>
+    <Property Name="TableName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TableName_As" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TableName_FK" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Constraint_SQL" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="TableName_Join" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="FRAMEWORK_FORMULAFIELD">
+    <Key>
+      <PropertyRef Name="FieldId" />
+    </Key>
+    <Property Name="FieldId" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FieldCaption" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FieldDesc" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="FieldFW" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="FieldReff" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="FormatString" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FilterType" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="SETID" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="FRAMEWORK_LINDEDSERVER">
+    <Key>
+      <PropertyRef Name="LinkedServID" />
+    </Key>
+    <Property Name="LinkedServID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LinkedServName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Ideb">
+    <Key>
+      <PropertyRef Name="IdebId" />
+    </Key>
+    <Property Name="IdebId" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ReqId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Seq" Type="Int64" />
+    <Property Name="DebtectorId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="KodeReferensiPengguna" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TanggalHasil" Type="DateTime" Precision="3" />
+    <Property Name="IdPermintaan" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="IdPenggunaPermintaan" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="DibuatOleh" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="KodeLJKPermintaan" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="KodeCabangPermintaan" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="KodeTujuanPermintaan" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="TanggalPermintaan" Type="DateTime" Precision="3" />
+    <Property Name="TotalBagian" Type="Int32" />
+    <Property Name="NomorBagian" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="DebType" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="NomorLaporan" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PosisiDataTerakhir" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="PosisiDataTerakhirDate" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="IdebCorpDatas" Relationship="Self.FK_IdebCorpData" FromRole="Ideb" ToRole="IdebCorpData" />
+    <NavigationProperty Name="IdebCorpGroups" Relationship="Self.FK_IdebCorpGroup" FromRole="Ideb" ToRole="IdebCorpGroup" />
+    <NavigationProperty Name="IdebCorpSearchVar" Relationship="Self.FK_IdebCorpSearchVar" FromRole="Ideb" ToRole="IdebCorpSearchVar" />
+    <NavigationProperty Name="IdebFacs" Relationship="Self.FK_IdebFac" FromRole="Ideb" ToRole="IdebFac" />
+    <NavigationProperty Name="IdebFacSummary" Relationship="Self.FK_IdebFacSummary" FromRole="Ideb" ToRole="IdebFacSummary" />
+    <NavigationProperty Name="IdebIndivDatas" Relationship="Self.FK_IdebIndivData" FromRole="Ideb" ToRole="IdebIndivData" />
+    <NavigationProperty Name="IdebIndivSearchVar" Relationship="Self.FK_IdebIndivSearchVar" FromRole="Ideb" ToRole="IdebIndivSearchVar" />
+  </EntityType>
+  <EntityType Name="IdebCorpData">
+    <Key>
+      <PropertyRef Name="IdebId" />
+      <PropertyRef Name="Seq" />
+    </Key>
+    <Property Name="IdebId" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Seq" Type="Int32" Nullable="false" />
+    <Property Name="DebtectorId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NamaDebitur" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="NamaLengkap" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Npwp" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BentukBu" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="BentukBuKet" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GoPublic" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="TempatPendirian" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NoAktaPendirian" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TglAktaPendirian" Type="DateTime" Precision="0" />
+    <Property Name="Pelapor" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="PelaporKet" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TanggalDibentuk" Type="DateTime" Precision="3" />
+    <Property Name="TanggalUpdate" Type="DateTime" Precision="3" />
+    <Property Name="Alamat" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Kelurahan" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Kecamatan" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="KabKota" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="KabKotaKet" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="KodePos" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Negara" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="NegaraKet" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NoAktaTerakhir" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TglAktaTerakhir" Type="DateTime" Precision="0" />
+    <Property Name="SektorEkonomi" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="SektorEkonomiKet" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Pemeringkat" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="PemeringkatKet" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Peringkat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TanggalPemeringkatan" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Ideb" Relationship="Self.FK_IdebCorpData" FromRole="IdebCorpData" ToRole="Ideb" />
+  </EntityType>
+  <EntityType Name="IdebCorpGroup">
+    <Key>
+      <PropertyRef Name="IdebId" />
+      <PropertyRef Name="Seq" />
+    </Key>
+    <Property Name="IdebId" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Seq" Type="Int32" Nullable="false" />
+    <Property Name="KodeLJK" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="NamaLJK" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="NamaSesuaiIdentitas" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="NomorIdentitas" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="JenisKelamin" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="JenisKelaminKet" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="PosisiPekerjaan" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="PosisiPekerjaanKet" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ProsentaseKepemilikan" Type="Double" />
+    <Property Name="StatusPengurusPemilik" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="StatusPengurusPemilikKet" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Alamat" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Kelurahan" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Kecamatan" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Kota" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="KotaKet" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Ideb" Relationship="Self.FK_IdebCorpGroup" FromRole="IdebCorpGroup" ToRole="Ideb" />
+  </EntityType>
+  <EntityType Name="IdebCorpSearchVar">
+    <Key>
+      <PropertyRef Name="IdebId" />
+    </Key>
+    <Property Name="IdebId" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NamaBadanUsaha" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Npwp" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TempatPendirian" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TanggalAktaPendirian" Type="DateTime" Precision="0" />
+    <Property Name="NomorAktaPendirian" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Ideb" Relationship="Self.FK_IdebCorpSearchVar" FromRole="IdebCorpSearchVar" ToRole="Ideb" />
+  </EntityType>
+  <EntityType Name="IdebFac">
+    <Key>
+      <PropertyRef Name="FacId" />
+    </Key>
+    <Property Name="FacId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IdebId" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="Seq" Type="Int32" />
+    <Property Name="DebtectorId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FacCat" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Ideb" Relationship="Self.FK_IdebFac" FromRole="IdebFac" ToRole="Ideb" />
+    <NavigationProperty Name="IdebFacCollaterals" Relationship="Self.FK_IdebFacCollateral" FromRole="IdebFac" ToRole="IdebFacCollateral" />
+    <NavigationProperty Name="IdebFacCollects" Relationship="Self.FK_IdebFacCollect" FromRole="IdebFac" ToRole="IdebFacCollect" />
+    <NavigationProperty Name="IdebFacCredit" Relationship="Self.FK_IdebFacCredit" FromRole="IdebFac" ToRole="IdebFacCredit" />
+    <NavigationProperty Name="IdebFacLc" Relationship="Self.FK_IdebFacLc" FromRole="IdebFac" ToRole="IdebFacLc" />
+    <NavigationProperty Name="IdebFacOther" Relationship="Self.FK_IdebFacOther" FromRole="IdebFac" ToRole="IdebFacOther" />
+    <NavigationProperty Name="IdebFacPenjamins" Relationship="Self.FK_IdebFacPenjamin" FromRole="IdebFac" ToRole="IdebFacPenjamin" />
+    <NavigationProperty Name="IdebFacSb" Relationship="Self.FK_IdebFacSb" FromRole="IdebFac" ToRole="IdebFacSb" />
+  </EntityType>
+  <EntityType Name="IdebFacBg">
+    <Key>
+      <PropertyRef Name="FacId" />
+    </Key>
+    <Property Name="FacId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Ljk" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LjkKet" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Cabang" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CabangKet" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="NominalBg" Type="Double" />
+    <Property Name="TanggalDibentuk" Type="DateTime" Precision="3" />
+    <Property Name="TanggalUpdate" Type="DateTime" Precision="3" />
+    <Property Name="Bulan" Type="Int32" />
+    <Property Name="Tahun" Type="Int32" />
+    <Property Name="NoRekening" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="JenisGaransi" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="JenisGaransiKet" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="TanggalDiterbitkan" Type="DateTime" Precision="0" />
+    <Property Name="TanggalJatuhTempo" Type="DateTime" Precision="0" />
+    <Property Name="NoAkadAwal" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TanggalAkadAwal" Type="DateTime" Precision="0" />
+    <Property Name="NoAkadAkhir" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TanggalAkadAkhir" Type="DateTime" Precision="0" />
+    <Property Name="NamaYangDijamin" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Kolektibilitas" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Valuta" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="Plafon" Type="Double" />
+    <Property Name="TujuanGaransi" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="TujuanGaransiKet" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="SetoranJaminan" Type="Double" />
+    <Property Name="TanggalWanPrestasi" Type="DateTime" Precision="0" />
+    <Property Name="Kondisi" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="KondisiKet" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="TanggalKondisi" Type="DateTime" Precision="0" />
+    <Property Name="Keterangan" Type="String" MaxLength="2048" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="IdebFacCollateral">
+    <Key>
+      <PropertyRef Name="FacId" />
+      <PropertyRef Name="Seq" />
+    </Key>
+    <Property Name="FacId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Seq" Type="Int32" Nullable="false" />
+    <Property Name="DebtectorId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DebtectorFacId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="JenisAgunanKet" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="NilaiAgunanMenurutLJK" Type="Double" />
+    <Property Name="ProsentaseParipasu" Type="Double" />
+    <Property Name="TanggalUpdate" Type="DateTime" Precision="3" />
+    <Property Name="NomorAgunan" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="JenisPengikatan" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="JenisPengikatanKet" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="TanggalPengikatan" Type="DateTime" Precision="0" />
+    <Property Name="NamaPemilikAgunan" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="AlamatAgunan" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="LokasiAgunan" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LokasiAgunanKet" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TglPenilaianLjk" Type="DateTime" Precision="0" />
+    <Property Name="PeringkatAgunan" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LembagaPemeringkat" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LembagaPemeringkatKet" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BuktiKepemilikan" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NilaiAgunanNjop" Type="Double" />
+    <Property Name="NilaiAgunanIndep" Type="Double" />
+    <Property Name="NamaPenilaiIndep" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Asuransi" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="TanggalPenilaianPenilaiIndependen" Type="DateTime" Precision="0" />
+    <Property Name="Keterangan" Type="String" MaxLength="2048" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="IdebFac" Relationship="Self.FK_IdebFacCollateral" FromRole="IdebFacCollateral" ToRole="IdebFac" />
+  </EntityType>
+  <EntityType Name="IdebFacCollect">
+    <Key>
+      <PropertyRef Name="FacId" />
+      <PropertyRef Name="Seq" />
+    </Key>
+    <Property Name="FacId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Seq" Type="Int32" Nullable="false" />
+    <Property Name="Tahun" Type="Int32" />
+    <Property Name="Bulan" Type="Int32" />
+    <Property Name="Dpd" Type="Int32" />
+    <Property Name="Collect" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="IdebFac" Relationship="Self.FK_IdebFacCollect" FromRole="IdebFacCollect" ToRole="IdebFac" />
+  </EntityType>
+  <EntityType Name="IdebFacCredit">
+    <Key>
+      <PropertyRef Name="FacId" />
+    </Key>
+    <Property Name="FacId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Ljk" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LjkKet" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Cabang" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CabangKet" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="BakiDebet" Type="Double" />
+    <Property Name="TanggalDibentuk" Type="DateTime" Precision="3" />
+    <Property Name="TanggalUpdate" Type="DateTime" Precision="3" />
+    <Property Name="Bulan" Type="Int32" />
+    <Property Name="Tahun" Type="Int32" />
+    <Property Name="SifatKredit" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="SifatKreditKet" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="JenisKredit" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="JenisKreditKet" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="AkadPembiayaan" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="AkadPembiayaanKet" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="NoRekening" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BaruPerpanjangan" Type="Boolean" />
+    <Property Name="NoAkadAwal" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TanggalAkadAwal" Type="DateTime" Precision="0" />
+    <Property Name="NoAkadAkhir" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TanggalAkadAkhir" Type="DateTime" Precision="0" />
+    <Property Name="TanggalAwalKredit" Type="DateTime" Precision="0" />
+    <Property Name="TanggalMulai" Type="DateTime" Precision="0" />
+    <Property Name="TanggalJatuhTempo" Type="DateTime" Precision="0" />
+    <Property Name="KategoriDebiturKode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="KategoriDebiturKet" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="JenisPenggunaan" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="JenisPenggunaanKet" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="SektorEkonomi" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="SektorEkonomiKet" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="KreditProgramPemerintah" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="KreditProgramPemerintahKet" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="LokasiProyek" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LokasiProyekKet" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="Valuta" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="SukuBunga" Type="Double" />
+    <Property Name="JenisSukuBunga" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="JenisSukuBungaKet" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="Kolektibilitas" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="JumlahHariTunggakan" Type="Int32" />
+    <Property Name="NilaiProyek" Type="Double" />
+    <Property Name="PlafonAwal" Type="Double" />
+    <Property Name="Plafon" Type="Double" />
+    <Property Name="RealisasiBulanBerjalan" Type="Double" />
+    <Property Name="NilaiDalamMataUangAsal" Type="Double" />
+    <Property Name="SebabMacet" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="SebabMacetKet" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="TanggalMacet" Type="DateTime" Precision="0" />
+    <Property Name="TunggakanPokok" Type="Double" />
+    <Property Name="TunggakanBunga" Type="Double" />
+    <Property Name="FrekuensiTunggakan" Type="Double" />
+    <Property Name="Denda" Type="Double" />
+    <Property Name="FrekuensiRestrukturisasi" Type="Double" />
+    <Property Name="TanggalRestrukturisasiAkhir" Type="DateTime" Precision="0" />
+    <Property Name="KodeCaraRestrukturisasi" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="RestrukturisasiKet" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="Kondisi" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="KondisiKet" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="TanggalKondisi" Type="DateTime" Precision="0" />
+    <Property Name="Keterangan" Type="String" MaxLength="2048" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="IdebFac" Relationship="Self.FK_IdebFacCredit" FromRole="IdebFacCredit" ToRole="IdebFac" />
+  </EntityType>
+  <EntityType Name="IdebFacLc">
+    <Key>
+      <PropertyRef Name="FacId" />
+    </Key>
+    <Property Name="FacId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Ljk" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LjkKet" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Cabang" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CabangKet" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="NominalLc" Type="Double" />
+    <Property Name="TanggalDibentuk" Type="DateTime" Precision="3" />
+    <Property Name="TanggalUpdate" Type="DateTime" Precision="3" />
+    <Property Name="Bulan" Type="Int32" />
+    <Property Name="Tahun" Type="Int32" />
+    <Property Name="NoLc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="JenisLc" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="JenisLcKet" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TanggalDiterbitkan" Type="DateTime" Precision="0" />
+    <Property Name="TanggalJatuhTempo" Type="DateTime" Precision="0" />
+    <Property Name="NoAkadAwal" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TanggalAkadAwal" Type="DateTime" Precision="0" />
+    <Property Name="NoAkadAkhir" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TanggalAkadAkhir" Type="DateTime" Precision="0" />
+    <Property Name="BankCounterparty" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Kolektibilitas" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Valuta" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="Plafon" Type="Double" />
+    <Property Name="TujuanLc" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="TujuanLcKet" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="SetoraJaminan" Type="Double" />
+    <Property Name="TanggalWanPrestasi" Type="DateTime" Precision="0" />
+    <Property Name="Kondisi" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="KondisiKet" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="TanggalKondisi" Type="DateTime" Precision="0" />
+    <Property Name="Keterangan" Type="String" MaxLength="2048" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="IdebFac" Relationship="Self.FK_IdebFacLc" FromRole="IdebFacLc" ToRole="IdebFac" />
+  </EntityType>
+  <EntityType Name="IdebFacOther">
+    <Key>
+      <PropertyRef Name="FacId" />
+    </Key>
+    <Property Name="FacId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Ljk" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LjkKet" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Cabang" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CabangKet" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="NominalJumlahKwajibanIDR" Type="Double" />
+    <Property Name="TanggalDibentuk" Type="DateTime" Precision="3" />
+    <Property Name="TanggalUpdate" Type="DateTime" Precision="3" />
+    <Property Name="Bulan" Type="Int32" />
+    <Property Name="Tahun" Type="Int32" />
+    <Property Name="NoRekening" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="JenisFasilitas" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="JenisFasilitasKet" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="TanggalMulai" Type="DateTime" Precision="0" />
+    <Property Name="TanggalJatuhTempo" Type="DateTime" Precision="0" />
+    <Property Name="Valuta" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="NilaiDalamMataUangAsal" Type="Double" />
+    <Property Name="SukuBunga" Type="Double" />
+    <Property Name="Kolektibilitas" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="JumlahHariTunggakan" Type="Int32" />
+    <Property Name="TanggalMacet" Type="DateTime" Precision="0" />
+    <Property Name="SebabMacet" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="SebabMacetKet" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="Tunggakan" Type="Double" />
+    <Property Name="Kondisi" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="KondisiKet" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="TanggalKondisi" Type="DateTime" Precision="0" />
+    <Property Name="Keterangan" Type="String" MaxLength="2048" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="IdebFac" Relationship="Self.FK_IdebFacOther" FromRole="IdebFacOther" ToRole="IdebFac" />
+  </EntityType>
+  <EntityType Name="IdebFacPenjamin">
+    <Key>
+      <PropertyRef Name="FacId" />
+      <PropertyRef Name="Seq" />
+    </Key>
+    <Property Name="FacId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Seq" Type="Int32" Nullable="false" />
+    <Property Name="NamaPenjamin" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="NomorIdentitas" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TanggalUpdate" Type="DateTime" Precision="3" />
+    <Property Name="TanggalBuat" Type="DateTime" Precision="3" />
+    <Property Name="JenisPenjamin" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="JenisPenjaminKet" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="AlamatPenjamin" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Keterangan" Type="String" MaxLength="2048" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="IdebFac" Relationship="Self.FK_IdebFacPenjamin" FromRole="IdebFacPenjamin" ToRole="IdebFac" />
+  </EntityType>
+  <EntityType Name="IdebFacSb">
+    <Key>
+      <PropertyRef Name="FacId" />
+    </Key>
+    <Property Name="FacId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Ljk" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LjkKet" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Cabang" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CabangKet" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="NominalSb" Type="Double" />
+    <Property Name="TanggalDibentuk" Type="DateTime" Precision="3" />
+    <Property Name="TanggalUpdate" Type="DateTime" Precision="3" />
+    <Property Name="Bulan" Type="Int32" />
+    <Property Name="Tahun" Type="Int32" />
+    <Property Name="NoSuratBeharga" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="JenisSuratBeharga" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="JenisSuratBehargaKet" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="SovereignRate" Type="Double" />
+    <Property Name="Listing" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="PeringkatSuratBeharga" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TujuanKepemilikan" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="TujuanKepemilikanKet" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="TanggalDiterbitkan" Type="DateTime" Precision="0" />
+    <Property Name="TanggalJatuhTempo" Type="DateTime" Precision="0" />
+    <Property Name="SukuBunga" Type="Double" />
+    <Property Name="Valuta" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="Kolektibilitas" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="JumlahHariTunggakan" Type="Int32" />
+    <Property Name="NilaiDalamMataUangAsal" Type="Double" />
+    <Property Name="NilaiPasar" Type="Double" />
+    <Property Name="NilaiPerolehan" Type="Double" />
+    <Property Name="Tunggakan" Type="Double" />
+    <Property Name="SebabMacet" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="SebabMacetKet" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="TanggalMacet" Type="DateTime" Precision="0" />
+    <Property Name="Kondisi" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="KondisiKet" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="TanggalKondisi" Type="DateTime" Precision="0" />
+    <Property Name="Keterangan" Type="String" MaxLength="2048" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="IdebFac" Relationship="Self.FK_IdebFacSb" FromRole="IdebFacSb" ToRole="IdebFac" />
+  </EntityType>
+  <EntityType Name="IdebFacSummary">
+    <Key>
+      <PropertyRef Name="IdebId" />
+    </Key>
+    <Property Name="IdebId" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PlafonEfektifKredit" Type="Double" />
+    <Property Name="PlafonEfektifLc" Type="Double" />
+    <Property Name="PlafonEfektifBg" Type="Double" />
+    <Property Name="plafonEfektifSec" Type="Double" />
+    <Property Name="PlafonEfektifLainnya" Type="Double" />
+    <Property Name="PlafonEfektifTotal" Type="Double" />
+    <Property Name="BakiDebetKredit" Type="Double" />
+    <Property Name="BakiDebetLc" Type="Double" />
+    <Property Name="BakiDebetBg" Type="Double" />
+    <Property Name="BakiDebetSec" Type="Double" />
+    <Property Name="BakiDebetLainnya" Type="Double" />
+    <Property Name="BakiDebetTotal" Type="Double" />
+    <Property Name="KrediturBankUmum" Type="Int32" />
+    <Property Name="KrediturBPR_S" Type="Int32" />
+    <Property Name="KrediturLp" Type="Int32" />
+    <Property Name="KrediturLainnya" Type="Int32" />
+    <Property Name="KolekTerburuk" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="KolekDataTerburuk" Type="Int32" />
+    <Property Name="KolekBulanDataTerburuk" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="KolekDataTerburukDate" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Ideb" Relationship="Self.FK_IdebFacSummary" FromRole="IdebFacSummary" ToRole="Ideb" />
+  </EntityType>
+  <EntityType Name="IdebIndivData">
+    <Key>
+      <PropertyRef Name="IdebId" />
+      <PropertyRef Name="Seq" />
+    </Key>
+    <Property Name="IdebId" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Seq" Type="Int32" Nullable="false" />
+    <Property Name="DebtectorId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NamaDebitur" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Identitas" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="NoIdentitas" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="JenisKelamin" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="JenisKelaminKet" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="Npwp" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TempatLahir" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TanggalLahir" Type="DateTime" Precision="0" />
+    <Property Name="Pelapor" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="PelaporKet" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TanggalDibentuk" Type="DateTime" Precision="3" />
+    <Property Name="TanggalUpdate" Type="DateTime" Precision="3" />
+    <Property Name="Alamat" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Kelurahan" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Kecamatan" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="KabKota" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="KabKotaKet" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="KodePos" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Negara" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="NegaraKet" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Pekerjaan" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="PekerjaanKet" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TempatBekerja" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BidangUsaha" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="BidangUsahaKet" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="KodeGelarDebitur" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="StatusGelarDebitur" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Ideb" Relationship="Self.FK_IdebIndivData" FromRole="IdebIndivData" ToRole="Ideb" />
+  </EntityType>
+  <EntityType Name="IdebIndivSearchVar">
+    <Key>
+      <PropertyRef Name="IdebId" />
+    </Key>
+    <Property Name="IdebId" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NamaDebitur" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="JenisKelamin" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="JenisKelaminKet" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="NoIdentitas" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Npwp" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TempatLahir" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TanggalLahir" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Ideb" Relationship="Self.FK_IdebIndivSearchVar" FromRole="IdebIndivSearchVar" ToRole="Ideb" />
+  </EntityType>
+  <EntityType Name="LIST">
+    <Key>
+      <PropertyRef Name="LISTID" />
+    </Key>
+    <Property Name="LISTID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="KEYFIELD" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="KEYFIELDDESC" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="LISTDESC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LISTFIELD" Type="String" MaxLength="2048" FixedLength="false" Unicode="false" />
+    <Property Name="LISTFILTER" Type="String" MaxLength="2048" FixedLength="false" Unicode="false" />
+    <Property Name="LISTDETAIL" Type="String" MaxLength="2048" FixedLength="false" Unicode="false" />
+    <Property Name="LISTSQLPARAM" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="LISTSQLCOND" Type="String" MaxLength="2048" FixedLength="false" Unicode="false" />
+    <Property Name="LISTGROUPBY" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="ALLOWSELECTION" Type="Boolean" />
+    <Property Name="ALLOWFILTER" Type="Boolean" />
+    <Property Name="ALLOWSORT" Type="Boolean" />
+    <Property Name="ALLOWGROUPBY" Type="Boolean" />
+    <Property Name="ALLOWEXPORT" Type="Boolean" />
+    <Property Name="LISTDETAILDESC" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="LISTDETAIL2" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="LISTDETAIL2DESC" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="LISTCHKBOXCMD" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="LISTCHKCMDTEXT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LISTREASONQRY" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="LISTREASONCAPTION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LISTREASONPOSFRONT" Type="Boolean" />
+    <Property Name="LISTORDERBY" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ParameterSystem">
+    <Key>
+      <PropertyRef Name="SetId" />
+      <PropertyRef Name="TableNM" />
+    </Key>
+    <Property Name="SetId" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TableNM" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IsMaker" Type="Boolean" />
+    <Property Name="ISApprv" Type="Boolean" />
+    <Property Name="ParamDesc" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="ParamLinkMaker" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="ParamLinkApprv" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="ParamPos" Type="Int32" />
+    <Property Name="ShowPending" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="ParameterSystem_AuditTrail">
+    <Key>
+      <PropertyRef Name="TemporaryID" />
+    </Key>
+    <Property Name="TemporaryID" Type="Guid" Nullable="false" />
+    <Property Name="TableName" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Status" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="ApproveDate" Type="DateTime" Precision="3" />
+    <Property Name="ApproveBy" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="HostIP" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ParameterSystem_AuditTrailDetail" Relationship="Self.FK_ParameterSystem_AuditTrailDetail" FromRole="ParameterSystem_AuditTrail" ToRole="ParameterSystem_AuditTrailDetail" />
+  </EntityType>
+  <EntityType Name="ParameterSystem_AuditTrailDetail">
+    <Key>
+      <PropertyRef Name="TemporaryID" />
+      <PropertyRef Name="FieldName" />
+    </Key>
+    <Property Name="TemporaryID" Type="Guid" Nullable="false" />
+    <Property Name="FieldName" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FieldValue" Type="String" MaxLength="3000" FixedLength="false" Unicode="false" />
+    <Property Name="FieldValueBefore" Type="String" MaxLength="3000" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ParameterSystem_AuditTrail" Relationship="Self.FK_ParameterSystem_AuditTrailDetail" FromRole="ParameterSystem_AuditTrailDetail" ToRole="ParameterSystem_AuditTrail" />
+  </EntityType>
+  <EntityType Name="ParameterSystem_Temporary">
+    <Key>
+      <PropertyRef Name="TemporaryID" />
+    </Key>
+    <Property Name="TemporaryID" Type="Guid" Nullable="false" />
+    <Property Name="TableName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Status" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ParameterSystem_TemporaryDetail" Relationship="Self.FK_PARAMETERSYSTEM_TEMPORARYDETAIL_PARAMETERSYSTEM_TEMPORARY" FromRole="ParameterSystem_Temporary" ToRole="ParameterSystem_TemporaryDetail" />
+  </EntityType>
+  <EntityType Name="ParameterSystem_TemporaryDetail">
+    <Key>
+      <PropertyRef Name="TemporaryID" />
+      <PropertyRef Name="FieldName" />
+    </Key>
+    <Property Name="TemporaryID" Type="Guid" Nullable="false" />
+    <Property Name="FieldName" Type="String" MaxLength="256" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FieldValue" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="FieldValueBefore" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ParameterSystem_Temporary" Relationship="Self.FK_PARAMETERSYSTEM_TEMPORARYDETAIL_PARAMETERSYSTEM_TEMPORARY" FromRole="ParameterSystem_TemporaryDetail" ToRole="ParameterSystem_Temporary" />
+  </EntityType>
+  <EntityType Name="ParameterSystemField">
+    <Key>
+      <PropertyRef Name="TableNM" />
+      <PropertyRef Name="FieldNM" />
+    </Key>
+    <Property Name="TableNM" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FieldPos" Type="Int32" />
+    <Property Name="FieldNM" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FieldTYPE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="FieldDesc" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="FieldReff" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="FieldAuto" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="FieldKey" Type="Boolean" />
+    <Property Name="FieldMan" Type="Boolean" />
+    <Property Name="GroupBy" Type="Boolean" />
+    <Property Name="SortSeq" Type="Int32" />
+    <Property Name="SortAsc" Type="Boolean" />
+    <Property Name="AutoPrefix" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="AutoSufix" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="FormulaType" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="Locked" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="ProcGenAppId">
+    <Key>
+      <PropertyRef Name="Org" />
+      <PropertyRef Name="ProcDate" />
+    </Key>
+    <Property Name="Org" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ProcDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="ProcFlag" Type="Boolean" />
+    <Property Name="RunNo" Type="Int32" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="SysModule">
+    <Key>
+      <PropertyRef Name="ModuleId" />
+    </Key>
+    <Property Name="ModuleId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ModuleName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="FK_IdebCorpData">
+    <End Role="Ideb" Type="Self.Ideb" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="IdebCorpData" Type="Self.IdebCorpData" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ideb">
+        <PropertyRef Name="IdebId" />
+      </Principal>
+      <Dependent Role="IdebCorpData">
+        <PropertyRef Name="IdebId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IdebCorpGroup">
+    <End Role="Ideb" Type="Self.Ideb" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="IdebCorpGroup" Type="Self.IdebCorpGroup" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ideb">
+        <PropertyRef Name="IdebId" />
+      </Principal>
+      <Dependent Role="IdebCorpGroup">
+        <PropertyRef Name="IdebId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IdebCorpSearchVar">
+    <End Role="Ideb" Type="Self.Ideb" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="IdebCorpSearchVar" Type="Self.IdebCorpSearchVar" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Ideb">
+        <PropertyRef Name="IdebId" />
+      </Principal>
+      <Dependent Role="IdebCorpSearchVar">
+        <PropertyRef Name="IdebId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IdebFac">
+    <End Role="Ideb" Type="Self.Ideb" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="IdebFac" Type="Self.IdebFac" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ideb">
+        <PropertyRef Name="IdebId" />
+      </Principal>
+      <Dependent Role="IdebFac">
+        <PropertyRef Name="IdebId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IdebFacSummary">
+    <End Role="Ideb" Type="Self.Ideb" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="IdebFacSummary" Type="Self.IdebFacSummary" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Ideb">
+        <PropertyRef Name="IdebId" />
+      </Principal>
+      <Dependent Role="IdebFacSummary">
+        <PropertyRef Name="IdebId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IdebIndivData">
+    <End Role="Ideb" Type="Self.Ideb" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="IdebIndivData" Type="Self.IdebIndivData" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ideb">
+        <PropertyRef Name="IdebId" />
+      </Principal>
+      <Dependent Role="IdebIndivData">
+        <PropertyRef Name="IdebId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IdebIndivSearchVar">
+    <End Role="Ideb" Type="Self.Ideb" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="IdebIndivSearchVar" Type="Self.IdebIndivSearchVar" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Ideb">
+        <PropertyRef Name="IdebId" />
+      </Principal>
+      <Dependent Role="IdebIndivSearchVar">
+        <PropertyRef Name="IdebId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IdebFacCollateral">
+    <End Role="IdebFac" Type="Self.IdebFac" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="IdebFacCollateral" Type="Self.IdebFacCollateral" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IdebFac">
+        <PropertyRef Name="FacId" />
+      </Principal>
+      <Dependent Role="IdebFacCollateral">
+        <PropertyRef Name="FacId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IdebFacCollect">
+    <End Role="IdebFac" Type="Self.IdebFac" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="IdebFacCollect" Type="Self.IdebFacCollect" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IdebFac">
+        <PropertyRef Name="FacId" />
+      </Principal>
+      <Dependent Role="IdebFacCollect">
+        <PropertyRef Name="FacId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IdebFacCredit">
+    <End Role="IdebFac" Type="Self.IdebFac" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="IdebFacCredit" Type="Self.IdebFacCredit" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="IdebFac">
+        <PropertyRef Name="FacId" />
+      </Principal>
+      <Dependent Role="IdebFacCredit">
+        <PropertyRef Name="FacId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IdebFacLc">
+    <End Role="IdebFac" Type="Self.IdebFac" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="IdebFacLc" Type="Self.IdebFacLc" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="IdebFac">
+        <PropertyRef Name="FacId" />
+      </Principal>
+      <Dependent Role="IdebFacLc">
+        <PropertyRef Name="FacId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IdebFacOther">
+    <End Role="IdebFac" Type="Self.IdebFac" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="IdebFacOther" Type="Self.IdebFacOther" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="IdebFac">
+        <PropertyRef Name="FacId" />
+      </Principal>
+      <Dependent Role="IdebFacOther">
+        <PropertyRef Name="FacId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IdebFacPenjamin">
+    <End Role="IdebFac" Type="Self.IdebFac" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="IdebFacPenjamin" Type="Self.IdebFacPenjamin" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IdebFac">
+        <PropertyRef Name="FacId" />
+      </Principal>
+      <Dependent Role="IdebFacPenjamin">
+        <PropertyRef Name="FacId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IdebFacSb">
+    <End Role="IdebFac" Type="Self.IdebFac" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="IdebFacSb" Type="Self.IdebFacSb" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="IdebFac">
+        <PropertyRef Name="FacId" />
+      </Principal>
+      <Dependent Role="IdebFacSb">
+        <PropertyRef Name="FacId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ParameterSystem_AuditTrailDetail">
+    <End Role="ParameterSystem_AuditTrail" Type="Self.ParameterSystem_AuditTrail" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ParameterSystem_AuditTrailDetail" Type="Self.ParameterSystem_AuditTrailDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterSystem_AuditTrail">
+        <PropertyRef Name="TemporaryID" />
+      </Principal>
+      <Dependent Role="ParameterSystem_AuditTrailDetail">
+        <PropertyRef Name="TemporaryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PARAMETERSYSTEM_TEMPORARYDETAIL_PARAMETERSYSTEM_TEMPORARY">
+    <End Role="ParameterSystem_Temporary" Type="Self.ParameterSystem_Temporary" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ParameterSystem_TemporaryDetail" Type="Self.ParameterSystem_TemporaryDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterSystem_Temporary">
+        <PropertyRef Name="TemporaryID" />
+      </Principal>
+      <Dependent Role="ParameterSystem_TemporaryDetail">
+        <PropertyRef Name="TemporaryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DBSCBSEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Apps" EntityType="Self.App" />
+    <EntitySet Name="AppBillPmts" EntityType="Self.AppBillPmt" />
+    <EntitySet Name="AppBureauReqs" EntityType="Self.AppBureauReq" />
+    <EntitySet Name="AppDecResps" EntityType="Self.AppDecResp" />
+    <EntitySet Name="AppDocs" EntityType="Self.AppDoc" />
+    <EntitySet Name="AppExCCs" EntityType="Self.AppExCC" />
+    <EntitySet Name="AppExFacs" EntityType="Self.AppExFac" />
+    <EntitySet Name="AppExLoans" EntityType="Self.AppExLoan" />
+    <EntitySet Name="AppFacs" EntityType="Self.AppFac" />
+    <EntitySet Name="AppFlags" EntityType="Self.AppFlag" />
+    <EntitySet Name="AppMemoes" EntityType="Self.AppMemo" />
+    <EntitySet Name="AppSupps" EntityType="Self.AppSupp" />
+    <EntitySet Name="AuthGroupMenus" EntityType="Self.AuthGroupMenu" />
+    <EntitySet Name="AuthGroups" EntityType="Self.AuthGroup" />
+    <EntitySet Name="AuthMenus" EntityType="Self.AuthMenu" />
+    <EntitySet Name="AuthParams" EntityType="Self.AuthParam" />
+    <EntitySet Name="AuthPwdHists" EntityType="Self.AuthPwdHist" />
+    <EntitySet Name="AuthUserActivities" EntityType="Self.AuthUserActivity" />
+    <EntitySet Name="AuthUserFlags" EntityType="Self.AuthUserFlag" />
+    <EntitySet Name="AuthUserGroups" EntityType="Self.AuthUserGroup" />
+    <EntitySet Name="AuthUserHists" EntityType="Self.AuthUserHist" />
+    <EntitySet Name="AuthUsers" EntityType="Self.AuthUser" />
+    <EntitySet Name="CustFins" EntityType="Self.CustFin" />
+    <EntitySet Name="CustJobs" EntityType="Self.CustJob" />
+    <EntitySet Name="CustPersonals" EntityType="Self.CustPersonal" />
+    <EntitySet Name="CustRels" EntityType="Self.CustRel" />
+    <EntitySet Name="DataImports" EntityType="Self.DataImport" />
+    <EntitySet Name="DataImportDestColumns" EntityType="Self.DataImportDestColumn" />
+    <EntitySet Name="DataImportDestTables" EntityType="Self.DataImportDestTable" />
+    <EntitySet Name="DataImportFlatFiles" EntityType="Self.DataImportFlatFile" />
+    <EntitySet Name="DataImportFlatFileColumns" EntityType="Self.DataImportFlatFileColumn" />
+    <EntitySet Name="DataImportLogs" EntityType="Self.DataImportLog" />
+    <EntitySet Name="DataImportLogDetails" EntityType="Self.DataImportLogDetail" />
+    <EntitySet Name="EnumBureauTypes" EntityType="Self.EnumBureauType" />
+    <EntitySet Name="EnumIdebFacCats" EntityType="Self.EnumIdebFacCat" />
+    <EntitySet Name="FRAMEWORK_FOREIGNKEY" EntityType="Self.FRAMEWORK_FOREIGNKEY" />
+    <EntitySet Name="FRAMEWORK_FORMULAFIELD" EntityType="Self.FRAMEWORK_FORMULAFIELD" />
+    <EntitySet Name="FRAMEWORK_LINDEDSERVER" EntityType="Self.FRAMEWORK_LINDEDSERVER" />
+    <EntitySet Name="Idebs" EntityType="Self.Ideb" />
+    <EntitySet Name="IdebCorpDatas" EntityType="Self.IdebCorpData" />
+    <EntitySet Name="IdebCorpGroups" EntityType="Self.IdebCorpGroup" />
+    <EntitySet Name="IdebCorpSearchVars" EntityType="Self.IdebCorpSearchVar" />
+    <EntitySet Name="IdebFacs" EntityType="Self.IdebFac" />
+    <EntitySet Name="IdebFacBgs" EntityType="Self.IdebFacBg" />
+    <EntitySet Name="IdebFacCollaterals" EntityType="Self.IdebFacCollateral" />
+    <EntitySet Name="IdebFacCollects" EntityType="Self.IdebFacCollect" />
+    <EntitySet Name="IdebFacCredits" EntityType="Self.IdebFacCredit" />
+    <EntitySet Name="IdebFacLcs" EntityType="Self.IdebFacLc" />
+    <EntitySet Name="IdebFacOthers" EntityType="Self.IdebFacOther" />
+    <EntitySet Name="IdebFacPenjamins" EntityType="Self.IdebFacPenjamin" />
+    <EntitySet Name="IdebFacSbs" EntityType="Self.IdebFacSb" />
+    <EntitySet Name="IdebFacSummaries" EntityType="Self.IdebFacSummary" />
+    <EntitySet Name="IdebIndivDatas" EntityType="Self.IdebIndivData" />
+    <EntitySet Name="IdebIndivSearchVars" EntityType="Self.IdebIndivSearchVar" />
+    <EntitySet Name="LISTs" EntityType="Self.LIST" />
+    <EntitySet Name="ParameterSystems" EntityType="Self.ParameterSystem" />
+    <EntitySet Name="ParameterSystem_AuditTrail" EntityType="Self.ParameterSystem_AuditTrail" />
+    <EntitySet Name="ParameterSystem_AuditTrailDetail" EntityType="Self.ParameterSystem_AuditTrailDetail" />
+    <EntitySet Name="ParameterSystem_Temporary" EntityType="Self.ParameterSystem_Temporary" />
+    <EntitySet Name="ParameterSystem_TemporaryDetail" EntityType="Self.ParameterSystem_TemporaryDetail" />
+    <EntitySet Name="ParameterSystemFields" EntityType="Self.ParameterSystemField" />
+    <EntitySet Name="ProcGenAppIds" EntityType="Self.ProcGenAppId" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="SysModules" EntityType="Self.SysModule" />
+    <AssociationSet Name="FK_IdebCorpData" Association="Self.FK_IdebCorpData">
+      <End Role="Ideb" EntitySet="Idebs" />
+      <End Role="IdebCorpData" EntitySet="IdebCorpDatas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IdebCorpGroup" Association="Self.FK_IdebCorpGroup">
+      <End Role="Ideb" EntitySet="Idebs" />
+      <End Role="IdebCorpGroup" EntitySet="IdebCorpGroups" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IdebCorpSearchVar" Association="Self.FK_IdebCorpSearchVar">
+      <End Role="Ideb" EntitySet="Idebs" />
+      <End Role="IdebCorpSearchVar" EntitySet="IdebCorpSearchVars" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IdebFac" Association="Self.FK_IdebFac">
+      <End Role="Ideb" EntitySet="Idebs" />
+      <End Role="IdebFac" EntitySet="IdebFacs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IdebFacSummary" Association="Self.FK_IdebFacSummary">
+      <End Role="Ideb" EntitySet="Idebs" />
+      <End Role="IdebFacSummary" EntitySet="IdebFacSummaries" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IdebIndivData" Association="Self.FK_IdebIndivData">
+      <End Role="Ideb" EntitySet="Idebs" />
+      <End Role="IdebIndivData" EntitySet="IdebIndivDatas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IdebIndivSearchVar" Association="Self.FK_IdebIndivSearchVar">
+      <End Role="Ideb" EntitySet="Idebs" />
+      <End Role="IdebIndivSearchVar" EntitySet="IdebIndivSearchVars" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IdebFacCollateral" Association="Self.FK_IdebFacCollateral">
+      <End Role="IdebFac" EntitySet="IdebFacs" />
+      <End Role="IdebFacCollateral" EntitySet="IdebFacCollaterals" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IdebFacCollect" Association="Self.FK_IdebFacCollect">
+      <End Role="IdebFac" EntitySet="IdebFacs" />
+      <End Role="IdebFacCollect" EntitySet="IdebFacCollects" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IdebFacCredit" Association="Self.FK_IdebFacCredit">
+      <End Role="IdebFac" EntitySet="IdebFacs" />
+      <End Role="IdebFacCredit" EntitySet="IdebFacCredits" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IdebFacLc" Association="Self.FK_IdebFacLc">
+      <End Role="IdebFac" EntitySet="IdebFacs" />
+      <End Role="IdebFacLc" EntitySet="IdebFacLcs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IdebFacOther" Association="Self.FK_IdebFacOther">
+      <End Role="IdebFac" EntitySet="IdebFacs" />
+      <End Role="IdebFacOther" EntitySet="IdebFacOthers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IdebFacPenjamin" Association="Self.FK_IdebFacPenjamin">
+      <End Role="IdebFac" EntitySet="IdebFacs" />
+      <End Role="IdebFacPenjamin" EntitySet="IdebFacPenjamins" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IdebFacSb" Association="Self.FK_IdebFacSb">
+      <End Role="IdebFac" EntitySet="IdebFacs" />
+      <End Role="IdebFacSb" EntitySet="IdebFacSbs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ParameterSystem_AuditTrailDetail" Association="Self.FK_ParameterSystem_AuditTrailDetail">
+      <End Role="ParameterSystem_AuditTrail" EntitySet="ParameterSystem_AuditTrail" />
+      <End Role="ParameterSystem_AuditTrailDetail" EntitySet="ParameterSystem_AuditTrailDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PARAMETERSYSTEM_TEMPORARYDETAIL_PARAMETERSYSTEM_TEMPORARY" Association="Self.FK_PARAMETERSYSTEM_TEMPORARYDETAIL_PARAMETERSYSTEM_TEMPORARY">
+      <End Role="ParameterSystem_Temporary" EntitySet="ParameterSystem_Temporary" />
+      <End Role="ParameterSystem_TemporaryDetail" EntitySet="ParameterSystem_TemporaryDetail" />
+    </AssociationSet>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(DBSCBSModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(DBSCBSModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+    <FunctionImport Name="usp_GenAppId">
+      <Parameter Name="AppId" Mode="InOut" Type="String" />
+      <Parameter Name="Org" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_GetAppId" ReturnType="Collection(String)">
+      <Parameter Name="UserId" Mode="In" Type="String" />
+      <Parameter Name="Org" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_InsUserActivity" ReturnType="Collection(Int32)">
+      <Parameter Name="UserId" Mode="In" Type="String" />
+      <Parameter Name="tokenId" Mode="In" Type="String" />
+      <Parameter Name="actDesc" Mode="In" Type="String" />
+      <Parameter Name="actLevel" Mode="In" Type="Int32" />
+      <Parameter Name="hostIP" Mode="In" Type="String" />
+      <Parameter Name="PageName" Mode="In" Type="String" />
+      <Parameter Name="pageURL" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_ViewImpFFSetting" ReturnType="Collection(DBSCBSModel.usp_ViewImpFFSetting_Result)">
+      <Parameter Name="importId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="usp_ViewIWIDReqResp" ReturnType="Collection(DBSCBSModel.usp_ViewIWIDReqResp_Result)" />
+    <FunctionImport Name="usp_ViewSPSResponse" ReturnType="Collection(DBSCBSModel.usp_ViewSPSResponse_Result)" />
+  </EntityContainer>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="usp_ViewImpFFSetting_Result">
+    <Property Type="String" Name="ImportName" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="SourceType" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="DestTable" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="Method" Nullable="true" MaxLength="10" />
+    <Property Type="Boolean" Name="RowOverwrite" Nullable="true" />
+    <Property Type="Int32" Name="ImportId" Nullable="true" />
+    <Property Type="String" Name="SourceFileName" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="SourceFilePath" Nullable="true" MaxLength="256" />
+    <Property Type="String" Name="Format" Nullable="true" MaxLength="16" />
+    <Property Type="String" Name="TextQualifier" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="HeaderRowDelimiter" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="HeaderRowsToSkip" Nullable="true" />
+    <Property Type="Boolean" Name="ColumnNameIn1st" Nullable="true" />
+    <Property Type="Int32" Name="DataRowsToSkip" Nullable="true" />
+    <Property Type="String" Name="RowDelimiter" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="ColumnDelimiter" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="FtpId" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="usp_ViewIWIDReqResp_Result">
+    <Property Type="Int32" Name="TotalRecord" Nullable="true" />
+    <Property Type="Int32" Name="NoOfSuccess" Nullable="true" />
+    <Property Type="Int32" Name="NoOfFailed" Nullable="false" />
+    <Property Type="DateTime" Name="Start" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="Finish" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="usp_ViewSPSResponse_Result">
+    <Property Type="String" Name="ORG" Nullable="true" MaxLength="256" />
+    <Property Type="String" Name="TYPE" Nullable="true" MaxLength="256" />
+    <Property Type="Int32" Name="STAGE_FLAG" Nullable="true" />
+    <Property Type="String" Name="APPLICATION_NO" Nullable="true" MaxLength="256" />
+    <Property Type="String" Name="EWSS_RESULT" Nullable="true" MaxLength="256" />
+    <Property Type="String" Name="LOAN_CODE" Nullable="true" MaxLength="256" />
+    <Property Type="String" Name="BI_RESULT_CHECK" Nullable="false" MaxLength="1" />
+    <Property Type="Int32" Name="DIN" Nullable="true" />
+    <Property Type="Int32" Name="VERIFIED_INCOME" Nullable="true" />
+    <Property Type="Int32" Name="FINAL_INCOME" Nullable="true" />
+    <Property Type="Int32" Name="PROXY_INC___MOB" Nullable="true" />
+    <Property Type="Int32" Name="PROXY_INC___ISSUER" Nullable="true" />
+    <Property Type="Int32" Name="PROXY_INC___LIMIT" Nullable="true" />
+    <Property Type="Int32" Name="OUTSIDE_MUE" Nullable="true" />
+    <Property Type="Int32" Name="MULTIPLIER_CUS_LEVEL_MUE" Nullable="true" />
+    <Property Type="Int32" Name="TOTAL_EXPOSURE_CC_LIMIT_AT_OTHER_BANKS" Nullable="false" />
+    <Property Type="Int32" Name="SID_RESULT" Nullable="true" />
+    <Property Type="Int32" Name="SUB_DECISION_CODE" Nullable="true" />
+    <Property Type="Int32" Name="C__OF_NEW_UL_L12M" Nullable="false" />
+    <Property Type="Int32" Name="TOT_ACTIVE_CC_OS" Nullable="false" />
+    <Property Type="Int32" Name="TOT_ACTIVE_CC_LIMIT" Nullable="false" />
+    <Property Type="Int32" Name="GROSS_OS_LIMIT" Nullable="false" />
+    <Property Type="Int32" Name="C__OF_ACTIVE_CC" Nullable="false" />
+    <Property Type="Int32" Name="WORST_DPD_L12M" Nullable="false" />
+    <Property Type="Int32" Name="C__OF_ACT_MORT_LOAN" Nullable="false" />
+    <Property Type="Int32" Name="C__OF_ACTIVE_REV" Nullable="false" />
+    <Property Type="Int32" Name="C__OF_REV_OVER_90_" Nullable="false" />
+    <Property Type="Int32" Name="C__OF_UNC_LOANS" Nullable="false" />
+    <Property Type="Int32" Name="C__OF_SECURED_LOANS" Nullable="false" />
+    <Property Type="Int32" Name="OLDEST_MOB_ALL_FAC" Nullable="false" />
+    <Property Type="Int32" Name="LATEST_DEQ_MONTH" Nullable="false" />
+    <Property Type="Int32" Name="OLDEST_MOB_UL_CC_ACT" Nullable="true" />
+    <Property Type="String" Name="PIN_PID_PI2_FLAG" Nullable="true" MaxLength="256" />
+    <Property Type="String" Name="AKKI_RESULT" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="CARD_RATING" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="SID__CREDIT_BUREAU_RESULT" Nullable="false" MaxLength="1" />
+    <Property Type="Int32" Name="OPEN_DATE___CARD_RATING_RESULT" Nullable="true" />
+    <Property Type="Int32" Name="LIMIT___CARD_RATING_RESULT" Nullable="true" />
+    <Property Type="Int32" Name="OS_BALANCE___CARD_RATING_RESULT" Nullable="true" />
+    <Property Type="Int32" Name="PAYMENT_TYPE___CARD_RATING_RESULT" Nullable="true" />
+    <Property Type="Int32" Name="HISTORY_L12_M___CARD_RATING_RESULT" Nullable="true" />
+    <Property Type="Int32" Name="CARD_TYPE___CARD_RATING_RESULT" Nullable="true" />
+    <Property Type="Int32" Name="LATEST_STATUS___CARD_RATING_RESULT" Nullable="true" />
+    <Property Type="Int32" Name="BUREAU____FACILITIES_CC_OD_WITH_MORT_90__UTILIZATION" Nullable="true" />
+    <Property Type="Int32" Name="BUREAU___MONTHS_ON_BUREAU___LATEST_MONTH_WITH_DELQ__0" Nullable="true" />
+    <Property Type="Int32" Name="NEED_PROBING" Nullable="true" />
+    <Property Type="Int32" Name="PROBING_DETAIL" Nullable="true" />
+    <Property Type="Int32" Name="PROBING_DETAIL_2" Nullable="true" />
+    <Property Type="Int32" Name="BUREAU___TOTAL_MOB_CARDS_FACILITY" Nullable="true" />
+    <Property Type="Int32" Name="BUREAU___UR__OF_ACTIVE_CARDS_OS_LIMIT" Nullable="true" />
+    <Property Type="Int32" Name="BUREAU_____LOAN_OPEN_L18M" Nullable="false" />
+    <Property Type="Int32" Name="BUREAU___DATE_LAST_CREDIT_CARD_TAKEN" Nullable="true" />
+    <Property Type="Int32" Name="BUREAU___MOB_LAST_CREDIT_CARD_TAKEN" Nullable="true" />
+    <Property Type="Int32" Name="BUREAU___WORST_DPD_L6M" Nullable="false" />
+    <Property Type="Int32" Name="SID_PROFILLING" Nullable="true" />
+    <Property Type="Int32" Name="FIELD_HIGH_RISK_AREA" Nullable="true" />
+    <Property Type="Int32" Name="TOTAL_CARD_ISSUERS" Nullable="true" />
+    <Property Type="Int32" Name="GROSS_AMT_AGGR_CARD" Nullable="false" />
+    <Property Type="String" Name="APPROVE_DECLINE_CODE" Nullable="false" MaxLength="1" />
+    <Property Type="Int32" Name="OTH2" Nullable="true" />
+    <Property Type="Int32" Name="DBR" Nullable="false" />
+    <Property Type="Int32" Name="DSR" Nullable="false" />
+    <Property Type="Int32" Name="UTILIZATION_RATE" Nullable="false" />
+    <Property Type="String" Name="PHONE_SEGMENTATION" Nullable="false" MaxLength="1" />
+  </ComplexType>
+</Schema>

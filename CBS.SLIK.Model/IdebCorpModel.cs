@@ -38,7 +38,14 @@ namespace SLIK.Model
 
         [JsonProperty(PropertyName = "tanggalAktaPendirian")]
         private string TanggalAktaPendirianHasil { get; set; }
-        public DateTime? TanggalAktaPendirian { get; set; }
+        public DateTime? TanggalAktaPendirian
+        {
+            get
+            {
+                return string.IsNullOrEmpty(TanggalAktaPendirianHasil) ? (DateTime?)null : DateTime.ParseExact(TanggalAktaPendirianHasil, "yyyyMMddHHmmss", null);
+            }
+            set { TanggalAktaPendirianHasil = value.GetValueOrDefault().ToString("yyyyMMddHHmmss"); }
+        }
 
         [JsonProperty(PropertyName = "nomorAktaPendirian")]
         public string NomorAktaPendirian { get; set; }
@@ -90,8 +97,11 @@ namespace SLIK.Model
 
         public DateTime? TglAktaPendirian
         {
-            get { return DateTime.ParseExact(TglAktaPendirianHasil, "yyyyMMddHHmmss", null); }
-            set { TglAktaPendirianHasil = value.GetValueOrDefault().ToString("yyyyMMddHHmmss"); }
+            get
+            {
+                return string.IsNullOrEmpty(TglAktaPendirianHasil) ? (DateTime?)null : DateTime.ParseExact(TglAktaPendirianHasil, "yyyyMMdd",null);
+            }
+            set { TglAktaPendirianHasil = value.GetValueOrDefault().ToString("yyyyMMdd"); }
         }
 
         [JsonProperty(PropertyName = "pelapor")]
@@ -102,7 +112,10 @@ namespace SLIK.Model
 
         public DateTime? TanggalDibentuk
         {
-            get { return DateTime.ParseExact(TanggalDibentukHasil, "yyyyMMddHHmmss", null); }
+            get
+            {
+                return string.IsNullOrEmpty(TanggalDibentukHasil) ? (DateTime?)null : DateTime.ParseExact(TanggalDibentukHasil, "yyyyMMddHHmmss", null);
+            }
             set { TanggalDibentukHasil = value.GetValueOrDefault().ToString("yyyyMMddHHmmss"); }
         }
 
@@ -112,7 +125,10 @@ namespace SLIK.Model
 
         public DateTime? TanggalUpdate
         {
-            get { return DateTime.ParseExact(TanggalUpdateHasil, "yyyyMMddHHmmss", null); }
+            get
+            {
+                return string.IsNullOrEmpty(TanggalUpdateHasil) ? (DateTime?)null : DateTime.ParseExact(TanggalUpdateHasil, "yyyyMMddHHmmss", null);
+            }
             set { TanggalUpdateHasil = value.GetValueOrDefault().ToString("yyyyMMddHHmmss"); }
         }
 
@@ -142,8 +158,11 @@ namespace SLIK.Model
 
         public DateTime? TglAktaTerakhir
         {
-            get { return DateTime.ParseExact(TanggalUpdateHasil, "yyyyMMddHHmmss", null); }
-            set { TanggalUpdateHasil = value.GetValueOrDefault().ToString("yyyyMMddHHmmss"); }
+            get
+            {
+                return string.IsNullOrEmpty(TglAktaTerakhirHasil) ? (DateTime?)null : DateTime.ParseExact(TglAktaTerakhirHasil, "yyyyMMdd", null);
+            }
+            set { TanggalUpdateHasil = value.GetValueOrDefault().ToString("yyyyMMdd"); }
         }
 
         [JsonProperty(PropertyName = "sektorEkonomi")]
@@ -159,8 +178,11 @@ namespace SLIK.Model
         private string TanggalPemeringkatanHasil { get; set; }
         public DateTime? TanggalPemeringkatan
         {
-            get { return DateTime.ParseExact(TanggalPemeringkatanHasil, "yyyyMMddHHmmss", null); }
-            set { TanggalPemeringkatanHasil = value.GetValueOrDefault().ToString("yyyyMMddHHmmss"); }
+            get
+            {
+                return string.IsNullOrEmpty(TanggalPemeringkatanHasil) ? (DateTime?)null : DateTime.ParseExact(TanggalPemeringkatanHasil, "yyyyMMdd", null);
+            }
+            set { TanggalPemeringkatanHasil = value.GetValueOrDefault().ToString("yyyyMMdd"); }
         }
     }
 

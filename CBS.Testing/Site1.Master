@@ -1,0 +1,28 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="CBS.Testing.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head runat="server">
+        <title>Testing</title>
+        <asp:PlaceHolder runat="server">
+            <%-- CSS --%>            
+            <link rel="stylesheet" href="<%=ResolveClientUrl("~/Assets/bootstrap-4.0.0-alpha.6-dist/css/bootstrap.min.css")%>" type="text/css" media="screen" />            
+            <link rel="stylesheet" href="<%=ResolveClientUrl("~/Assets/css/Custom.css")%>" type="text/css" media="screen" />
+
+            <%-- JS --%>
+            <script type="text/javascript" src="<%=ResolveClientUrl("~/Assets/js/jquery-3.2.1.min.js")%>"></script>
+            <script type="text/javascript" src="<%=ResolveClientUrl("~/Assets/bootstrap-4.0.0-alpha.6-dist/js/bootstrap.min.js")%>"></script>
+            
+            <asp:ContentPlaceHolder ID="head" runat="server">
+            </asp:ContentPlaceHolder>
+        </asp:PlaceHolder>        
+    </head>
+    <body>
+        <%--<form runat="server" align="center" class="border">--%>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+            </asp:ContentPlaceHolder>                
+        <%--</form>--%>            
+    </body>
+</html>

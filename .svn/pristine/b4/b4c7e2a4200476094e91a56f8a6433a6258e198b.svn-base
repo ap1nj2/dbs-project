@@ -1,0 +1,2025 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBSCBSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="App">
+    <Key>
+      <PropertyRef Name="AppId" />
+    </Key>
+    <Property Name="AppId" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="DataSource" Type="varchar" MaxLength="10" />
+    <Property Name="BranchId" Type="varchar" MaxLength="10" />
+    <Property Name="SourceCd" Type="varchar" MaxLength="10" />
+    <Property Name="CampaignCd" Type="varchar" MaxLength="10" />
+    <Property Name="LoanCentreCd" Type="varchar" MaxLength="20" />
+    <Property Name="AgentCd" Type="varchar" MaxLength="10" />
+    <Property Name="SalesCd" Type="varchar" MaxLength="10" />
+    <Property Name="MgmCd" Type="varchar" MaxLength="10" />
+    <Property Name="Org" Type="varchar" MaxLength="3" />
+    <Property Name="Type" Type="varchar" MaxLength="3" />
+    <Property Name="OriginAppId" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="AppRefNo" Type="varchar" MaxLength="20" />
+    <Property Name="ReceiptDate" Type="date" />
+    <Property Name="SolicitationId" Type="varchar" MaxLength="10" />
+    <Property Name="VIPIndicator" Type="varchar" MaxLength="1" />
+    <Property Name="UseCreditDesired" Type="varchar" MaxLength="1" />
+    <Property Name="ProcCradleToGrave" Type="varchar" MaxLength="10" />
+    <Property Name="CreateCustRecord" Type="varchar" MaxLength="1" />
+    <Property Name="CreateRelRecord" Type="varchar" MaxLength="1" />
+    <Property Name="RelCd" Type="varchar" MaxLength="10" />
+    <Property Name="CreateBaseSegRecord" Type="varchar" MaxLength="50" />
+    <Property Name="SameCust" Type="varchar" MaxLength="1" />
+    <Property Name="EmbMethodCd" Type="varchar" MaxLength="1" />
+    <Property Name="BaseSegCd" Type="varchar" MaxLength="20" />
+    <Property Name="CardSchemeCd" Type="varchar" MaxLength="1" />
+    <Property Name="LoanPlanNo" Type="varchar" MaxLength="5" />
+    <Property Name="PrimaryAcc" Type="varchar" MaxLength="1" />
+    <Property Name="LoanRefNo" Type="varchar" MaxLength="23" />
+    <Property Name="RelTypeIndCd" Type="varchar" MaxLength="1" />
+    <Property Name="ProcessTypeCd" Type="varchar" MaxLength="1" />
+    <Property Name="AlgoProxyIncTest" Type="varchar" MaxLength="20" />
+    <Property Name="AlgoSegTest" Type="varchar" MaxLength="10" />
+    <Property Name="AlgoScoreTest" Type="varchar" MaxLength="3" />
+    <Property Name="AlgoTestTrack" Type="varchar" MaxLength="20" />
+    <Property Name="PLNameOfBank" Type="varchar" MaxLength="25" />
+    <Property Name="CustConsent" Type="varchar" MaxLength="1" />
+    <Property Name="MarcomConsent" Type="varchar" MaxLength="1" />
+    <Property Name="UpfrontReject" Type="varchar" MaxLength="1" />
+    <Property Name="ExcludeIndustry" Type="varchar" MaxLength="5" />
+    <Property Name="PLOptDBSMUE" Type="float" />
+    <Property Name="CCOptDBSMUE" Type="float" />
+    <Property Name="MLOptDBSMUE" Type="float" />
+    <Property Name="SignatureDate" Type="date" />
+    <Property Name="AreaScore" Type="int" />
+    <Property Name="PSCd" Type="varchar" MaxLength="5" />
+    <Property Name="CustType" Type="varchar" MaxLength="50" />
+    <Property Name="TopupType" Type="varchar" MaxLength="20" />
+    <Property Name="OldestMOB" Type="varchar" MaxLength="5" />
+    <Property Name="OriginAccNo" Type="varchar" MaxLength="50" />
+    <Property Name="DiscFlag" Type="varchar" MaxLength="5" />
+    <Property Name="PINPIDPI2Flag" Type="varchar" MaxLength="5" />
+    <Property Name="RelWithBanks" Type="varchar" MaxLength="20" />
+    <Property Name="NeedProbing" Type="varchar" MaxLength="10" />
+    <Property Name="ProbingDetail" Type="varchar" MaxLength="50" />
+    <Property Name="ProbingDetail2" Type="varchar" MaxLength="50" />
+    <Property Name="TotalCardIssuers" Type="int" />
+    <Property Name="BillPmtReg" Type="varchar" MaxLength="5" />
+    <Property Name="SavingAccNo" Type="varchar" MaxLength="25" />
+    <Property Name="ReqPrintBilling" Type="varchar" MaxLength="5" />
+    <Property Name="DocType" Type="varchar" MaxLength="40" />
+    <Property Name="Oth1" Type="varchar" MaxLength="100" />
+    <Property Name="Oth2" Type="varchar" MaxLength="100" />
+    <Property Name="Oth3" Type="varchar" MaxLength="100" />
+    <Property Name="Oth4" Type="varchar" MaxLength="100" />
+    <Property Name="Oth5" Type="varchar" MaxLength="100" />
+    <Property Name="BatchFileName" Type="varchar" MaxLength="128" />
+    <Property Name="InsertTime" Type="datetime" />
+    <Property Name="InsertBy" Type="varchar" MaxLength="20" />
+    <Property Name="UpdateTime" Type="datetime" />
+    <Property Name="UpdateBy" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="AppBillPmt">
+    <Key>
+      <PropertyRef Name="AppId" />
+      <PropertyRef Name="Seq" />
+    </Key>
+    <Property Name="AppId" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Seq" Type="int" Nullable="false" />
+    <Property Name="BillerName" Type="varchar" MaxLength="25" />
+    <Property Name="BillAccNo" Type="varchar" MaxLength="25" />
+    <Property Name="NameOnBill" Type="varchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="AppBureauReq">
+    <Key>
+      <PropertyRef Name="ReqId" />
+    </Key>
+    <Property Name="ReqId" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="AppId" Type="varchar" MaxLength="20" />
+    <Property Name="Seq" Type="int" />
+    <Property Name="DatTypeCd" Type="varchar" MaxLength="50" />
+    <Property Name="Name" Type="varchar" MaxLength="100" />
+    <Property Name="DateOfBirth" Type="date" />
+    <Property Name="PlaceOfBirth" Type="varchar" MaxLength="100" />
+    <Property Name="IDType" Type="varchar" MaxLength="10" />
+    <Property Name="IDNumber" Type="varchar" MaxLength="25" />
+    <Property Name="Gender" Type="varchar" MaxLength="1" />
+    <Property Name="Npwp" Type="varchar" MaxLength="25" />
+    <Property Name="Addr1" Type="varchar" MaxLength="40" />
+    <Property Name="Addr2" Type="varchar" MaxLength="40" />
+    <Property Name="Addr3" Type="varchar" MaxLength="40" />
+    <Property Name="CityName" Type="varchar" MaxLength="25" />
+    <Property Name="PostalCode" Type="varchar" MaxLength="10" />
+    <Property Name="ReqBy" Type="varchar" MaxLength="20" />
+    <Property Name="ReqTime" Type="datetime" />
+    <Property Name="ReqType" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="AppDecResp">
+    <Key>
+      <PropertyRef Name="AppId" />
+    </Key>
+    <Property Name="AppId" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="GenTime" Type="datetime" />
+    <Property Name="Org" Type="varchar" MaxLength="3" />
+    <Property Name="Type" Type="varchar" MaxLength="3" />
+    <Property Name="Sage" Type="varchar" MaxLength="5" />
+    <Property Name="OriginAppId" Type="varchar" MaxLength="20" />
+    <Property Name="EwssResult" Type="varchar" MaxLength="5" />
+    <Property Name="LoanCode" Type="varchar" MaxLength="20" />
+    <Property Name="SLIKResultCheck" Type="varchar" MaxLength="10" />
+    <Property Name="SLIKID" Type="varchar" MaxLength="128" />
+    <Property Name="IncomeVer" Type="float" />
+    <Property Name="IncomeFinal" Type="float" />
+    <Property Name="ProxyIncMOB" Type="varchar" MaxLength="20" />
+    <Property Name="ProxyIncIssuer" Type="varchar" MaxLength="50" />
+    <Property Name="ProxyIncLimit" Type="float" />
+    <Property Name="OutsideMUE" Type="varchar" MaxLength="5" />
+    <Property Name="MultiCusLevelMUE" Type="float" />
+    <Property Name="TotalCCLimitOthBank" Type="float" />
+    <Property Name="SLIKResult" Type="varchar" MaxLength="128" />
+    <Property Name="SubDecCd" Type="varchar" MaxLength="2" />
+    <Property Name="NoOfNewULL12M" Type="int" />
+    <Property Name="TotActiveCCOS" Type="float" />
+    <Property Name="TotActiveCCLimit" Type="float" />
+    <Property Name="GrossOSOrLimit" Type="float" />
+    <Property Name="NoOfActiveCC" Type="int" />
+    <Property Name="WorstDPDl12M" Type="int" />
+    <Property Name="NoOfActiveHL" Type="int" />
+    <Property Name="NoOfActiveRev" Type="int" />
+    <Property Name="RatioOfRevOver90Pct" Type="float" />
+    <Property Name="NoOfUL" Type="int" />
+    <Property Name="NoOfSL" Type="int" />
+    <Property Name="OldestMOBAllFac" Type="int" />
+    <Property Name="LatestDeqMonth" Type="int" />
+    <Property Name="OldestMOBULCC" Type="int" />
+    <Property Name="PINPIDPI2Flag" Type="varchar" MaxLength="5" />
+    <Property Name="AKKIResult" Type="varchar" MaxLength="1" />
+    <Property Name="RatingResult" Type="varchar" MaxLength="1" />
+    <Property Name="BureauResult" Type="varchar" MaxLength="1" />
+    <Property Name="RatingOpenDate" Type="date" />
+    <Property Name="RatingLimit" Type="float" />
+    <Property Name="RatingOSBal" Type="float" />
+    <Property Name="RatingPmtType" Type="varchar" MaxLength="20" />
+    <Property Name="RatingHistL12M" Type="varchar" MaxLength="50" />
+    <Property Name="RatingCardType" Type="varchar" MaxLength="20" />
+    <Property Name="RatingLatesSta" Type="varchar" MaxLength="20" />
+    <Property Name="BureauRatioCCODWithHL90Util" Type="varchar" MaxLength="20" />
+    <Property Name="BureauLatesMDelqGT0" Type="varchar" MaxLength="20" />
+    <Property Name="BureauTotMOBCC" Type="int" />
+    <Property Name="BureauURActiveCCOSLimit" Type="float" />
+    <Property Name="BureauNoOfLoanOpenL18M" Type="int" />
+    <Property Name="BureauDateLastCCTaken" Type="date" />
+    <Property Name="BureauMOBLastCCTaken" Type="int" />
+    <Property Name="BureauWorstDPDL6M" Type="int" />
+    <Property Name="BureauProfiling" Type="varchar" MaxLength="20" />
+    <Property Name="NeedProbing" Type="varchar" MaxLength="2" />
+    <Property Name="ProbingDetail" Type="varchar" MaxLength="50" />
+    <Property Name="ProbingDetail2" Type="varchar" MaxLength="50" />
+    <Property Name="FieldHRArea" Type="varchar" MaxLength="1" />
+    <Property Name="TotalCCIssuers" Type="varchar" MaxLength="2" />
+    <Property Name="GrossAmtAggrCard" Type="float" />
+    <Property Name="ApproveDeclineCode" Type="varchar" MaxLength="5" />
+    <Property Name="Oth2" Type="varchar" MaxLength="20" />
+    <Property Name="Dbr" Type="float" />
+    <Property Name="Dsr" Type="float" />
+    <Property Name="UtilizationRate" Type="float" />
+    <Property Name="PhoneSeg" Type="varchar" MaxLength="5" />
+  </EntityType>
+  <EntityType Name="AppDoc">
+    <Key>
+      <PropertyRef Name="AppId" />
+    </Key>
+    <Property Name="AppId" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Seq" Type="int" />
+    <Property Name="DocCd" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="AppExCC">
+    <Key>
+      <PropertyRef Name="AppId" />
+      <PropertyRef Name="Seq" />
+    </Key>
+    <Property Name="AppId" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Seq" Type="int" Nullable="false" />
+    <Property Name="DataTypeCd" Type="varchar" MaxLength="5" />
+    <Property Name="RelId" Type="varchar" MaxLength="25" />
+    <Property Name="CardNo" Type="varchar" MaxLength="50" />
+    <Property Name="IssuerId" Type="varchar" MaxLength="10" />
+    <Property Name="IssuerName" Type="varchar" MaxLength="100" />
+    <Property Name="MemberSince" Type="date" />
+    <Property Name="ExpiryDate" Type="date" />
+    <Property Name="Limit" Type="float" />
+    <Property Name="Outstanding" Type="float" />
+  </EntityType>
+  <EntityType Name="AppExFac">
+    <Key>
+      <PropertyRef Name="AppId" />
+      <PropertyRef Name="Seq" />
+    </Key>
+    <Property Name="AppId" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Seq" Type="int" Nullable="false" />
+    <Property Name="DataTypeCd" Type="varchar" MaxLength="5" />
+    <Property Name="RelId" Type="varchar" MaxLength="25" />
+    <Property Name="FacType" Type="varchar" MaxLength="10" />
+    <Property Name="IssuerId" Type="varchar" MaxLength="10" />
+    <Property Name="IssuerName" Type="varchar" MaxLength="50" />
+    <Property Name="Currency" Type="varchar" MaxLength="10" />
+    <Property Name="Tenure" Type="int" />
+    <Property Name="Limit" Type="float" />
+    <Property Name="Interest" Type="float" />
+    <Property Name="Instalment" Type="float" />
+    <Property Name="Outstanding" Type="float" />
+    <Property Name="OpenDate" Type="date" />
+    <Property Name="ExpiryDate" Type="date" />
+    <Property Name="LnAccNo" Type="varchar" MaxLength="25" />
+    <Property Name="CardNo" Type="varchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="AppExLoan">
+    <Key>
+      <PropertyRef Name="AppId" />
+      <PropertyRef Name="Seq" />
+    </Key>
+    <Property Name="AppId" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Seq" Type="int" Nullable="false" />
+    <Property Name="DataTypeCd" Type="varchar" MaxLength="5" />
+    <Property Name="RelId" Type="varchar" MaxLength="25" />
+    <Property Name="LnTypeCd" Type="varchar" MaxLength="10" />
+    <Property Name="BankId" Type="varchar" MaxLength="10" />
+    <Property Name="Limit" Type="float" />
+    <Property Name="Outstanding" Type="float" />
+    <Property Name="LnAccNo" Type="varchar" MaxLength="25" />
+    <Property Name="Instalment" Type="float" />
+  </EntityType>
+  <EntityType Name="AppFac">
+    <Key>
+      <PropertyRef Name="AppId" />
+      <PropertyRef Name="Seq" />
+    </Key>
+    <Property Name="AppId" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Seq" Type="int" Nullable="false" />
+    <Property Name="ProjectCd" Type="varchar" MaxLength="40" />
+    <Property Name="ProdTypeCd" Type="varchar" MaxLength="40" />
+    <Property Name="ProgTypeCd" Type="varchar" MaxLength="2" />
+    <Property Name="ProgramCd" Type="varchar" MaxLength="40" />
+    <Property Name="LimitReqAmt" Type="float" />
+    <Property Name="LoanCode" Type="varchar" MaxLength="20" />
+    <Property Name="Tenure" Type="int" />
+    <Property Name="LoanPurpCd" Type="varchar" MaxLength="10" />
+    <Property Name="LoanPurpOth" Type="varchar" MaxLength="10" />
+    <Property Name="AccBeneficiaryName" Type="varchar" MaxLength="100" />
+    <Property Name="AccBankName" Type="varchar" MaxLength="100" />
+    <Property Name="AccBankId" Type="varchar" MaxLength="10" />
+    <Property Name="AccBranchId" Type="varchar" MaxLength="10" />
+    <Property Name="AccNo" Type="varchar" MaxLength="25" />
+    <Property Name="BranchAreaExp1" Type="varchar" MaxLength="25" />
+    <Property Name="PayeeName2" Type="varchar" MaxLength="100" />
+    <Property Name="PayeeAccNo2" Type="varchar" MaxLength="25" />
+    <Property Name="BranchAreaExp2" Type="varchar" MaxLength="25" />
+    <Property Name="PayeeName3" Type="varchar" MaxLength="100" />
+    <Property Name="PayeeAccNo3" Type="varchar" MaxLength="25" />
+    <Property Name="BranchAreaExp3" Type="varchar" MaxLength="25" />
+    <Property Name="DisbFeeFlag" Type="varchar" MaxLength="5" />
+    <Property Name="DisbPercentage1" Type="float" />
+    <Property Name="DisbPercentage2" Type="float" />
+    <Property Name="DisbPercentage3" Type="float" />
+    <Property Name="DisbFixAmt1" Type="float" />
+    <Property Name="DisbFixAmt2" Type="float" />
+    <Property Name="DisbFixAmt3" Type="float" />
+    <Property Name="PrevTopupLimit" Type="float" />
+    <Property Name="CardType" Type="varchar" MaxLength="25" />
+    <Property Name="PCTID" Type="varchar" MaxLength="5" />
+    <Property Name="FundTrans" Type="varchar" MaxLength="10" />
+    <Property Name="FundTransLnAmtReq" Type="float" Nullable="false" />
+    <Property Name="FundTransLnTenureReq" Type="int" />
+    <Property Name="FundTransLnPmtType" Type="varchar" MaxLength="1" />
+    <Property Name="DDNomType" Type="varchar" MaxLength="3" />
+    <Property Name="DDPmtType" Type="varchar" MaxLength="3" />
+    <Property Name="DDReqDays" Type="int" />
+    <Property Name="PrevLnSegBaseCd" Type="varchar" MaxLength="1" />
+    <Property Name="TopUpSegCd" Type="varchar" MaxLength="1" />
+    <Property Name="InsProdCd" Type="varchar" MaxLength="2" />
+    <Property Name="ApprvDecCd" Type="varchar" MaxLength="3" />
+    <Property Name="SubDecCd" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="AppFlag">
+    <Key>
+      <PropertyRef Name="AppId" />
+    </Key>
+    <Property Name="AppId" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="BankCd" Type="varchar" MaxLength="10" />
+    <Property Name="DBSLnLimit_OS" Type="float" />
+    <Property Name="VerBillAddrMatch" Type="varchar" MaxLength="1" />
+    <Property Name="VerMobilePhnMatch" Type="varchar" MaxLength="1" />
+    <Property Name="NpwpDocFlag" Type="varchar" MaxLength="1" />
+    <Property Name="AMLRiskRating" Type="varchar" MaxLength="1" />
+    <Property Name="BureauType" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="AppMemo">
+    <Key>
+      <PropertyRef Name="AppId" />
+      <PropertyRef Name="Seq" />
+    </Key>
+    <Property Name="AppId" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Seq" Type="int" Nullable="false" />
+    <Property Name="Memo" Type="varchar" MaxLength="8000" />
+    <Property Name="InputDate" Type="datetime" />
+    <Property Name="InputBy" Type="varchar" MaxLength="20" />
+    <Property Name="Locked" Type="bit" />
+  </EntityType>
+  <EntityType Name="AppSupp">
+    <Key>
+      <PropertyRef Name="AppId" />
+      <PropertyRef Name="Seq" />
+    </Key>
+    <Property Name="AppId" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Seq" Type="int" Nullable="false" />
+    <Property Name="NameAsIDCard" Type="varchar" MaxLength="40" />
+    <Property Name="IDNumber" Type="varchar" MaxLength="25" />
+    <Property Name="NameOnCard" Type="varchar" MaxLength="25" />
+    <Property Name="Relationship" Type="varchar" MaxLength="10" />
+    <Property Name="Gender" Type="varchar" MaxLength="1" />
+    <Property Name="DateOfBirth" Type="date" />
+    <Property Name="PlaceOfBirth" Type="varchar" MaxLength="25" />
+    <Property Name="MothersMaidenName" Type="varchar" MaxLength="40" />
+    <Property Name="MobilePhoneNo" Type="varchar" MaxLength="20" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="NationalityCd" Type="varchar" MaxLength="1" />
+    <Property Name="CountryCd" Type="varchar" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="AuthGroupMenu">
+    <Key>
+      <PropertyRef Name="GroupId" />
+      <PropertyRef Name="MenuId" />
+    </Key>
+    <Property Name="GroupId" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="MenuId" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="IsRead" Type="bit" />
+    <Property Name="IsWrite" Type="bit" />
+  </EntityType>
+  <EntityType Name="AuthGroups">
+    <Key>
+      <PropertyRef Name="GroupId" />
+    </Key>
+    <Property Name="GroupId" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="GroupName" Type="varchar" MaxLength="50" />
+    <Property Name="Description" Type="varchar" MaxLength="256" />
+    <Property Name="RegDate" Type="datetime" />
+    <Property Name="RegBy" Type="varchar" MaxLength="20" />
+    <Property Name="ApprvDate" Type="datetime" />
+    <Property Name="ApprvBy" Type="varchar" MaxLength="20" />
+    <Property Name="IsDormant" Type="bit" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="AuthMenus">
+    <Key>
+      <PropertyRef Name="MenuId" />
+    </Key>
+    <Property Name="MenuId" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="MenuName" Type="varchar" MaxLength="50" />
+    <Property Name="MenuUrl" Type="varchar" MaxLength="256" />
+    <Property Name="MenuIcon" Type="varchar" MaxLength="256" />
+    <Property Name="MenuParent" Type="varchar" MaxLength="10" />
+    <Property Name="MenuOrder" Type="int" />
+  </EntityType>
+  <EntityType Name="AuthParam">
+    <Key>
+      <PropertyRef Name="ParamId" />
+    </Key>
+    <Property Name="ParamId" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="ParamName" Type="varchar" MaxLength="50" />
+    <Property Name="DataType" Type="varchar" MaxLength="25" />
+    <Property Name="ParamValue" Type="varchar" MaxLength="512" />
+  </EntityType>
+  <EntityType Name="AuthPwdHist">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="Seq" />
+    </Key>
+    <Property Name="UserId" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Seq" Type="int" Nullable="false" />
+    <Property Name="ChangeDate" Type="datetime" />
+    <Property Name="OldPwd" Type="varchar" MaxLength="256" />
+    <Property Name="NewPwd" Type="varchar" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="AuthUserActivity">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="Seq" />
+    </Key>
+    <Property Name="UserId" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Seq" Type="int" Nullable="false" />
+    <Property Name="TokenId" Type="varchar" MaxLength="64" />
+    <Property Name="ActTime" Type="datetime" />
+    <Property Name="ActDesc" Type="varchar" MaxLength="1024" />
+    <Property Name="ActLevel" Type="int" />
+    <Property Name="Host" Type="varchar" MaxLength="20" />
+    <Property Name="PageUrl" Type="varchar" MaxLength="256" />
+    <Property Name="PageName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="AuthUserFlag">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="IsLogon" Type="bit" />
+    <Property Name="IsRevoke" Type="bit" />
+    <Property Name="FalsePwd" Type="int" />
+    <Property Name="LastLogon" Type="datetime" />
+    <Property Name="LastHost" Type="varchar" MaxLength="20" />
+    <Property Name="LastActivity" Type="datetime" />
+    <Property Name="TokenId" Type="varchar" MaxLength="64" />
+  </EntityType>
+  <EntityType Name="AuthUserGroup">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="GroupId" />
+    </Key>
+    <Property Name="UserId" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="GroupId" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AuthUserHist">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="Seq" />
+    </Key>
+    <Property Name="UserId" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Seq" Type="int" Nullable="false" />
+    <Property Name="TokenId" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="LogonTime" Type="datetime" />
+    <Property Name="LogonHost" Type="varchar" MaxLength="20" />
+    <Property Name="LogoutTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="AuthUsers">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="50" />
+    <Property Name="Description" Type="varchar" MaxLength="256" />
+    <Property Name="Password" Type="varchar" MaxLength="256" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="NIP" Type="varchar" MaxLength="25" />
+    <Property Name="ExtensionNo" Type="varchar" MaxLength="10" />
+    <Property Name="HomePhoneNo" Type="varchar" MaxLength="20" />
+    <Property Name="MobilePhoneNo" Type="varchar" MaxLength="20" />
+    <Property Name="UplinerId" Type="varchar" MaxLength="20" />
+    <Property Name="PwdExpDate" Type="datetime" />
+    <Property Name="BranchId" Type="varchar" MaxLength="10" />
+    <Property Name="Position" Type="varchar" MaxLength="25" />
+    <Property Name="Departement" Type="varchar" MaxLength="25" />
+    <Property Name="RegDate" Type="datetime" />
+    <Property Name="RegBy" Type="varchar" MaxLength="20" />
+    <Property Name="ApprvDate" Type="datetime" />
+    <Property Name="ApprvBy" Type="varchar" MaxLength="20" />
+    <Property Name="LevelId" Type="int" />
+    <Property Name="IsDormant" Type="bit" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="CustFin">
+    <Key>
+      <PropertyRef Name="AppId" />
+    </Key>
+    <Property Name="AppId" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="IncDocType" Type="varchar" MaxLength="10" />
+    <Property Name="IncDeclare12M" Type="float" />
+    <Property Name="IncDeclareExtraYearly" Type="float" />
+    <Property Name="IncMonthlyBasedOnDoc" Type="float" />
+    <Property Name="IncMultiplier" Type="float" />
+    <Property Name="IncTotalBasedOnDoc" Type="float" />
+  </EntityType>
+  <EntityType Name="CustJob">
+    <Key>
+      <PropertyRef Name="AppId" />
+      <PropertyRef Name="Seq" />
+    </Key>
+    <Property Name="AppId" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Seq" Type="int" Nullable="false" />
+    <Property Name="CompName" Type="varchar" MaxLength="100" />
+    <Property Name="Addr1" Type="varchar" MaxLength="100" />
+    <Property Name="Addr2" Type="varchar" MaxLength="100" />
+    <Property Name="Addr3" Type="varchar" MaxLength="100" />
+    <Property Name="DistrictCd" Type="varchar" MaxLength="5" />
+    <Property Name="DistrictName" Type="varchar" MaxLength="50" />
+    <Property Name="SubDistrictCd" Type="varchar" MaxLength="5" />
+    <Property Name="SubDistrictName" Type="varchar" MaxLength="50" />
+    <Property Name="CityCd" Type="varchar" MaxLength="10" />
+    <Property Name="CityName" Type="varchar" MaxLength="25" />
+    <Property Name="PostalCode" Type="varchar" MaxLength="10" />
+    <Property Name="PhoneNo" Type="varchar" MaxLength="20" />
+    <Property Name="PhoneExt" Type="varchar" MaxLength="10" />
+    <Property Name="PhoneStaCd" Type="varchar" MaxLength="3" />
+    <Property Name="Phone2No" Type="varchar" MaxLength="20" />
+    <Property Name="Phone2Ext" Type="varchar" MaxLength="10" />
+    <Property Name="Phone2StaCd" Type="varchar" MaxLength="3" />
+    <Property Name="HomeAddrEqOffAddr" Type="bit" />
+    <Property Name="PositionCd" Type="varchar" MaxLength="2" />
+    <Property Name="Position" Type="varchar" MaxLength="50" />
+    <Property Name="NOB" Type="varchar" MaxLength="2" />
+    <Property Name="Department" Type="varchar" MaxLength="25" />
+    <Property Name="EmployeeIDNo" Type="varchar" MaxLength="20" />
+    <Property Name="JobStatus" Type="varchar" MaxLength="1" />
+    <Property Name="CurrLojYY" Type="int" />
+    <Property Name="CurrLojMM" Type="int" />
+    <Property Name="TotalLojYY" Type="int" />
+    <Property Name="TotalLojMM" Type="int" />
+    <Property Name="PrevLojYY" Type="int" />
+    <Property Name="PrevLojMM" Type="int" />
+    <Property Name="PervCompName" Type="varchar" MaxLength="100" />
+    <Property Name="PrevPhoneNo" Type="varchar" MaxLength="20" />
+    <Property Name="PrevPhoneExt" Type="varchar" MaxLength="10" />
+    <Property Name="NoOfEmployee" Type="int" />
+    <Property Name="EwssResult" Type="varchar" MaxLength="5" />
+    <Property Name="RelPartyResult" Type="varchar" MaxLength="5" />
+    <Property Name="WellEstablishCompType" Type="varchar" MaxLength="5" />
+    <Property Name="ChangeToNewOffAddr" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="CustPersonal">
+    <Key>
+      <PropertyRef Name="AppId" />
+    </Key>
+    <Property Name="AppId" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="CustNo" Type="varchar" MaxLength="20" />
+    <Property Name="CustName" Type="varchar" MaxLength="40" />
+    <Property Name="CustNameOnID" Type="varchar" MaxLength="40" />
+    <Property Name="CustNickName" Type="varchar" MaxLength="20" />
+    <Property Name="CustNameInCard" Type="varchar" MaxLength="40" />
+    <Property Name="NationalityCd" Type="varchar" MaxLength="1" />
+    <Property Name="MothersMaidenName" Type="varchar" MaxLength="40" />
+    <Property Name="GenderCd" Type="varchar" MaxLength="1" />
+    <Property Name="PlaceOfBirth" Type="varchar" MaxLength="50" />
+    <Property Name="DateOfBirth" Type="date" />
+    <Property Name="IDTypeCd" Type="varchar" MaxLength="5" />
+    <Property Name="IdCardTrackCd" Type="varchar" MaxLength="10" />
+    <Property Name="IDNumber" Type="varchar" MaxLength="25" />
+    <Property Name="EduCd" Type="varchar" MaxLength="2" />
+    <Property Name="MaritalCd" Type="varchar" MaxLength="1" />
+    <Property Name="NoOfDependents" Type="int" />
+    <Property Name="HomeAddr1" Type="varchar" MaxLength="100" />
+    <Property Name="HomeAddr2" Type="varchar" MaxLength="100" />
+    <Property Name="HomeAddr3" Type="varchar" MaxLength="100" />
+    <Property Name="HomeDistrictCd" Type="varchar" MaxLength="5" />
+    <Property Name="HomeDistrictName" Type="varchar" MaxLength="25" />
+    <Property Name="HomeSubDistrictCd" Type="varchar" MaxLength="5" />
+    <Property Name="HomeSubDistrictName" Type="varchar" MaxLength="25" />
+    <Property Name="HomeCityName" Type="varchar" MaxLength="25" />
+    <Property Name="HomePostalCode" Type="varchar" MaxLength="10" />
+    <Property Name="HomePhoneNo" Type="varchar" MaxLength="20" />
+    <Property Name="HomePhoneStaCd" Type="varchar" MaxLength="1" />
+    <Property Name="HomeAddrEqIDAddr" Type="bit" />
+    <Property Name="IDAddr1" Type="varchar" MaxLength="100" />
+    <Property Name="IDAddr2" Type="varchar" MaxLength="100" />
+    <Property Name="IDAddr3" Type="varchar" MaxLength="100" />
+    <Property Name="IDDistrictCd" Type="varchar" MaxLength="5" />
+    <Property Name="IDDistrictName" Type="varchar" MaxLength="25" />
+    <Property Name="IDSubDistrictCd" Type="varchar" MaxLength="5" />
+    <Property Name="IDSubDistrictName" Type="varchar" MaxLength="25" />
+    <Property Name="IDCityName" Type="varchar" MaxLength="25" />
+    <Property Name="IDPostalCode" Type="varchar" MaxLength="10" />
+    <Property Name="PixelCode" Type="varchar" MaxLength="5" />
+    <Property Name="PixelAddr" Type="varchar" MaxLength="256" />
+    <Property Name="PixelWKCCode" Type="varchar" MaxLength="5" />
+    <Property Name="MobilePhoneNo" Type="varchar" MaxLength="20" />
+    <Property Name="MobilePhoneNo2" Type="varchar" MaxLength="20" />
+    <Property Name="ExMobilePhone" Type="varchar" MaxLength="20" />
+    <Property Name="ResStaCd" Type="varchar" MaxLength="1" />
+    <Property Name="ResLOSYY" Type="int" />
+    <Property Name="ResLOSMM" Type="int" />
+    <Property Name="Npwp" Type="varchar" MaxLength="25" />
+    <Property Name="MailingAddrCd" Type="varchar" MaxLength="2" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="ChangeToNewHomeAddr" Type="varchar" MaxLength="10" />
+    <Property Name="CountryCd" Type="varchar" MaxLength="2" />
+    <Property Name="InsertTime" Type="datetime" />
+    <Property Name="InsertBy" Type="varchar" MaxLength="20" />
+    <Property Name="UpdateTime" Type="datetime" />
+    <Property Name="UpdateBy" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="CustRel">
+    <Key>
+      <PropertyRef Name="RelId" />
+    </Key>
+    <Property Name="RelId" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="AppId" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Seq" Type="int" Nullable="false" />
+    <Property Name="DataTypeCd" Type="varchar" MaxLength="5" />
+    <Property Name="RelTypeCd" Type="varchar" MaxLength="5" />
+    <Property Name="FullName" Type="varchar" MaxLength="100" />
+    <Property Name="Addr1" Type="varchar" MaxLength="100" />
+    <Property Name="Addr2" Type="varchar" MaxLength="100" />
+    <Property Name="Addr3" Type="varchar" MaxLength="100" />
+    <Property Name="DistrictCd" Type="varchar" MaxLength="10" />
+    <Property Name="DistrictName" Type="varchar" MaxLength="50" />
+    <Property Name="SubDistrictCd" Type="varchar" MaxLength="10" />
+    <Property Name="SubDistrictName" Type="varchar" MaxLength="50" />
+    <Property Name="CityCd" Type="varchar" MaxLength="10" />
+    <Property Name="CityName" Type="varchar" MaxLength="25" />
+    <Property Name="PostalCode" Type="varchar" MaxLength="10" />
+    <Property Name="HomePhoneNo" Type="varchar" MaxLength="20" />
+    <Property Name="HomePhoneStaCd" Type="varchar" MaxLength="2" />
+    <Property Name="MobilePhoneNo" Type="varchar" MaxLength="20" />
+    <Property Name="OtherPhoneNo" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="DataImport">
+    <Key>
+      <PropertyRef Name="ImportId" />
+    </Key>
+    <Property Name="ImportId" Type="int" Nullable="false" />
+    <Property Name="ImportName" Type="varchar" MaxLength="64" />
+    <Property Name="OrderSeq" Type="int" />
+    <Property Name="SourceType" Type="varchar" MaxLength="16" />
+    <Property Name="DestTable" Type="varchar" MaxLength="64" />
+    <Property Name="Method" Type="varchar" MaxLength="10" />
+    <Property Name="RowOverwrite" Type="bit" />
+    <Property Name="Active" Type="bit" />
+  </EntityType>
+  <EntityType Name="DataImportDestColumn">
+    <Key>
+      <PropertyRef Name="ImportId" />
+      <PropertyRef Name="TableName" />
+      <PropertyRef Name="ColumnName" />
+    </Key>
+    <Property Name="ImportId" Type="int" Nullable="false" />
+    <Property Name="TableName" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="ColumnName" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="SourceColumnName" Type="varchar" MaxLength="32" />
+    <Property Name="IsKey" Type="bit" />
+    <Property Name="AutoFormula" Type="varchar" MaxLength="1024" />
+  </EntityType>
+  <EntityType Name="DataImportDestTable">
+    <Key>
+      <PropertyRef Name="ImportId" />
+      <PropertyRef Name="TableName" />
+    </Key>
+    <Property Name="ImportId" Type="int" Nullable="false" />
+    <Property Name="TableName" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="OrderSeq" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DataImportFlatFile">
+    <Key>
+      <PropertyRef Name="ImportId" />
+    </Key>
+    <Property Name="ImportId" Type="int" Nullable="false" />
+    <Property Name="SourceFileName" Type="varchar" MaxLength="64" />
+    <Property Name="SourceFilePath" Type="varchar" MaxLength="256" />
+    <Property Name="Format" Type="varchar" MaxLength="16" />
+    <Property Name="TextQualifier" Type="varchar" MaxLength="10" />
+    <Property Name="HeaderRowDelimiter" Type="varchar" MaxLength="10" />
+    <Property Name="HeaderRowsToSkip" Type="int" />
+    <Property Name="ColumnNameIn1st" Type="bit" />
+    <Property Name="DataRowsToSkip" Type="int" />
+    <Property Name="RowDelimiter" Type="varchar" MaxLength="10" />
+    <Property Name="ColumnDelimiter" Type="varchar" MaxLength="10" />
+    <Property Name="FtpId" Type="int" />
+  </EntityType>
+  <EntityType Name="DataImportFlatFileColumn">
+    <Key>
+      <PropertyRef Name="ImportId" />
+      <PropertyRef Name="Seq" />
+    </Key>
+    <Property Name="ImportId" Type="int" Nullable="false" />
+    <Property Name="Seq" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="InputColumnWidth" Type="int" />
+    <Property Name="DataPrecision" Type="int" />
+    <Property Name="DataScale" Type="int" />
+    <Property Name="DataType" Type="varchar" MaxLength="10" />
+    <Property Name="OutputColumnWidth" Type="int" />
+    <Property Name="TextQualified" Type="bit" />
+  </EntityType>
+  <EntityType Name="DataImportLog">
+    <Key>
+      <PropertyRef Name="BatchFileName" />
+    </Key>
+    <Property Name="BatchFileName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TotalRow" Type="int" />
+    <Property Name="NoOfSuccess" Type="int" />
+    <Property Name="NoOfFailed" Type="int" />
+    <Property Name="StartTime" Type="datetime" />
+    <Property Name="FinishTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="DataImportLogDetail">
+    <Key>
+      <PropertyRef Name="BatchFileName" />
+      <PropertyRef Name="RowNumber" />
+    </Key>
+    <Property Name="BatchFileName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="RowNumber" Type="int" Nullable="false" />
+    <Property Name="LineNumber" Type="int" />
+    <Property Name="KeyValue" Type="varchar" MaxLength="100" />
+    <Property Name="LogType" Type="varchar" MaxLength="10" />
+    <Property Name="LogMessage" Type="varchar" MaxLength="8000" />
+  </EntityType>
+  <EntityType Name="EnumBureauType">
+    <Key>
+      <PropertyRef Name="BurTypeCd" />
+    </Key>
+    <Property Name="BurTypeCd" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="BurTypeDesc" Type="varchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="EnumIdebFacCat">
+    <Key>
+      <PropertyRef Name="CatCd" />
+    </Key>
+    <Property Name="CatCd" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="CatDesc" Type="varchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="FRAMEWORK_FOREIGNKEY">
+    <Key>
+      <PropertyRef Name="TableName" />
+      <PropertyRef Name="TableName_FK" />
+    </Key>
+    <Property Name="TableName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="TableName_As" Type="varchar" MaxLength="100" />
+    <Property Name="TableName_FK" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Constraint_SQL" Type="varchar" MaxLength="500" />
+    <Property Name="TableName_Join" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="FRAMEWORK_FORMULAFIELD">
+    <Key>
+      <PropertyRef Name="FieldId" />
+    </Key>
+    <Property Name="FieldId" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="FieldCaption" Type="varchar" MaxLength="50" />
+    <Property Name="FieldDesc" Type="varchar" MaxLength="100" />
+    <Property Name="FieldFW" Type="varchar" MaxLength="1000" />
+    <Property Name="FieldReff" Type="varchar" MaxLength="1000" />
+    <Property Name="FormatString" Type="varchar" MaxLength="50" />
+    <Property Name="FilterType" Type="varchar" MaxLength="10" />
+    <Property Name="SETID" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="FRAMEWORK_LINDEDSERVER">
+    <Key>
+      <PropertyRef Name="LinkedServID" />
+    </Key>
+    <Property Name="LinkedServID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="LinkedServName" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Ideb">
+    <Key>
+      <PropertyRef Name="IdebId" />
+    </Key>
+    <Property Name="IdebId" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="ReqId" Type="varchar" MaxLength="20" />
+    <Property Name="Seq" Type="bigint" />
+    <Property Name="DebtectorId" Type="varchar" MaxLength="50" />
+    <Property Name="KodeReferensiPengguna" Type="varchar" MaxLength="50" />
+    <Property Name="TanggalHasil" Type="datetime" />
+    <Property Name="IdPermintaan" Type="varchar" MaxLength="20" />
+    <Property Name="IdPenggunaPermintaan" Type="varchar" MaxLength="20" />
+    <Property Name="DibuatOleh" Type="varchar" MaxLength="20" />
+    <Property Name="KodeLJKPermintaan" Type="varchar" MaxLength="10" />
+    <Property Name="KodeCabangPermintaan" Type="varchar" MaxLength="10" />
+    <Property Name="KodeTujuanPermintaan" Type="varchar" MaxLength="10" />
+    <Property Name="TanggalPermintaan" Type="datetime" />
+    <Property Name="TotalBagian" Type="int" />
+    <Property Name="NomorBagian" Type="varchar" MaxLength="10" />
+    <Property Name="DebType" Type="varchar" MaxLength="1" />
+    <Property Name="NomorLaporan" Type="varchar" MaxLength="50" />
+    <Property Name="PosisiDataTerakhir" Type="varchar" MaxLength="6" />
+    <Property Name="PosisiDataTerakhirDate" Type="date" />
+  </EntityType>
+  <EntityType Name="IdebCorpData">
+    <Key>
+      <PropertyRef Name="IdebId" />
+      <PropertyRef Name="Seq" />
+    </Key>
+    <Property Name="IdebId" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Seq" Type="int" Nullable="false" />
+    <Property Name="DebtectorId" Type="varchar" MaxLength="50" />
+    <Property Name="NamaDebitur" Type="varchar" MaxLength="100" />
+    <Property Name="NamaLengkap" Type="varchar" MaxLength="100" />
+    <Property Name="Npwp" Type="varchar" MaxLength="50" />
+    <Property Name="BentukBu" Type="varchar" MaxLength="10" />
+    <Property Name="BentukBuKet" Type="varchar" MaxLength="50" />
+    <Property Name="GoPublic" Type="varchar" MaxLength="10" />
+    <Property Name="TempatPendirian" Type="varchar" MaxLength="50" />
+    <Property Name="NoAktaPendirian" Type="varchar" MaxLength="50" />
+    <Property Name="TglAktaPendirian" Type="date" />
+    <Property Name="Pelapor" Type="varchar" MaxLength="10" />
+    <Property Name="PelaporKet" Type="varchar" MaxLength="50" />
+    <Property Name="TanggalDibentuk" Type="datetime" />
+    <Property Name="TanggalUpdate" Type="datetime" />
+    <Property Name="Alamat" Type="varchar" MaxLength="200" />
+    <Property Name="Kelurahan" Type="varchar" MaxLength="50" />
+    <Property Name="Kecamatan" Type="varchar" MaxLength="50" />
+    <Property Name="KabKota" Type="varchar" MaxLength="10" />
+    <Property Name="KabKotaKet" Type="varchar" MaxLength="100" />
+    <Property Name="KodePos" Type="varchar" MaxLength="10" />
+    <Property Name="Negara" Type="varchar" MaxLength="5" />
+    <Property Name="NegaraKet" Type="varchar" MaxLength="50" />
+    <Property Name="NoAktaTerakhir" Type="varchar" MaxLength="50" />
+    <Property Name="TglAktaTerakhir" Type="date" />
+    <Property Name="SektorEkonomi" Type="varchar" MaxLength="10" />
+    <Property Name="SektorEkonomiKet" Type="varchar" MaxLength="50" />
+    <Property Name="Pemeringkat" Type="varchar" MaxLength="10" />
+    <Property Name="PemeringkatKet" Type="varchar" MaxLength="50" />
+    <Property Name="Peringkat" Type="varchar" MaxLength="50" />
+    <Property Name="TanggalPemeringkatan" Type="date" />
+  </EntityType>
+  <EntityType Name="IdebCorpGroup">
+    <Key>
+      <PropertyRef Name="IdebId" />
+      <PropertyRef Name="Seq" />
+    </Key>
+    <Property Name="IdebId" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Seq" Type="int" Nullable="false" />
+    <Property Name="KodeLJK" Type="varchar" MaxLength="10" />
+    <Property Name="NamaLJK" Type="varchar" MaxLength="100" />
+    <Property Name="NamaSesuaiIdentitas" Type="varchar" MaxLength="100" />
+    <Property Name="NomorIdentitas" Type="varchar" MaxLength="50" />
+    <Property Name="JenisKelamin" Type="varchar" MaxLength="10" />
+    <Property Name="JenisKelaminKet" Type="varchar" MaxLength="25" />
+    <Property Name="PosisiPekerjaan" Type="varchar" MaxLength="10" />
+    <Property Name="PosisiPekerjaanKet" Type="varchar" MaxLength="50" />
+    <Property Name="ProsentaseKepemilikan" Type="float" />
+    <Property Name="StatusPengurusPemilik" Type="varchar" MaxLength="5" />
+    <Property Name="StatusPengurusPemilikKet" Type="varchar" MaxLength="20" />
+    <Property Name="Alamat" Type="varchar" MaxLength="200" />
+    <Property Name="Kelurahan" Type="varchar" MaxLength="50" />
+    <Property Name="Kecamatan" Type="varchar" MaxLength="50" />
+    <Property Name="Kota" Type="varchar" MaxLength="10" />
+    <Property Name="KotaKet" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="IdebCorpSearchVar">
+    <Key>
+      <PropertyRef Name="IdebId" />
+    </Key>
+    <Property Name="IdebId" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="NamaBadanUsaha" Type="varchar" MaxLength="100" />
+    <Property Name="Npwp" Type="varchar" MaxLength="50" />
+    <Property Name="TempatPendirian" Type="varchar" MaxLength="50" />
+    <Property Name="TanggalAktaPendirian" Type="date" />
+    <Property Name="NomorAktaPendirian" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="IdebFac">
+    <Key>
+      <PropertyRef Name="FacId" />
+    </Key>
+    <Property Name="FacId" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="IdebId" Type="varchar" MaxLength="25" />
+    <Property Name="Seq" Type="int" />
+    <Property Name="DebtectorId" Type="varchar" MaxLength="50" />
+    <Property Name="FacCat" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="IdebFacBg">
+    <Key>
+      <PropertyRef Name="FacId" />
+    </Key>
+    <Property Name="FacId" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Ljk" Type="varchar" MaxLength="10" />
+    <Property Name="LjkKet" Type="varchar" MaxLength="100" />
+    <Property Name="Cabang" Type="varchar" MaxLength="10" />
+    <Property Name="CabangKet" Type="varchar" MaxLength="100" />
+    <Property Name="NominalBg" Type="float" />
+    <Property Name="TanggalDibentuk" Type="datetime" />
+    <Property Name="TanggalUpdate" Type="datetime" />
+    <Property Name="Bulan" Type="int" />
+    <Property Name="Tahun" Type="int" />
+    <Property Name="NoRekening" Type="varchar" MaxLength="50" />
+    <Property Name="JenisGaransi" Type="varchar" MaxLength="10" />
+    <Property Name="JenisGaransiKet" Type="varchar" MaxLength="128" />
+    <Property Name="TanggalDiterbitkan" Type="date" />
+    <Property Name="TanggalJatuhTempo" Type="date" />
+    <Property Name="NoAkadAwal" Type="varchar" MaxLength="50" />
+    <Property Name="TanggalAkadAwal" Type="date" />
+    <Property Name="NoAkadAkhir" Type="varchar" MaxLength="50" />
+    <Property Name="TanggalAkadAkhir" Type="date" />
+    <Property Name="NamaYangDijamin" Type="varchar" MaxLength="100" />
+    <Property Name="Kolektibilitas" Type="varchar" MaxLength="10" />
+    <Property Name="Valuta" Type="varchar" MaxLength="5" />
+    <Property Name="Plafon" Type="float" />
+    <Property Name="TujuanGaransi" Type="varchar" MaxLength="10" />
+    <Property Name="TujuanGaransiKet" Type="varchar" MaxLength="128" />
+    <Property Name="SetoranJaminan" Type="float" />
+    <Property Name="TanggalWanPrestasi" Type="date" />
+    <Property Name="Kondisi" Type="varchar" MaxLength="10" />
+    <Property Name="KondisiKet" Type="varchar" MaxLength="128" />
+    <Property Name="TanggalKondisi" Type="date" />
+    <Property Name="Keterangan" Type="varchar" MaxLength="2048" />
+  </EntityType>
+  <EntityType Name="IdebFacCollateral">
+    <Key>
+      <PropertyRef Name="FacId" />
+      <PropertyRef Name="Seq" />
+    </Key>
+    <Property Name="FacId" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Seq" Type="int" Nullable="false" />
+    <Property Name="DebtectorId" Type="varchar" MaxLength="50" />
+    <Property Name="DebtectorFacId" Type="varchar" MaxLength="50" />
+    <Property Name="JenisAgunanKet" Type="varchar" MaxLength="128" />
+    <Property Name="NilaiAgunanMenurutLJK" Type="float" />
+    <Property Name="ProsentaseParipasu" Type="float" />
+    <Property Name="TanggalUpdate" Type="datetime" />
+    <Property Name="NomorAgunan" Type="varchar" MaxLength="50" />
+    <Property Name="JenisPengikatan" Type="varchar" MaxLength="10" />
+    <Property Name="JenisPengikatanKet" Type="varchar" MaxLength="128" />
+    <Property Name="TanggalPengikatan" Type="date" />
+    <Property Name="NamaPemilikAgunan" Type="varchar" MaxLength="100" />
+    <Property Name="AlamatAgunan" Type="varchar" MaxLength="200" />
+    <Property Name="LokasiAgunan" Type="varchar" MaxLength="10" />
+    <Property Name="LokasiAgunanKet" Type="varchar" MaxLength="100" />
+    <Property Name="TglPenilaianLjk" Type="date" />
+    <Property Name="PeringkatAgunan" Type="varchar" MaxLength="10" />
+    <Property Name="LembagaPemeringkat" Type="varchar" MaxLength="10" />
+    <Property Name="LembagaPemeringkatKet" Type="varchar" MaxLength="50" />
+    <Property Name="BuktiKepemilikan" Type="varchar" MaxLength="50" />
+    <Property Name="NilaiAgunanNjop" Type="float" />
+    <Property Name="NilaiAgunanIndep" Type="float" />
+    <Property Name="NamaPenilaiIndep" Type="varchar" MaxLength="100" />
+    <Property Name="Asuransi" Type="varchar" MaxLength="10" />
+    <Property Name="TanggalPenilaianPenilaiIndependen" Type="date" />
+    <Property Name="Keterangan" Type="varchar" MaxLength="2048" />
+  </EntityType>
+  <EntityType Name="IdebFacCollect">
+    <Key>
+      <PropertyRef Name="FacId" />
+      <PropertyRef Name="Seq" />
+    </Key>
+    <Property Name="FacId" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Seq" Type="int" Nullable="false" />
+    <Property Name="Tahun" Type="int" />
+    <Property Name="Bulan" Type="int" />
+    <Property Name="Dpd" Type="int" />
+    <Property Name="Collect" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="IdebFacCredit">
+    <Key>
+      <PropertyRef Name="FacId" />
+    </Key>
+    <Property Name="FacId" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Ljk" Type="varchar" MaxLength="10" />
+    <Property Name="LjkKet" Type="varchar" MaxLength="100" />
+    <Property Name="Cabang" Type="varchar" MaxLength="10" />
+    <Property Name="CabangKet" Type="varchar" MaxLength="100" />
+    <Property Name="BakiDebet" Type="float" />
+    <Property Name="TanggalDibentuk" Type="datetime" />
+    <Property Name="TanggalUpdate" Type="datetime" />
+    <Property Name="Bulan" Type="int" />
+    <Property Name="Tahun" Type="int" />
+    <Property Name="SifatKredit" Type="varchar" MaxLength="10" />
+    <Property Name="SifatKreditKet" Type="varchar" MaxLength="128" />
+    <Property Name="JenisKredit" Type="varchar" MaxLength="10" />
+    <Property Name="JenisKreditKet" Type="varchar" MaxLength="128" />
+    <Property Name="AkadPembiayaan" Type="varchar" MaxLength="10" />
+    <Property Name="AkadPembiayaanKet" Type="varchar" MaxLength="128" />
+    <Property Name="NoRekening" Type="varchar" MaxLength="50" />
+    <Property Name="BaruPerpanjangan" Type="bit" />
+    <Property Name="NoAkadAwal" Type="varchar" MaxLength="50" />
+    <Property Name="TanggalAkadAwal" Type="date" />
+    <Property Name="NoAkadAkhir" Type="varchar" MaxLength="50" />
+    <Property Name="TanggalAkadAkhir" Type="date" />
+    <Property Name="TanggalAwalKredit" Type="date" />
+    <Property Name="TanggalMulai" Type="date" />
+    <Property Name="TanggalJatuhTempo" Type="date" />
+    <Property Name="KategoriDebiturKode" Type="varchar" MaxLength="10" />
+    <Property Name="KategoriDebiturKet" Type="varchar" MaxLength="128" />
+    <Property Name="JenisPenggunaan" Type="varchar" MaxLength="10" />
+    <Property Name="JenisPenggunaanKet" Type="varchar" MaxLength="128" />
+    <Property Name="SektorEkonomi" Type="varchar" MaxLength="10" />
+    <Property Name="SektorEkonomiKet" Type="varchar" MaxLength="128" />
+    <Property Name="KreditProgramPemerintah" Type="varchar" MaxLength="10" />
+    <Property Name="KreditProgramPemerintahKet" Type="varchar" MaxLength="128" />
+    <Property Name="LokasiProyek" Type="varchar" MaxLength="10" />
+    <Property Name="LokasiProyekKet" Type="varchar" MaxLength="128" />
+    <Property Name="Valuta" Type="varchar" MaxLength="5" />
+    <Property Name="SukuBunga" Type="float" />
+    <Property Name="JenisSukuBunga" Type="varchar" MaxLength="5" />
+    <Property Name="JenisSukuBungaKet" Type="varchar" MaxLength="128" />
+    <Property Name="Kolektibilitas" Type="varchar" MaxLength="10" />
+    <Property Name="JumlahHariTunggakan" Type="int" />
+    <Property Name="NilaiProyek" Type="float" />
+    <Property Name="PlafonAwal" Type="float" />
+    <Property Name="Plafon" Type="float" />
+    <Property Name="RealisasiBulanBerjalan" Type="float" />
+    <Property Name="NilaiDalamMataUangAsal" Type="float" />
+    <Property Name="SebabMacet" Type="varchar" MaxLength="10" />
+    <Property Name="SebabMacetKet" Type="varchar" MaxLength="128" />
+    <Property Name="TanggalMacet" Type="date" />
+    <Property Name="TunggakanPokok" Type="float" />
+    <Property Name="TunggakanBunga" Type="float" />
+    <Property Name="FrekuensiTunggakan" Type="float" />
+    <Property Name="Denda" Type="float" />
+    <Property Name="FrekuensiRestrukturisasi" Type="float" />
+    <Property Name="TanggalRestrukturisasiAkhir" Type="date" />
+    <Property Name="KodeCaraRestrukturisasi" Type="varchar" MaxLength="10" />
+    <Property Name="RestrukturisasiKet" Type="varchar" MaxLength="128" />
+    <Property Name="Kondisi" Type="varchar" MaxLength="10" />
+    <Property Name="KondisiKet" Type="varchar" MaxLength="128" />
+    <Property Name="TanggalKondisi" Type="date" />
+    <Property Name="Keterangan" Type="varchar" MaxLength="2048" />
+  </EntityType>
+  <EntityType Name="IdebFacLc">
+    <Key>
+      <PropertyRef Name="FacId" />
+    </Key>
+    <Property Name="FacId" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Ljk" Type="varchar" MaxLength="10" />
+    <Property Name="LjkKet" Type="varchar" MaxLength="100" />
+    <Property Name="Cabang" Type="varchar" MaxLength="10" />
+    <Property Name="CabangKet" Type="varchar" MaxLength="100" />
+    <Property Name="NominalLc" Type="float" />
+    <Property Name="TanggalDibentuk" Type="datetime" />
+    <Property Name="TanggalUpdate" Type="datetime" />
+    <Property Name="Bulan" Type="int" />
+    <Property Name="Tahun" Type="int" />
+    <Property Name="NoLc" Type="varchar" MaxLength="50" />
+    <Property Name="JenisLc" Type="varchar" MaxLength="10" />
+    <Property Name="JenisLcKet" Type="varchar" MaxLength="50" />
+    <Property Name="TanggalDiterbitkan" Type="date" />
+    <Property Name="TanggalJatuhTempo" Type="date" />
+    <Property Name="NoAkadAwal" Type="varchar" MaxLength="50" />
+    <Property Name="TanggalAkadAwal" Type="date" />
+    <Property Name="NoAkadAkhir" Type="varchar" MaxLength="50" />
+    <Property Name="TanggalAkadAkhir" Type="date" />
+    <Property Name="BankCounterparty" Type="varchar" MaxLength="100" />
+    <Property Name="Kolektibilitas" Type="varchar" MaxLength="10" />
+    <Property Name="Valuta" Type="varchar" MaxLength="5" />
+    <Property Name="Plafon" Type="float" />
+    <Property Name="TujuanLc" Type="varchar" MaxLength="5" />
+    <Property Name="TujuanLcKet" Type="varchar" MaxLength="128" />
+    <Property Name="SetoraJaminan" Type="float" />
+    <Property Name="TanggalWanPrestasi" Type="date" />
+    <Property Name="Kondisi" Type="varchar" MaxLength="10" />
+    <Property Name="KondisiKet" Type="varchar" MaxLength="128" />
+    <Property Name="TanggalKondisi" Type="date" />
+    <Property Name="Keterangan" Type="varchar" MaxLength="2048" />
+  </EntityType>
+  <EntityType Name="IdebFacOther">
+    <Key>
+      <PropertyRef Name="FacId" />
+    </Key>
+    <Property Name="FacId" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Ljk" Type="varchar" MaxLength="10" />
+    <Property Name="LjkKet" Type="varchar" MaxLength="100" />
+    <Property Name="Cabang" Type="varchar" MaxLength="10" />
+    <Property Name="CabangKet" Type="varchar" MaxLength="100" />
+    <Property Name="NominalJumlahKwajibanIDR" Type="float" />
+    <Property Name="TanggalDibentuk" Type="datetime" />
+    <Property Name="TanggalUpdate" Type="datetime" />
+    <Property Name="Bulan" Type="int" />
+    <Property Name="Tahun" Type="int" />
+    <Property Name="NoRekening" Type="varchar" MaxLength="50" />
+    <Property Name="JenisFasilitas" Type="varchar" MaxLength="10" />
+    <Property Name="JenisFasilitasKet" Type="varchar" MaxLength="128" />
+    <Property Name="TanggalMulai" Type="date" />
+    <Property Name="TanggalJatuhTempo" Type="date" />
+    <Property Name="Valuta" Type="varchar" MaxLength="5" />
+    <Property Name="NilaiDalamMataUangAsal" Type="float" />
+    <Property Name="SukuBunga" Type="float" />
+    <Property Name="Kolektibilitas" Type="varchar" MaxLength="10" />
+    <Property Name="JumlahHariTunggakan" Type="int" />
+    <Property Name="TanggalMacet" Type="date" />
+    <Property Name="SebabMacet" Type="varchar" MaxLength="10" />
+    <Property Name="SebabMacetKet" Type="varchar" MaxLength="128" />
+    <Property Name="Tunggakan" Type="float" />
+    <Property Name="Kondisi" Type="varchar" MaxLength="10" />
+    <Property Name="KondisiKet" Type="varchar" MaxLength="128" />
+    <Property Name="TanggalKondisi" Type="date" />
+    <Property Name="Keterangan" Type="varchar" MaxLength="2048" />
+  </EntityType>
+  <EntityType Name="IdebFacPenjamin">
+    <Key>
+      <PropertyRef Name="FacId" />
+      <PropertyRef Name="Seq" />
+    </Key>
+    <Property Name="FacId" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Seq" Type="int" Nullable="false" />
+    <Property Name="NamaPenjamin" Type="varchar" MaxLength="100" />
+    <Property Name="NomorIdentitas" Type="varchar" MaxLength="50" />
+    <Property Name="TanggalUpdate" Type="datetime" />
+    <Property Name="TanggalBuat" Type="datetime" />
+    <Property Name="JenisPenjamin" Type="varchar" MaxLength="10" />
+    <Property Name="JenisPenjaminKet" Type="varchar" MaxLength="128" />
+    <Property Name="AlamatPenjamin" Type="varchar" MaxLength="200" />
+    <Property Name="Keterangan" Type="varchar" MaxLength="2048" />
+  </EntityType>
+  <EntityType Name="IdebFacSb">
+    <Key>
+      <PropertyRef Name="FacId" />
+    </Key>
+    <Property Name="FacId" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Ljk" Type="varchar" MaxLength="10" />
+    <Property Name="LjkKet" Type="varchar" MaxLength="100" />
+    <Property Name="Cabang" Type="varchar" MaxLength="10" />
+    <Property Name="CabangKet" Type="varchar" MaxLength="100" />
+    <Property Name="NominalSb" Type="float" />
+    <Property Name="TanggalDibentuk" Type="datetime" />
+    <Property Name="TanggalUpdate" Type="datetime" />
+    <Property Name="Bulan" Type="int" />
+    <Property Name="Tahun" Type="int" />
+    <Property Name="NoSuratBeharga" Type="varchar" MaxLength="50" />
+    <Property Name="JenisSuratBeharga" Type="varchar" MaxLength="10" />
+    <Property Name="JenisSuratBehargaKet" Type="varchar" MaxLength="128" />
+    <Property Name="SovereignRate" Type="float" />
+    <Property Name="Listing" Type="varchar" MaxLength="5" />
+    <Property Name="PeringkatSuratBeharga" Type="varchar" MaxLength="100" />
+    <Property Name="TujuanKepemilikan" Type="varchar" MaxLength="10" />
+    <Property Name="TujuanKepemilikanKet" Type="varchar" MaxLength="128" />
+    <Property Name="TanggalDiterbitkan" Type="date" />
+    <Property Name="TanggalJatuhTempo" Type="date" />
+    <Property Name="SukuBunga" Type="float" />
+    <Property Name="Valuta" Type="varchar" MaxLength="5" />
+    <Property Name="Kolektibilitas" Type="varchar" MaxLength="10" />
+    <Property Name="JumlahHariTunggakan" Type="int" />
+    <Property Name="NilaiDalamMataUangAsal" Type="float" />
+    <Property Name="NilaiPasar" Type="float" />
+    <Property Name="NilaiPerolehan" Type="float" />
+    <Property Name="Tunggakan" Type="float" />
+    <Property Name="SebabMacet" Type="varchar" MaxLength="10" />
+    <Property Name="SebabMacetKet" Type="varchar" MaxLength="128" />
+    <Property Name="TanggalMacet" Type="date" />
+    <Property Name="Kondisi" Type="varchar" MaxLength="10" />
+    <Property Name="KondisiKet" Type="varchar" MaxLength="128" />
+    <Property Name="TanggalKondisi" Type="date" />
+    <Property Name="Keterangan" Type="varchar" MaxLength="2048" />
+  </EntityType>
+  <EntityType Name="IdebFacSummary">
+    <Key>
+      <PropertyRef Name="IdebId" />
+    </Key>
+    <Property Name="IdebId" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="PlafonEfektifKredit" Type="float" />
+    <Property Name="PlafonEfektifLc" Type="float" />
+    <Property Name="PlafonEfektifBg" Type="float" />
+    <Property Name="plafonEfektifSec" Type="float" />
+    <Property Name="PlafonEfektifLainnya" Type="float" />
+    <Property Name="PlafonEfektifTotal" Type="float" />
+    <Property Name="BakiDebetKredit" Type="float" />
+    <Property Name="BakiDebetLc" Type="float" />
+    <Property Name="BakiDebetBg" Type="float" />
+    <Property Name="BakiDebetSec" Type="float" />
+    <Property Name="BakiDebetLainnya" Type="float" />
+    <Property Name="BakiDebetTotal" Type="float" />
+    <Property Name="KrediturBankUmum" Type="int" />
+    <Property Name="KrediturBPR_S" Type="int" />
+    <Property Name="KrediturLp" Type="int" />
+    <Property Name="KrediturLainnya" Type="int" />
+    <Property Name="KolekTerburuk" Type="varchar" MaxLength="1" />
+    <Property Name="KolekDataTerburuk" Type="int" />
+    <Property Name="KolekBulanDataTerburuk" Type="varchar" MaxLength="6" />
+    <Property Name="KolekDataTerburukDate" Type="date" />
+  </EntityType>
+  <EntityType Name="IdebIndivData">
+    <Key>
+      <PropertyRef Name="IdebId" />
+      <PropertyRef Name="Seq" />
+    </Key>
+    <Property Name="IdebId" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Seq" Type="int" Nullable="false" />
+    <Property Name="DebtectorId" Type="varchar" MaxLength="50" />
+    <Property Name="NamaDebitur" Type="varchar" MaxLength="100" />
+    <Property Name="Identitas" Type="varchar" MaxLength="10" />
+    <Property Name="NoIdentitas" Type="varchar" MaxLength="50" />
+    <Property Name="JenisKelamin" Type="varchar" MaxLength="10" />
+    <Property Name="JenisKelaminKet" Type="varchar" MaxLength="25" />
+    <Property Name="Npwp" Type="varchar" MaxLength="50" />
+    <Property Name="TempatLahir" Type="varchar" MaxLength="50" />
+    <Property Name="TanggalLahir" Type="date" />
+    <Property Name="Pelapor" Type="varchar" MaxLength="10" />
+    <Property Name="PelaporKet" Type="varchar" MaxLength="50" />
+    <Property Name="TanggalDibentuk" Type="datetime" />
+    <Property Name="TanggalUpdate" Type="datetime" />
+    <Property Name="Alamat" Type="varchar" MaxLength="200" />
+    <Property Name="Kelurahan" Type="varchar" MaxLength="50" />
+    <Property Name="Kecamatan" Type="varchar" MaxLength="50" />
+    <Property Name="KabKota" Type="varchar" MaxLength="10" />
+    <Property Name="KabKotaKet" Type="varchar" MaxLength="100" />
+    <Property Name="KodePos" Type="varchar" MaxLength="10" />
+    <Property Name="Negara" Type="varchar" MaxLength="5" />
+    <Property Name="NegaraKet" Type="varchar" MaxLength="50" />
+    <Property Name="Pekerjaan" Type="varchar" MaxLength="10" />
+    <Property Name="PekerjaanKet" Type="varchar" MaxLength="50" />
+    <Property Name="TempatBekerja" Type="varchar" MaxLength="50" />
+    <Property Name="BidangUsaha" Type="varchar" MaxLength="10" />
+    <Property Name="BidangUsahaKet" Type="varchar" MaxLength="100" />
+    <Property Name="KodeGelarDebitur" Type="varchar" MaxLength="10" />
+    <Property Name="StatusGelarDebitur" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="IdebIndivSearchVar">
+    <Key>
+      <PropertyRef Name="IdebId" />
+    </Key>
+    <Property Name="IdebId" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="NamaDebitur" Type="varchar" MaxLength="100" />
+    <Property Name="JenisKelamin" Type="varchar" MaxLength="1" />
+    <Property Name="JenisKelaminKet" Type="varchar" MaxLength="25" />
+    <Property Name="NoIdentitas" Type="varchar" MaxLength="50" />
+    <Property Name="Npwp" Type="varchar" MaxLength="50" />
+    <Property Name="TempatLahir" Type="varchar" MaxLength="50" />
+    <Property Name="TanggalLahir" Type="date" />
+  </EntityType>
+  <EntityType Name="LIST">
+    <Key>
+      <PropertyRef Name="LISTID" />
+    </Key>
+    <Property Name="LISTID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="KEYFIELD" Type="varchar" MaxLength="100" />
+    <Property Name="KEYFIELDDESC" Type="varchar" MaxLength="100" />
+    <Property Name="LISTDESC" Type="varchar" MaxLength="50" />
+    <Property Name="LISTFIELD" Type="varchar" MaxLength="2048" />
+    <Property Name="LISTFILTER" Type="varchar" MaxLength="2048" />
+    <Property Name="LISTDETAIL" Type="varchar" MaxLength="2048" />
+    <Property Name="LISTSQLPARAM" Type="varchar" MaxLength="250" />
+    <Property Name="LISTSQLCOND" Type="varchar" MaxLength="2048" />
+    <Property Name="LISTGROUPBY" Type="varchar" MaxLength="250" />
+    <Property Name="ALLOWSELECTION" Type="bit" />
+    <Property Name="ALLOWFILTER" Type="bit" />
+    <Property Name="ALLOWSORT" Type="bit" />
+    <Property Name="ALLOWGROUPBY" Type="bit" />
+    <Property Name="ALLOWEXPORT" Type="bit" />
+    <Property Name="LISTDETAILDESC" Type="varchar" MaxLength="30" />
+    <Property Name="LISTDETAIL2" Type="varchar" MaxLength="1000" />
+    <Property Name="LISTDETAIL2DESC" Type="varchar" MaxLength="30" />
+    <Property Name="LISTCHKBOXCMD" Type="varchar" MaxLength="1000" />
+    <Property Name="LISTCHKCMDTEXT" Type="varchar" MaxLength="50" />
+    <Property Name="LISTREASONQRY" Type="varchar" MaxLength="250" />
+    <Property Name="LISTREASONCAPTION" Type="varchar" MaxLength="50" />
+    <Property Name="LISTREASONPOSFRONT" Type="bit" />
+    <Property Name="LISTORDERBY" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="ParameterSystem">
+    <Key>
+      <PropertyRef Name="SetId" />
+      <PropertyRef Name="TableNM" />
+    </Key>
+    <Property Name="SetId" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="TableNM" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="IsMaker" Type="bit" />
+    <Property Name="ISApprv" Type="bit" />
+    <Property Name="ParamDesc" Type="varchar" MaxLength="1000" />
+    <Property Name="ParamLinkMaker" Type="varchar" MaxLength="1000" />
+    <Property Name="ParamLinkApprv" Type="varchar" MaxLength="1000" />
+    <Property Name="ParamPos" Type="int" />
+    <Property Name="ShowPending" Type="bit" />
+  </EntityType>
+  <EntityType Name="ParameterSystem_AuditTrail">
+    <Key>
+      <PropertyRef Name="TemporaryID" />
+    </Key>
+    <Property Name="TemporaryID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TableName" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="Status" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="250" />
+    <Property Name="ApproveDate" Type="datetime" />
+    <Property Name="ApproveBy" Type="varchar" MaxLength="250" />
+    <Property Name="HostIP" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="ParameterSystem_AuditTrailDetail">
+    <Key>
+      <PropertyRef Name="TemporaryID" />
+      <PropertyRef Name="FieldName" />
+    </Key>
+    <Property Name="TemporaryID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="FieldName" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="FieldValue" Type="varchar" MaxLength="3000" />
+    <Property Name="FieldValueBefore" Type="varchar" MaxLength="3000" />
+  </EntityType>
+  <EntityType Name="ParameterSystem_Temporary">
+    <Key>
+      <PropertyRef Name="TemporaryID" />
+    </Key>
+    <Property Name="TemporaryID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TableName" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Status" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="ParameterSystem_TemporaryDetail">
+    <Key>
+      <PropertyRef Name="TemporaryID" />
+      <PropertyRef Name="FieldName" />
+    </Key>
+    <Property Name="TemporaryID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="FieldName" Type="varchar" MaxLength="256" Nullable="false" />
+    <Property Name="FieldValue" Type="varchar" MaxLength="8000" />
+    <Property Name="FieldValueBefore" Type="varchar" MaxLength="8000" />
+  </EntityType>
+  <EntityType Name="ParameterSystemField">
+    <Key>
+      <PropertyRef Name="TableNM" />
+      <PropertyRef Name="FieldNM" />
+    </Key>
+    <Property Name="TableNM" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="FieldPos" Type="int" />
+    <Property Name="FieldNM" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="FieldTYPE" Type="varchar" MaxLength="10" />
+    <Property Name="FieldDesc" Type="varchar" MaxLength="200" />
+    <Property Name="FieldReff" Type="varchar" MaxLength="1000" />
+    <Property Name="FieldAuto" Type="varchar" MaxLength="1000" />
+    <Property Name="FieldKey" Type="bit" />
+    <Property Name="FieldMan" Type="bit" />
+    <Property Name="GroupBy" Type="bit" />
+    <Property Name="SortSeq" Type="int" />
+    <Property Name="SortAsc" Type="bit" />
+    <Property Name="AutoPrefix" Type="varchar" MaxLength="200" />
+    <Property Name="AutoSufix" Type="varchar" MaxLength="200" />
+    <Property Name="FormulaType" Type="char" MaxLength="1" />
+    <Property Name="Locked" Type="bit" />
+  </EntityType>
+  <EntityType Name="ProcGenAppId">
+    <Key>
+      <PropertyRef Name="Org" />
+      <PropertyRef Name="ProcDate" />
+    </Key>
+    <Property Name="Org" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="ProcDate" Type="date" Nullable="false" />
+    <Property Name="ProcFlag" Type="bit" />
+    <Property Name="RunNo" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'DBSCBS.dbo.STAGING_IWIDINPUT' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="STAGING_IWIDINPUT">
+          <Property Name="AS_OF_DATE" Type="datetime" />
+          <Property Name="ORG" Type="varchar" MaxLength="256" />
+          <Property Name="APPTYPE" Type="varchar" MaxLength="256" />
+          <Property Name="APPLICATION_NO" Type="varchar" MaxLength="256" />
+          <Property Name="RECEIPT_DATE" Type="varchar" MaxLength="256" />
+          <Property Name="SOLICITATION_ID" Type="varchar" MaxLength="256" />
+          <Property Name="VIP_INDICATOR" Type="varchar" MaxLength="256" />
+          <Property Name="USE_CREDIT_DESIRED" Type="varchar" MaxLength="256" />
+          <Property Name="PROCESS_CRADLE_TO_GRAVE" Type="varchar" MaxLength="256" />
+          <Property Name="CREATE_CUSTOMER_RECORD" Type="varchar" MaxLength="256" />
+          <Property Name="CUSTOMER_NUMBER" Type="varchar" MaxLength="256" />
+          <Property Name="CREATE_RELATIONSHIP_RECORD" Type="varchar" MaxLength="256" />
+          <Property Name="RELATIONSHIP" Type="varchar" MaxLength="256" />
+          <Property Name="CREATE_BASE_SEGMENT_RECORD" Type="varchar" MaxLength="256" />
+          <Property Name="SAME_CUSTOMER_BASE_NUMBER" Type="varchar" MaxLength="256" />
+          <Property Name="EMBOSSING_METHOD" Type="varchar" MaxLength="256" />
+          <Property Name="BASE_SEGMENT" Type="varchar" MaxLength="256" />
+          <Property Name="CARD_SCHEME" Type="varchar" MaxLength="256" />
+          <Property Name="LOAN_PLAN_NUMBER" Type="varchar" MaxLength="256" />
+          <Property Name="PRIMARY_ACCOUNT" Type="varchar" MaxLength="256" />
+          <Property Name="LOAN_REFERENCE_NUMBER" Type="varchar" MaxLength="256" />
+          <Property Name="RELATIONSHIP_TYPE_INDICATOR" Type="varchar" MaxLength="256" />
+          <Property Name="PROCESS_TYPE" Type="varchar" MaxLength="256" />
+          <Property Name="NAME" Type="varchar" MaxLength="256" />
+          <Property Name="NAME_BASED_ON_ID" Type="varchar" MaxLength="256" />
+          <Property Name="NICK_NAME" Type="varchar" MaxLength="256" />
+          <Property Name="NAME_IN_CARD" Type="varchar" MaxLength="256" />
+          <Property Name="NATIONALITY" Type="varchar" MaxLength="256" />
+          <Property Name="MOTHER_MAIDEN_NAME" Type="varchar" MaxLength="256" />
+          <Property Name="GENDER" Type="varchar" MaxLength="256" />
+          <Property Name="PLACE_OF_BIRTH" Type="varchar" MaxLength="256" />
+          <Property Name="DATE_OF_BIRTH" Type="varchar" MaxLength="256" />
+          <Property Name="KTP_NUMBER" Type="varchar" MaxLength="256" />
+          <Property Name="EDUCATIONAL_LEVEL" Type="varchar" MaxLength="256" />
+          <Property Name="MARITAL_STATUS" Type="varchar" MaxLength="256" />
+          <Property Name="NUMBER_OF_DEPENDENTS" Type="varchar" MaxLength="256" />
+          <Property Name="HOME_CURRENT_ADDRESS_1" Type="varchar" MaxLength="256" />
+          <Property Name="HOME_CURRENT_ADDRESS_2" Type="varchar" MaxLength="256" />
+          <Property Name="HOME_CURRENT_ADDRESS_3" Type="varchar" MaxLength="256" />
+          <Property Name="HOME_DISTRICT_CODE" Type="varchar" MaxLength="256" />
+          <Property Name="HOME_SUB_DISTRICT_CODE" Type="varchar" MaxLength="256" />
+          <Property Name="HOME_SUB_DISTRICT_NAME" Type="varchar" MaxLength="256" />
+          <Property Name="HOME_DISTRICT_NAME" Type="varchar" MaxLength="256" />
+          <Property Name="HOME_CITY" Type="varchar" MaxLength="256" />
+          <Property Name="HOME_POSTAL_CODE" Type="varchar" MaxLength="256" />
+          <Property Name="CURRENT_ADDRESS_ID_CARD_ADDRESS" Type="varchar" MaxLength="256" />
+          <Property Name="ID_CARD_ADDRESS_1" Type="varchar" MaxLength="256" />
+          <Property Name="ID_CARD_ADDRESS_2" Type="varchar" MaxLength="256" />
+          <Property Name="ID_CARD_ADDRESS_3" Type="varchar" MaxLength="256" />
+          <Property Name="ID_CARD_SUB_DISTRICT_CODE" Type="varchar" MaxLength="256" />
+          <Property Name="ID_CARD_DISTRICT_CODE" Type="varchar" MaxLength="256" />
+          <Property Name="ID_CARD_SUB_DISTRICT_NAME" Type="varchar" MaxLength="256" />
+          <Property Name="ID_CARD_DISTRICT_NAME" Type="varchar" MaxLength="256" />
+          <Property Name="ID_CARD_CITY" Type="varchar" MaxLength="256" />
+          <Property Name="HOME_TEL_NUMBER" Type="varchar" MaxLength="256" />
+          <Property Name="HOME_TEL_STATUS" Type="varchar" MaxLength="256" />
+          <Property Name="PIXEL_CODE" Type="varchar" MaxLength="256" />
+          <Property Name="PIXEL_ADDRESS" Type="varchar" MaxLength="256" />
+          <Property Name="PIXEL_WKC_CODE" Type="varchar" MaxLength="256" />
+          <Property Name="MOBILE_TEL_NUMBER" Type="varchar" MaxLength="256" />
+          <Property Name="MOBILE_TEL_NUMBER_2" Type="varchar" MaxLength="256" />
+          <Property Name="RESIDENTIAL_STATUS" Type="varchar" MaxLength="256" />
+          <Property Name="LENGTH_OF_STAY_YY" Type="varchar" MaxLength="256" />
+          <Property Name="COMPANY_NAME" Type="varchar" MaxLength="256" />
+          <Property Name="COMPANY_ADDRESS_1" Type="varchar" MaxLength="256" />
+          <Property Name="COMPANY_ADDRESS_2" Type="varchar" MaxLength="256" />
+          <Property Name="COMPANY_ADDRESS_3" Type="varchar" MaxLength="256" />
+          <Property Name="COMPANY_DISTRICT_NAME" Type="varchar" MaxLength="256" />
+          <Property Name="COMPANY_SUB_DISTRICT_NAME" Type="varchar" MaxLength="256" />
+          <Property Name="COMPANY_DISTRICT_CODE" Type="varchar" MaxLength="256" />
+          <Property Name="COMPANY_CITY" Type="varchar" MaxLength="256" />
+          <Property Name="COMPANY_POSTAL_CODE" Type="varchar" MaxLength="256" />
+          <Property Name="HOME_ADDRESS_OFFICE_ADDRESS" Type="varchar" MaxLength="256" />
+          <Property Name="CO_TEL_NUMBER" Type="varchar" MaxLength="256" />
+          <Property Name="CO_TEL_EXTENSION" Type="varchar" MaxLength="256" />
+          <Property Name="CO_TEL_NUMBER_STATUS" Type="varchar" MaxLength="256" />
+          <Property Name="CO_TEL_NUMBER_2" Type="varchar" MaxLength="256" />
+          <Property Name="CO_TEL_EXTENSION_2" Type="varchar" MaxLength="256" />
+          <Property Name="CO_TEL_NUMBER_2_STATUS" Type="varchar" MaxLength="256" />
+          <Property Name="POSITION" Type="varchar" MaxLength="256" />
+          <Property Name="POSITION_CODE" Type="varchar" MaxLength="256" />
+          <Property Name="NATURE_OF_BUSINESS" Type="varchar" MaxLength="256" />
+          <Property Name="DEPARTMENT" Type="varchar" MaxLength="256" />
+          <Property Name="EMPLOYEE_ID_NUMBER" Type="varchar" MaxLength="256" />
+          <Property Name="JOB_STATUS" Type="varchar" MaxLength="256" />
+          <Property Name="TOTAL_LENGTH_ON_JOB" Type="varchar" MaxLength="256" />
+          <Property Name="PREVIOUS_COMPANY_LENGTH_ON_JOB" Type="varchar" MaxLength="256" />
+          <Property Name="PREVIOUS_COMPANY_NAME" Type="varchar" MaxLength="256" />
+          <Property Name="PREVIOUS_CO_TEL_NUMBER" Type="varchar" MaxLength="256" />
+          <Property Name="PREVIOUS_CO_EXTENSION_NUMBER" Type="varchar" MaxLength="256" />
+          <Property Name="NUMBER_OF_EMPLOYEE" Type="varchar" MaxLength="256" />
+          <Property Name="EWSS_RESULT" Type="varchar" MaxLength="256" />
+          <Property Name="RELATED_PARTY_RESULT" Type="varchar" MaxLength="256" />
+          <Property Name="IDENTITY_IDTYPE" Type="varchar" MaxLength="256" />
+          <Property Name="INCOME_DOC_TYPE" Type="varchar" MaxLength="256" />
+          <Property Name="DOC_CODE_1" Type="varchar" MaxLength="256" />
+          <Property Name="DOC_CODE_2" Type="varchar" MaxLength="256" />
+          <Property Name="DOC_CODE_3" Type="varchar" MaxLength="256" />
+          <Property Name="DOC_CODE_4" Type="varchar" MaxLength="256" />
+          <Property Name="DOC_CODE_5" Type="varchar" MaxLength="256" />
+          <Property Name="DOC_CODE_6" Type="varchar" MaxLength="256" />
+          <Property Name="_12_MONTHS_DECLARED_INCOME" Type="varchar" MaxLength="256" />
+          <Property Name="EXTRA_YEARLY_DECLARED_INCOME" Type="varchar" MaxLength="256" />
+          <Property Name="MONTHLY_INCOME_BASED_ON_DOC" Type="varchar" MaxLength="256" />
+          <Property Name="INCOME_MULTIPLIER" Type="varchar" MaxLength="256" />
+          <Property Name="ID_CARD_TRACK" Type="varchar" MaxLength="256" />
+          <Property Name="CREDIT_CARD_NUMBER" Type="varchar" MaxLength="256" />
+          <Property Name="NAME_OF_CARD_ISSUER" Type="varchar" MaxLength="256" />
+          <Property Name="CARD_EXPIRY" Type="varchar" MaxLength="256" />
+          <Property Name="ALGO_PROXY_INC_TEST" Type="varchar" MaxLength="256" />
+          <Property Name="ID_POSTAL_CODE" Type="varchar" MaxLength="256" />
+          <Property Name="NAME_OF_THE_BANK" Type="varchar" MaxLength="256" />
+          <Property Name="OTH1" Type="varchar" MaxLength="256" />
+          <Property Name="ALGO_SEGMENT_TEST" Type="varchar" MaxLength="256" />
+          <Property Name="CUSTOMER_CONSENT" Type="varchar" MaxLength="256" />
+          <Property Name="MARCOM_CONSENT" Type="varchar" MaxLength="256" />
+          <Property Name="EMERGENCY_CONT_NAME" Type="varchar" MaxLength="256" />
+          <Property Name="EMERG_RELATIONSHIP" Type="varchar" MaxLength="256" />
+          <Property Name="EMERGENCY_ADDRESS_1" Type="varchar" MaxLength="256" />
+          <Property Name="EMERGENCY_ADDRESS_2" Type="varchar" MaxLength="256" />
+          <Property Name="EMERGENCY_ADDRESS_3" Type="varchar" MaxLength="256" />
+          <Property Name="EMERGENCY_SUB_DISTRICT" Type="varchar" MaxLength="256" />
+          <Property Name="EMERGENCY_DISTRICT" Type="varchar" MaxLength="256" />
+          <Property Name="EMERGENCY_CITY" Type="varchar" MaxLength="256" />
+          <Property Name="EMERGENCY_POSTAL_CD" Type="varchar" MaxLength="256" />
+          <Property Name="EMERGENCY_HOME_TEL" Type="varchar" MaxLength="256" />
+          <Property Name="EMERGENCY_HOME_TEL_STATUS" Type="varchar" MaxLength="256" />
+          <Property Name="EMERGENCY_MOBILE_TEL" Type="varchar" MaxLength="256" />
+          <Property Name="EMERGENCY_TEL_OTHERS" Type="varchar" MaxLength="256" />
+          <Property Name="OTH2" Type="varchar" MaxLength="256" />
+          <Property Name="TAX_NUMBER" Type="varchar" MaxLength="256" />
+          <Property Name="LOAN_AMOUNT_REQUEST" Type="varchar" MaxLength="256" />
+          <Property Name="LOAN_CODE" Type="varchar" MaxLength="256" />
+          <Property Name="LOAN_TENOR" Type="varchar" MaxLength="256" />
+          <Property Name="BENEFICIARY_NAME" Type="varchar" MaxLength="256" />
+          <Property Name="BENEFICIARY_BANK_NAME" Type="varchar" MaxLength="256" />
+          <Property Name="BANK_CODE_BR_ACC_NO" Type="varchar" MaxLength="256" />
+          <Property Name="APPLICATION_REFERENCE_NUMBER" Type="varchar" MaxLength="256" />
+          <Property Name="SOURCE_CODE" Type="varchar" MaxLength="256" />
+          <Property Name="CAMPAIGN_CODE" Type="varchar" MaxLength="256" />
+          <Property Name="LOAN_CENTRE_CODE" Type="varchar" MaxLength="256" />
+          <Property Name="AGENT_CODE" Type="varchar" MaxLength="256" />
+          <Property Name="SALES_CODE" Type="varchar" MaxLength="256" />
+          <Property Name="MGM_CODE" Type="varchar" MaxLength="256" />
+          <Property Name="UPFRONT_REJECT" Type="varchar" MaxLength="256" />
+          <Property Name="OTH3" Type="varchar" MaxLength="256" />
+          <Property Name="OTH4" Type="varchar" MaxLength="256" />
+          <Property Name="ALGO_SCORE_TEST" Type="varchar" MaxLength="256" />
+          <Property Name="ALGO_TEST_TRACK" Type="varchar" MaxLength="256" />
+          <Property Name="EXCLUDE_INDUSTRY" Type="varchar" MaxLength="256" />
+          <Property Name="MAILING_ADDRESS_IND" Type="varchar" MaxLength="256" />
+          <Property Name="PERSONAL_LOAN_OPTIMUM_DBS_MUE" Type="varchar" MaxLength="256" />
+          <Property Name="CREDIT_CARD_OPTIMUM_DBS_MUE" Type="varchar" MaxLength="256" />
+          <Property Name="MONEY_LINE_OPTIMUM_DBS_MUE" Type="varchar" MaxLength="256" />
+          <Property Name="SIGNATURE_DATE" Type="varchar" MaxLength="256" />
+          <Property Name="CREDIT_LIMIT_AMOUNT" Type="varchar" MaxLength="256" />
+          <Property Name="DBS_LOAN_LIMIT_OS_BALANCE" Type="varchar" MaxLength="256" />
+          <Property Name="EMAIL_ADDRESS" Type="varchar" MaxLength="256" />
+          <Property Name="AREA_SCORE" Type="varchar" MaxLength="256" />
+          <Property Name="PS_CODE" Type="varchar" MaxLength="256" />
+          <Property Name="PAYEE_NAME_2" Type="varchar" MaxLength="256" />
+          <Property Name="DC_ACCOUNT_2" Type="varchar" MaxLength="256" />
+          <Property Name="BRANCH_AREA_EXP_2" Type="varchar" MaxLength="256" />
+          <Property Name="PAYEE_NAME_3" Type="varchar" MaxLength="256" />
+          <Property Name="DC_ACCOUNT_3" Type="varchar" MaxLength="256" />
+          <Property Name="BRANCH_AREA_EXP_3" Type="varchar" MaxLength="256" />
+          <Property Name="DISB_FEE_FLAG" Type="varchar" MaxLength="256" />
+          <Property Name="DISB_PERCENTAGE_1" Type="varchar" MaxLength="256" />
+          <Property Name="DISB_PERCENTAGE_2" Type="varchar" MaxLength="256" />
+          <Property Name="DISB_PERCENTAGE_3" Type="varchar" MaxLength="256" />
+          <Property Name="DISB_FIXED_AMT_1" Type="varchar" MaxLength="256" />
+          <Property Name="DISB_FIXED_AMT_2" Type="varchar" MaxLength="256" />
+          <Property Name="DISB_FIXED_AMT_3" Type="varchar" MaxLength="256" />
+          <Property Name="BRANCH_AREA_EXP" Type="varchar" MaxLength="256" />
+          <Property Name="CUSTOMER_TYPE" Type="varchar" MaxLength="256" />
+          <Property Name="TOP_UP_TYPE" Type="varchar" MaxLength="256" />
+          <Property Name="OLDEST_MOB" Type="varchar" MaxLength="256" />
+          <Property Name="ORIGINAL_ACCOUNT_NO" Type="varchar" MaxLength="256" />
+          <Property Name="DISC_FLAG" Type="varchar" MaxLength="256" />
+          <Property Name="PIN_PID_PI2_FLAG" Type="varchar" MaxLength="256" />
+          <Property Name="_2ND_OTHER_CARD_NUMBER" Type="varchar" MaxLength="256" />
+          <Property Name="_2ND_OTHER_CARD_ISSUERS" Type="varchar" MaxLength="256" />
+          <Property Name="_2ND_OTHER_CARD_EXPIRY" Type="varchar" MaxLength="256" />
+          <Property Name="BRANCH_CODE" Type="varchar" MaxLength="256" />
+          <Property Name="RELATIONSHIP_WITH_THE_BANKS" Type="varchar" MaxLength="256" />
+          <Property Name="BANK_CODE" Type="varchar" MaxLength="256" />
+          <Property Name="PURPOSE_OF_LOAN" Type="varchar" MaxLength="256" />
+          <Property Name="WELL_ESTABLISH_COMPANY_TYPE" Type="varchar" MaxLength="256" />
+          <Property Name="NEED_PROBING" Type="varchar" MaxLength="256" />
+          <Property Name="PROBING_DETAIL" Type="varchar" MaxLength="256" />
+          <Property Name="PROBING_DETAIL_2" Type="varchar" MaxLength="256" />
+          <Property Name="PREVIOUS_TOP_UP_LIMIT" Type="varchar" MaxLength="256" />
+          <Property Name="CHANGE_TO_NEW_HOME_ADDRESS" Type="varchar" MaxLength="256" />
+          <Property Name="CHANGE_TO_NEW_OFF_BUSS_ADDRESS" Type="varchar" MaxLength="256" />
+          <Property Name="DECLARED_TOTAL_CARD_ISSUERS" Type="varchar" MaxLength="256" />
+          <Property Name="BILL_PAYMENT_REGISTRATION" Type="varchar" MaxLength="256" />
+          <Property Name="BILLER_NAME_1" Type="varchar" MaxLength="256" />
+          <Property Name="BILL_ACCOUNT_NUMBER_1" Type="varchar" MaxLength="256" />
+          <Property Name="NAME_ON_BILL_1" Type="varchar" MaxLength="256" />
+          <Property Name="BILLER_NAME_2" Type="varchar" MaxLength="256" />
+          <Property Name="BILL_ACCOUNT_NUMBER_2" Type="varchar" MaxLength="256" />
+          <Property Name="NAME_ON_BILL_2" Type="varchar" MaxLength="256" />
+          <Property Name="BILLER_NAME_3" Type="varchar" MaxLength="256" />
+          <Property Name="BILL_ACCOUNT_NUMBER_3" Type="varchar" MaxLength="256" />
+          <Property Name="NAME_ON_BILL_3" Type="varchar" MaxLength="256" />
+          <Property Name="CARD_TYPE" Type="varchar" MaxLength="256" />
+          <Property Name="PCT_ID" Type="varchar" MaxLength="256" />
+          <Property Name="DBS_CREDIT_CARD_NUMBER" Type="varchar" MaxLength="256" />
+          <Property Name="DBS_ACCOUNT_NUMBER" Type="varchar" MaxLength="256" />
+          <Property Name="DBS_SAVING_ACCOUNT_NUMBER" Type="varchar" MaxLength="256" />
+          <Property Name="REQUEST_PRINT_BILLING" Type="varchar" MaxLength="256" />
+          <Property Name="OTH5" Type="varchar" MaxLength="256" />
+          <Property Name="PROGRAM_TYPE" Type="varchar" MaxLength="256" />
+          <Property Name="MONEY_LINE_FUND_TRANSFER" Type="varchar" MaxLength="256" />
+          <Property Name="FUND_TRANSFER_LOAN_AMOUNT_REQ" Type="varchar" MaxLength="256" />
+          <Property Name="FUND_TRANSFER_LOAN_TENOR_REQ" Type="varchar" MaxLength="256" />
+          <Property Name="FUND_TRANSFER_LOAN_TYPE" Type="varchar" MaxLength="256" />
+          <Property Name="OTH_PURPOSE_OF_LOAN" Type="varchar" MaxLength="256" />
+          <Property Name="DD_NOMINATED_TYPE" Type="varchar" MaxLength="256" />
+          <Property Name="DD_PAYMENT_TYPE" Type="varchar" MaxLength="256" />
+          <Property Name="DD_REQUEST_DAYS" Type="varchar" MaxLength="256" />
+          <Property Name="PREVIOUS_LOAN_SEGMENT_BASE" Type="varchar" MaxLength="256" />
+          <Property Name="TOP_UP_SEGMENT" Type="varchar" MaxLength="256" />
+          <Property Name="BILLING_ADDRESS_MATCHING_VERIFICATION" Type="varchar" MaxLength="256" />
+          <Property Name="MOBILE_PHN_NUMBER_MATCHING_VERIFICATION" Type="varchar" MaxLength="256" />
+          <Property Name="NPWP_DOC_FLAG" Type="varchar" MaxLength="256" />
+          <Property Name="AML_RISK_RATING" Type="varchar" MaxLength="256" />
+          <Property Name="INSURANCE_PRODUCT_CODE" Type="varchar" MaxLength="256" />
+          <Property Name="APPROVE_DECLINE_CODE" Type="varchar" MaxLength="256" />
+          <Property Name="SUPPLEMENTARY_CARD_NAME" Type="varchar" MaxLength="256" />
+          <Property Name="SUPPLEMENTARY_NO_KTP_PASPOR" Type="varchar" MaxLength="256" />
+          <Property Name="SUPPLEMENTARY_NAME_ON_CARD" Type="varchar" MaxLength="256" />
+          <Property Name="SUPPLEMENTARY_RELATIONSHIP" Type="varchar" MaxLength="256" />
+          <Property Name="SUPPLEMENTARY_GENDER" Type="varchar" MaxLength="256" />
+          <Property Name="SUPPLEMENTARY_DOB" Type="varchar" MaxLength="256" />
+          <Property Name="SUPPLEMENTARY_PLACE_OF_BIRTH" Type="varchar" MaxLength="256" />
+          <Property Name="SUPPLEMENTARY_MOTHERS_MAIDEN_NAME" Type="varchar" MaxLength="256" />
+          <Property Name="SUPPLEMENTARY_MOBILEPHONE" Type="varchar" MaxLength="256" />
+          <Property Name="SUPPLEMENTARY_EMAIL_ADDRESS" Type="varchar" MaxLength="256" />
+          <Property Name="SUPPLEMENTARY_NATIONALITY" Type="varchar" MaxLength="256" />
+          <Property Name="CURRENT_COMPANY_LENGTH_ON_JOB_MM" Type="varchar" MaxLength="256" />
+          <Property Name="CURRENT_COMPANY_LENGTH_ON_JOB_YY" Type="varchar" MaxLength="256" />
+          <Property Name="EXISTING_MOBILE_PHONE_NUMBER" Type="varchar" MaxLength="256" />
+          <Property Name="COUNTRY_CODE" Type="varchar" MaxLength="256" />
+          <Property Name="SUPPLEMENTARY_COUNTRY_CODE" Type="varchar" MaxLength="256" />
+          <Property Name="PROJECT" Type="varchar" MaxLength="256" />
+          <Property Name="PRODUCT_TYPE" Type="varchar" MaxLength="256" />
+          <Property Name="PROGRAM" Type="varchar" MaxLength="256" />
+          <Property Name="DOCUMENT_TYPE" Type="varchar" MaxLength="256" />
+          <Property Name="TOTAL_INCOME_BASED_ON_DOC" Type="varchar" MaxLength="256" />
+          <Property Name="SUB_DECISION_CODE" Type="varchar" MaxLength="256" />
+        </EntityType>-->
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="SysModule">
+    <Key>
+      <PropertyRef Name="ModuleId" />
+    </Key>
+    <Property Name="ModuleId" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="ModuleName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_IdebCorpData">
+    <End Role="Ideb" Type="Self.Ideb" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="IdebCorpData" Type="Self.IdebCorpData" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ideb">
+        <PropertyRef Name="IdebId" />
+      </Principal>
+      <Dependent Role="IdebCorpData">
+        <PropertyRef Name="IdebId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IdebCorpGroup">
+    <End Role="Ideb" Type="Self.Ideb" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="IdebCorpGroup" Type="Self.IdebCorpGroup" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ideb">
+        <PropertyRef Name="IdebId" />
+      </Principal>
+      <Dependent Role="IdebCorpGroup">
+        <PropertyRef Name="IdebId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IdebCorpSearchVar">
+    <End Role="Ideb" Type="Self.Ideb" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="IdebCorpSearchVar" Type="Self.IdebCorpSearchVar" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Ideb">
+        <PropertyRef Name="IdebId" />
+      </Principal>
+      <Dependent Role="IdebCorpSearchVar">
+        <PropertyRef Name="IdebId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IdebFac">
+    <End Role="Ideb" Type="Self.Ideb" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="IdebFac" Type="Self.IdebFac" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ideb">
+        <PropertyRef Name="IdebId" />
+      </Principal>
+      <Dependent Role="IdebFac">
+        <PropertyRef Name="IdebId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IdebFacCollateral">
+    <End Role="IdebFac" Type="Self.IdebFac" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="IdebFacCollateral" Type="Self.IdebFacCollateral" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IdebFac">
+        <PropertyRef Name="FacId" />
+      </Principal>
+      <Dependent Role="IdebFacCollateral">
+        <PropertyRef Name="FacId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IdebFacCollect">
+    <End Role="IdebFac" Type="Self.IdebFac" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="IdebFacCollect" Type="Self.IdebFacCollect" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IdebFac">
+        <PropertyRef Name="FacId" />
+      </Principal>
+      <Dependent Role="IdebFacCollect">
+        <PropertyRef Name="FacId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IdebFacCredit">
+    <End Role="IdebFac" Type="Self.IdebFac" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="IdebFacCredit" Type="Self.IdebFacCredit" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="IdebFac">
+        <PropertyRef Name="FacId" />
+      </Principal>
+      <Dependent Role="IdebFacCredit">
+        <PropertyRef Name="FacId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IdebFacLc">
+    <End Role="IdebFac" Type="Self.IdebFac" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="IdebFacLc" Type="Self.IdebFacLc" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="IdebFac">
+        <PropertyRef Name="FacId" />
+      </Principal>
+      <Dependent Role="IdebFacLc">
+        <PropertyRef Name="FacId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IdebFacOther">
+    <End Role="IdebFac" Type="Self.IdebFac" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="IdebFacOther" Type="Self.IdebFacOther" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="IdebFac">
+        <PropertyRef Name="FacId" />
+      </Principal>
+      <Dependent Role="IdebFacOther">
+        <PropertyRef Name="FacId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IdebFacPenjamin">
+    <End Role="IdebFac" Type="Self.IdebFac" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="IdebFacPenjamin" Type="Self.IdebFacPenjamin" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IdebFac">
+        <PropertyRef Name="FacId" />
+      </Principal>
+      <Dependent Role="IdebFacPenjamin">
+        <PropertyRef Name="FacId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IdebFacSb">
+    <End Role="IdebFac" Type="Self.IdebFac" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="IdebFacSb" Type="Self.IdebFacSb" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="IdebFac">
+        <PropertyRef Name="FacId" />
+      </Principal>
+      <Dependent Role="IdebFacSb">
+        <PropertyRef Name="FacId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IdebFacSummary">
+    <End Role="Ideb" Type="Self.Ideb" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="IdebFacSummary" Type="Self.IdebFacSummary" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Ideb">
+        <PropertyRef Name="IdebId" />
+      </Principal>
+      <Dependent Role="IdebFacSummary">
+        <PropertyRef Name="IdebId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IdebIndivData">
+    <End Role="Ideb" Type="Self.Ideb" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="IdebIndivData" Type="Self.IdebIndivData" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ideb">
+        <PropertyRef Name="IdebId" />
+      </Principal>
+      <Dependent Role="IdebIndivData">
+        <PropertyRef Name="IdebId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IdebIndivSearchVar">
+    <End Role="Ideb" Type="Self.Ideb" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="IdebIndivSearchVar" Type="Self.IdebIndivSearchVar" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Ideb">
+        <PropertyRef Name="IdebId" />
+      </Principal>
+      <Dependent Role="IdebIndivSearchVar">
+        <PropertyRef Name="IdebId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ParameterSystem_AuditTrailDetail">
+    <End Role="ParameterSystem_AuditTrail" Type="Self.ParameterSystem_AuditTrail" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ParameterSystem_AuditTrailDetail" Type="Self.ParameterSystem_AuditTrailDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterSystem_AuditTrail">
+        <PropertyRef Name="TemporaryID" />
+      </Principal>
+      <Dependent Role="ParameterSystem_AuditTrailDetail">
+        <PropertyRef Name="TemporaryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PARAMETERSYSTEM_TEMPORARYDETAIL_PARAMETERSYSTEM_TEMPORARY">
+    <End Role="ParameterSystem_Temporary" Type="Self.ParameterSystem_Temporary" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ParameterSystem_TemporaryDetail" Type="Self.ParameterSystem_TemporaryDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterSystem_Temporary">
+        <PropertyRef Name="TemporaryID" />
+      </Principal>
+      <Dependent Role="ParameterSystem_TemporaryDetail">
+        <PropertyRef Name="TemporaryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="dbgetInstallment" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="float">
+    <Parameter Name="inttype" Type="varchar" Mode="In" />
+    <Parameter Name="loan" Type="float" Mode="In" />
+    <Parameter Name="bungaTahun" Type="float" Mode="In" />
+    <Parameter Name="cpTenor" Type="float" Mode="In" />
+    <Parameter Name="coeff" Type="float" Mode="In" />
+    <Parameter Name="days" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="udf_CharMatch" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+    <Parameter Name="var1" Type="varchar" Mode="In" />
+    <Parameter Name="var2" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="udf_GetWorkDays" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+    <Parameter Name="STARTDATE" Type="datetime" Mode="In" />
+    <Parameter Name="ENDDATE" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="udf_ZeroFill" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar">
+    <Parameter Name="str" Type="varchar" Mode="In" />
+    <Parameter Name="pjg" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_GenAppId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AppId" Type="varchar" Mode="InOut" />
+    <Parameter Name="Org" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="usp_GetAppId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="varchar" Mode="In" />
+    <Parameter Name="Org" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="usp_InsUserActivity" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="varchar" Mode="In" />
+    <Parameter Name="tokenId" Type="varchar" Mode="In" />
+    <Parameter Name="actDesc" Type="varchar" Mode="In" />
+    <Parameter Name="actLevel" Type="int" Mode="In" />
+    <Parameter Name="hostIP" Type="varchar" Mode="In" />
+    <Parameter Name="PageName" Type="varchar" Mode="In" />
+    <Parameter Name="pageURL" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="usp_ViewImpFFSetting" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="importId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_ViewIWIDReqResp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_ViewSPSResponse" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="DBSCBSModelStoreContainer">
+    <EntitySet Name="App" EntityType="Self.App" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AppBillPmt" EntityType="Self.AppBillPmt" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AppBureauReq" EntityType="Self.AppBureauReq" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AppDecResp" EntityType="Self.AppDecResp" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AppDoc" EntityType="Self.AppDoc" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AppExCC" EntityType="Self.AppExCC" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AppExFac" EntityType="Self.AppExFac" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AppExLoan" EntityType="Self.AppExLoan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AppFac" EntityType="Self.AppFac" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AppFlag" EntityType="Self.AppFlag" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AppMemo" EntityType="Self.AppMemo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AppSupp" EntityType="Self.AppSupp" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AuthGroupMenu" EntityType="Self.AuthGroupMenu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AuthGroups" EntityType="Self.AuthGroups" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AuthMenus" EntityType="Self.AuthMenus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AuthParam" EntityType="Self.AuthParam" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AuthPwdHist" EntityType="Self.AuthPwdHist" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AuthUserActivity" EntityType="Self.AuthUserActivity" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AuthUserFlag" EntityType="Self.AuthUserFlag" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AuthUserGroup" EntityType="Self.AuthUserGroup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AuthUserHist" EntityType="Self.AuthUserHist" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AuthUsers" EntityType="Self.AuthUsers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CustFin" EntityType="Self.CustFin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CustJob" EntityType="Self.CustJob" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CustPersonal" EntityType="Self.CustPersonal" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CustRel" EntityType="Self.CustRel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DataImport" EntityType="Self.DataImport" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DataImportDestColumn" EntityType="Self.DataImportDestColumn" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DataImportDestTable" EntityType="Self.DataImportDestTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DataImportFlatFile" EntityType="Self.DataImportFlatFile" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DataImportFlatFileColumn" EntityType="Self.DataImportFlatFileColumn" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DataImportLog" EntityType="Self.DataImportLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DataImportLogDetail" EntityType="Self.DataImportLogDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EnumBureauType" EntityType="Self.EnumBureauType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EnumIdebFacCat" EntityType="Self.EnumIdebFacCat" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FRAMEWORK_FOREIGNKEY" EntityType="Self.FRAMEWORK_FOREIGNKEY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FRAMEWORK_FORMULAFIELD" EntityType="Self.FRAMEWORK_FORMULAFIELD" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FRAMEWORK_LINDEDSERVER" EntityType="Self.FRAMEWORK_LINDEDSERVER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ideb" EntityType="Self.Ideb" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IdebCorpData" EntityType="Self.IdebCorpData" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IdebCorpGroup" EntityType="Self.IdebCorpGroup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IdebCorpSearchVar" EntityType="Self.IdebCorpSearchVar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IdebFac" EntityType="Self.IdebFac" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IdebFacBg" EntityType="Self.IdebFacBg" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IdebFacCollateral" EntityType="Self.IdebFacCollateral" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IdebFacCollect" EntityType="Self.IdebFacCollect" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IdebFacCredit" EntityType="Self.IdebFacCredit" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IdebFacLc" EntityType="Self.IdebFacLc" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IdebFacOther" EntityType="Self.IdebFacOther" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IdebFacPenjamin" EntityType="Self.IdebFacPenjamin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IdebFacSb" EntityType="Self.IdebFacSb" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IdebFacSummary" EntityType="Self.IdebFacSummary" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IdebIndivData" EntityType="Self.IdebIndivData" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IdebIndivSearchVar" EntityType="Self.IdebIndivSearchVar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LIST" EntityType="Self.LIST" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ParameterSystem" EntityType="Self.ParameterSystem" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ParameterSystem_AuditTrail" EntityType="Self.ParameterSystem_AuditTrail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ParameterSystem_AuditTrailDetail" EntityType="Self.ParameterSystem_AuditTrailDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ParameterSystem_Temporary" EntityType="Self.ParameterSystem_Temporary" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ParameterSystem_TemporaryDetail" EntityType="Self.ParameterSystem_TemporaryDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ParameterSystemField" EntityType="Self.ParameterSystemField" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProcGenAppId" EntityType="Self.ProcGenAppId" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SysModule" EntityType="Self.SysModule" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_IdebCorpData" Association="Self.FK_IdebCorpData">
+      <End Role="Ideb" EntitySet="Ideb" />
+      <End Role="IdebCorpData" EntitySet="IdebCorpData" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IdebCorpGroup" Association="Self.FK_IdebCorpGroup">
+      <End Role="Ideb" EntitySet="Ideb" />
+      <End Role="IdebCorpGroup" EntitySet="IdebCorpGroup" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IdebCorpSearchVar" Association="Self.FK_IdebCorpSearchVar">
+      <End Role="Ideb" EntitySet="Ideb" />
+      <End Role="IdebCorpSearchVar" EntitySet="IdebCorpSearchVar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IdebFac" Association="Self.FK_IdebFac">
+      <End Role="Ideb" EntitySet="Ideb" />
+      <End Role="IdebFac" EntitySet="IdebFac" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IdebFacCollateral" Association="Self.FK_IdebFacCollateral">
+      <End Role="IdebFac" EntitySet="IdebFac" />
+      <End Role="IdebFacCollateral" EntitySet="IdebFacCollateral" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IdebFacCollect" Association="Self.FK_IdebFacCollect">
+      <End Role="IdebFac" EntitySet="IdebFac" />
+      <End Role="IdebFacCollect" EntitySet="IdebFacCollect" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IdebFacCredit" Association="Self.FK_IdebFacCredit">
+      <End Role="IdebFac" EntitySet="IdebFac" />
+      <End Role="IdebFacCredit" EntitySet="IdebFacCredit" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IdebFacLc" Association="Self.FK_IdebFacLc">
+      <End Role="IdebFac" EntitySet="IdebFac" />
+      <End Role="IdebFacLc" EntitySet="IdebFacLc" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IdebFacOther" Association="Self.FK_IdebFacOther">
+      <End Role="IdebFac" EntitySet="IdebFac" />
+      <End Role="IdebFacOther" EntitySet="IdebFacOther" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IdebFacPenjamin" Association="Self.FK_IdebFacPenjamin">
+      <End Role="IdebFac" EntitySet="IdebFac" />
+      <End Role="IdebFacPenjamin" EntitySet="IdebFacPenjamin" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IdebFacSb" Association="Self.FK_IdebFacSb">
+      <End Role="IdebFac" EntitySet="IdebFac" />
+      <End Role="IdebFacSb" EntitySet="IdebFacSb" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IdebFacSummary" Association="Self.FK_IdebFacSummary">
+      <End Role="Ideb" EntitySet="Ideb" />
+      <End Role="IdebFacSummary" EntitySet="IdebFacSummary" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IdebIndivData" Association="Self.FK_IdebIndivData">
+      <End Role="Ideb" EntitySet="Ideb" />
+      <End Role="IdebIndivData" EntitySet="IdebIndivData" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IdebIndivSearchVar" Association="Self.FK_IdebIndivSearchVar">
+      <End Role="Ideb" EntitySet="Ideb" />
+      <End Role="IdebIndivSearchVar" EntitySet="IdebIndivSearchVar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ParameterSystem_AuditTrailDetail" Association="Self.FK_ParameterSystem_AuditTrailDetail">
+      <End Role="ParameterSystem_AuditTrail" EntitySet="ParameterSystem_AuditTrail" />
+      <End Role="ParameterSystem_AuditTrailDetail" EntitySet="ParameterSystem_AuditTrailDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PARAMETERSYSTEM_TEMPORARYDETAIL_PARAMETERSYSTEM_TEMPORARY" Association="Self.FK_PARAMETERSYSTEM_TEMPORARYDETAIL_PARAMETERSYSTEM_TEMPORARY">
+      <End Role="ParameterSystem_Temporary" EntitySet="ParameterSystem_Temporary" />
+      <End Role="ParameterSystem_TemporaryDetail" EntitySet="ParameterSystem_TemporaryDetail" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
